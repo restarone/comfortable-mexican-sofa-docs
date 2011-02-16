@@ -9,7 +9,7 @@ A more detailed explanation of functionality outlined in [README](https://github
 * [[Layouts: Using Application Layout]]
 * [[Layouts: Nesting Layouts]]
 * [[Layouts: CMS managed CSS and JS]]
-
+* [[Sites]]
 ### Using CMS from your Application
 * [[View Rendering]]
 * [[Accessing CmsPage content directly]]
