@@ -7,4 +7,4 @@
 * **[[Application Layout]]** - Re-use your existing application layout
 * **[[Nested Layouts]]** - Nest layouts in previously defined layouts
 * **[[Layout CSS and JS]]** - How to use CMS managed css and javascript
-
+* **[[Uploaded Files]]** - How to manage uploaded files
