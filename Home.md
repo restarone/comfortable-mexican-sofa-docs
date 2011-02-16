@@ -1,10 +1,9 @@
 # Comfortable Mexican Sofa
 ### Managing Content
-* [[Cms Page Tags]]
-* [[Cms Field Tags]]
-* [[Cms Snippet Tags]]
-* [[Cms Helper and Partial Tags]]
-* [[Application Layout]]
-* [[Nested Layouts]]
-* [[Layout CSS and JS]]
-* [[Uploaded Files]]
+* [[Tags: Page]]
+* [[Tags: Field]]
+* [[Tags: Snippet]]
+* [[Tags: Helper and Partial]]
+* [[Layouts: Using Application Layout]]
+* [[Layouts: Nesting Layouts]]
+* [[Layouts: CMS managed CSS and JS]]
