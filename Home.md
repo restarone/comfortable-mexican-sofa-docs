@@ -1,4 +1,6 @@
 # Comfortable Mexican Sofa
+A more detailed explanation of functionality outlined in [[https://github.com/twg/comfortable-mexican-sofa#readme]] 
+
 ### Managing Content
 * [[Tags: Page]]
 * [[Tags: Field]]
@@ -14,3 +16,6 @@
 
 ### Extending Admin Area
 * [[ViewHooks]]
+
+### CMS Seeds
+* [[Working with CMS seeds]]
