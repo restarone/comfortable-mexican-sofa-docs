@@ -10,7 +10,7 @@
 
 ### Using CMS from your Application
 * [[View Rendering]]
-* [[Accessing page content directly]]
+* [[Accessing CmsPage content directly]]
 
 ### Extending Admin Area
 * [[ViewHooks]]
