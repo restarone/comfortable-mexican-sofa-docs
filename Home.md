@@ -1,6 +1,6 @@
 # Comfortable Mexican Sofa
 ### Managing Content
-* [[Cms Page Tags - Start populating your content]]
+* [[Cms Page Tags]]
 * [[Cms Field Tags]]
 * [[Cms Snippet Tags]]
 * [[Cms Helper and Partial Tags]]
