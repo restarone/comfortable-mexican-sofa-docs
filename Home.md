@@ -1,1 +1,1 @@
-Welcome to the comfortable-mexican-sofa wiki!
+[[Cms Page Tag Introduction]]
