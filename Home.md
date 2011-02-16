@@ -1,1 +1,1 @@
-[[Cms Page Tag Introduction]]
+[[Cms Tags Introduction]]
