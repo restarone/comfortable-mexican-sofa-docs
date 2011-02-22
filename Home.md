@@ -20,3 +20,6 @@ A more detailed explanation of functionality outlined in [README](https://github
 
 ### CMS Seeds
 * [[Working with CMS seeds]]
+
+### What else?
+* [What's with the name?](http://blog.twg.ca/2011/02/the-comfortable-mexican-sofa-vitamin-d-infused/)
