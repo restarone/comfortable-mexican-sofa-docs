@@ -20,7 +20,7 @@ this is equivalent to:
     
     <%= method_name('x', 'y', 'z') %>
     
-If you don't have that helper available an exception will be thrown.
+If you don't have that helper available an exception will be raised.
 
 ### Partial Tags
 
@@ -41,4 +41,5 @@ same as:
     <%= render :partial => 'path/to/partial', :locals => { :param_1 => 'a', :param_2 => 'b' } %>
     
 You cannot really name those parameters, so you'd want to do some translation to make your partial readable (but that's up to you).
+Same as with helpers, if there's no partial found an exception will be raised.
     
