@@ -17,3 +17,7 @@ Instead of redefining all the structural html/css in Layouts you can use your la
     <html>
     
 That's a lot of markup we don't really want to duplicate into CMS. You can simply use **App Layout** dropdown during CMS Layout creation/editing. Now everything that CMS renders will be output into the `yield` of the selected application layout. This way your CMS layouts can be light and easy to manage. However, now you have no access to structural html and css, but that can be a *good* thing.
+
+So your new simple Layout can be just this:
+    
+    {{ cms:page:content }}
