@@ -17,6 +17,7 @@ ComfortableMexicanSofa's content management is simple, yet incredibly flexible. 
 * Tags that were defined in the Layout dictate what form fields are going to be rendered during Page creation.
 * When rendering a Page, Layout content and Page content (along with everything else) are merged and displayed.
 
+---
 
 * **[[Tags: Page]]**
 * **[[Tags: Field]]**
