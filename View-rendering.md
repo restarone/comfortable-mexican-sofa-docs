@@ -11,7 +11,7 @@ To **explicitly** specify what CMS Page needs to be rendered:
       end
     end
     
-You can also render CMS Page implicitly. If Rails cannot find a template and throws *ActionView::MissingTemplate* Sofa will attempt to serve a page that matches the request URL. For example, if /entries is routed to *EntriesController#index* we can do this:
+You can also render CMS Page **implicitly**. If Rails cannot find a template and throws *ActionView::MissingTemplate* Sofa will attempt to serve a page that matches the request URL. For example, if /entries is routed to *EntriesController#index* we can do this:
     
     class EntriesController < ApplicationController
       def index
