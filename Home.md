@@ -30,7 +30,7 @@ ComfortableMexicanSofa's content management is simple, yet incredibly flexible. 
 
 ### Using CMS from your Application
 * **[[View Rendering]]**
-* **[[Accessing CmsPage content directly]]**
+* **[[Accessing @cms\_site, @cms\_layout and @cms\_page]]**
 
 ### Extending Admin Area
 * **[[ViewHooks]]**
