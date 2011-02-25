@@ -1,6 +1,6 @@
 # Nesting Layouts
 
-Let's say you need to define a CMS Layout that has left and right columns. It looks exactly like your one-column layout, but now there's two. You *could* just copy-paste it and modify it, but that's not really good. Remember `{{ cms:page:content }}` tag? Page tags with `content` label allow layout nesting. 
+Let's say you need to define a CMS Layout that has left and right columns. It looks exactly like your one-column layout, but now there's two. You *could* just copy-paste it and modify it, but that's not really good. Remember the often-used `{{ cms:page:content }}` tag? Page tags with `content` label allow layout nesting. 
 
 Here's a scenario when Layout B is a child of Layout A
 
