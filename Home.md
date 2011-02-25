@@ -13,9 +13,9 @@ This way you have a freedom to define page structure in any way you want.
     CMS Layout                          CMS Page Creation                   Final Result
     ╔═══════════════════════════╗       ╔═══════════════════════════╗       ╔═══════════════════════════╗
     ║  <html>                   ║       ║                           ║       ║  <html>                   ║
-    ║    {{cms:page:header }}   ║       ║  form field for header    ║       ║    header content         ║
-    ║    {{cms:page:content }}  ║  ==>  ║  form field for content   ║  ==>  ║    content content        ║
-    ║    {{cms:page:footer }}   ║       ║  form field for footer    ║       ║    footer content         ║
+    ║    {{cms:page:header }}   ║       ║ [ form field for header ] ║       ║    header content         ║
+    ║    {{cms:page:body }}     ║  ==>  ║ [ form field for body   ] ║  ==>  ║    body content           ║
+    ║    {{cms:page:footer }}   ║       ║ [ form field for footer ] ║       ║    footer content         ║
     ║  </html>                  ║       ║                           ║       ║  </html>                  ║
     ╚═══════════════════════════╝       ╚═══════════════════════════╝       ╚═══════════════════════════╝
 
