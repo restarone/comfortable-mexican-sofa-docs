@@ -13,11 +13,9 @@ ComfortableMexicanSofa's content management is simple, yet incredibly flexible. 
     ║  </html>                  ║       ║                           ║       ║  </html>                  ║
     ╚═══════════════════════════╝       ╚═══════════════════════════╝       ╚═══════════════════════════╝
     
-* First, a Layout is created. There you define your HTML structure for the page and tags that are used to populate content.
-* Tags that were defined in the Layout dictate what form fields are going to be rendered during Page creation.
-* When rendering a Page, Layout content and Page content (along with everything else) are merged and displayed.
-
----
+**Step 1:** First, a Layout is created. There you define your HTML structure for the page and tags that are used to populate content.<br/>
+**Step 2:** Tags that were defined in the Layout dictate what form fields are going to be rendered during Page creation.<br/>
+**Step 3:** When rendering a Page, Layout content and Page content (along with everything else) are merged and displayed.
 
 * **[[Tags: Page]]**
 * **[[Tags: Field]]**
