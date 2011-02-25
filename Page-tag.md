@@ -14,15 +14,37 @@ Page tag is defines a piece of content that is displayed during page rendering. 
 ### Available formats
 
 <table>
-  <tr><th>Test</th>
-    </tr>
+  <tr>
+    <td><em>{{ cms:page:content }}</em></td>
+    <td><strong>Text</strong></td>
+    <td>Format parameter can be omitted. It defaults to *text*</td>
+  </tr>
+  <tr>
+    <td>{{ cms:page:content:text }}</td>
+    <td>Text</td>
+    <td>A plain-text textarea. With html/css/js code highlighting provided via CodeMirror</td>
+  </tr>
+  <tr>
+    <td>{{ cms:page:content:rich_text}}</td>
+    <td>RichText</td>
+    <td>WYSIWYG editor (TinyMCE) will be used.</td>
+  </tr>
+  <tr>
+    <td>{{ cms:page:content:string }}</td>
+    <td>String</td>
+    <td>Sometimes you need a short text entry. This will render a text field.</td>
+  </tr>
+  <tr>
+    <td>{{ cms:page:content:datetime }}</td>
+    <td>DateTime</td>
+    <td>Textfield, with Datetime selection widget.</td>
+  </tr>
+  <tr>
+    <td>{{ cms:page:content:integer }}</td>
+    <td>Integer</td>
+    <td>Input with 'number' type will be rendered. You can only type numbers in there.</td>
+  </tr>
 </table>
-* *{{ cms:page:content }}* - **Text**: Format parameter can be omitted. It defaults to *text*.
-* *{{ cms:page:content:text }}* - **Text**: A plain-text textarea. With html/css/js code highlighting provided via CodeMirror
-* *{{ cms:page:content:rich\_text}}* - **RichText**: WYSIWYG editor (TinyMCE) will be used.
-* *{{ cms:page:content:string }}* - **String**: Sometimes you need a short text entry. This will render a text field.
-* *{{ cms:page:content:datetime }}* - **DateTime**: Textfield, with Datetime selection widget.
-* *{{ cms:page:content:integer }}* - **Integer**: Input with 'number' type will be rendered. You can only type numbers in there.
 
 Formats only control how content gets populated during CMS Page creation. They do not control how that content is displayed on final page render.
 
