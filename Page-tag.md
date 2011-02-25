@@ -17,31 +17,31 @@ Page tag is defines a piece of content that is displayed during page rendering. 
   <tr>
     <td><em>{{ cms:page:content }}</em></td>
     <td><strong>Text</strong></td>
-    <td>Format parameter can be omitted. It defaults to *text*</td>
+    <td>Format parameter can be omitted. It defaults to :text</td>
   </tr>
   <tr>
-    <td>{{ cms:page:content:text }}</td>
-    <td>Text</td>
+    <td><em>{{ cms:page:content:text }}</em></td>
+    <td><strong>Text</strong></td>
     <td>A plain-text textarea. With html/css/js code highlighting provided via CodeMirror</td>
   </tr>
   <tr>
-    <td>{{ cms:page:content:rich_text}}</td>
-    <td>RichText</td>
+    <td><em>{{ cms:page:content:rich_text}}</em></td>
+    <td><strong>RichText</strong></td>
     <td>WYSIWYG editor (TinyMCE) will be used.</td>
   </tr>
   <tr>
-    <td>{{ cms:page:content:string }}</td>
-    <td>String</td>
+    <td><em>{{ cms:page:content:string }}</em></td>
+    <td><strong>String</strong></td>
     <td>Sometimes you need a short text entry. This will render a text field.</td>
   </tr>
   <tr>
-    <td>{{ cms:page:content:datetime }}</td>
-    <td>DateTime</td>
+    <td><em>{{ cms:page:content:datetime }}</em></td>
+    <td><strong>DateTime</strong></td>
     <td>Textfield, with Datetime selection widget.</td>
   </tr>
   <tr>
-    <td>{{ cms:page:content:integer }}</td>
-    <td>Integer</td>
+    <td><em>{{ cms:page:content:integer }}</em></td>
+    <td><strong>Integer</strong></td>
     <td>Input with 'number' type will be rendered. You can only type numbers in there.</td>
   </tr>
 </table>
