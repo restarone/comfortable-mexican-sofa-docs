@@ -1,5 +1,6 @@
 # Comfortable Mexican Sofa
 A more detailed explanation of functionality outlined in [README](https://github.com/twg/comfortable-mexican-sofa#readme)
+
 ** Please feel free to edit with Wiki **
 
 ### Managing Content
