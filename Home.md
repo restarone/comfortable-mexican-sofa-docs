@@ -3,12 +3,6 @@ A more detailed explanation of functionality outlined in [README](https://github
 
 ### Managing Content
 ComfortableMexicanSofa's content management is simple, yet incredibly flexible. Here's how it's done:
-
-* First, a Layout is created. There you define your HTML structure for the page and tags that are used to populate content.
-* Tags that were defined in the Layout dictate what form fields are going to be rendered during Page creation.
-* When rendering a Page, Layout content and Page content (along with everything else) are merged and displayed.
-
-This way you have a freedom to define page structure in any way you want.
     
     CMS Layout                          CMS Page Creation                   Final Result
     ╔═══════════════════════════╗       ╔═══════════════════════════╗       ╔═══════════════════════════╗
@@ -18,6 +12,11 @@ This way you have a freedom to define page structure in any way you want.
     ║    {{cms:page:footer }}   ║       ║ [ form field for footer ] ║       ║    footer content         ║
     ║  </html>                  ║       ║                           ║       ║  </html>                  ║
     ╚═══════════════════════════╝       ╚═══════════════════════════╝       ╚═══════════════════════════╝
+    
+* First, a Layout is created. There you define your HTML structure for the page and tags that are used to populate content.
+* Tags that were defined in the Layout dictate what form fields are going to be rendered during Page creation.
+* When rendering a Page, Layout content and Page content (along with everything else) are merged and displayed.
+
 
 * **[[Tags: Page]]**
 * **[[Tags: Field]]**
