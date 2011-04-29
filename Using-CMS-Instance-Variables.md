@@ -1,4 +1,4 @@
-# Using CMS instance variables
+# Using CMS Instance Variables
 
 When rendering CMS content you have access to the following instance variables: `@cms_site`, `@cms_layout` and `@cms_page` from helpers, partials and application layouts used during rendering.
 
