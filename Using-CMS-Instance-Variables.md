@@ -6,7 +6,7 @@ When rendering CMS content you have access to the following instance variables: 
 
 This is the instance variable for CMS Site object. Generally you don't really need to worry about this one unless you have multiple [[Sites]]. You can use it for things like generation of the primary navigation:
 
-    <% @cms_site.cms_pages.root.children.published.each do |page| %>
+    <% @cms_site.pages.root.children.published.each do |page| %>
       <%= link_to page.label, page.full_path %>
     <% end %>
     
