@@ -1,4 +1,4 @@
-# Comfortable Mexican Sofa
+# ComfortableMexicanSofa (MicroCMS)
 
 ### Managing Content
 ComfortableMexicanSofa's content management is simple, yet incredibly flexible. Here's how it's done:
