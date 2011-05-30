@@ -1,15 +1,41 @@
 # ComfortableMexicanSofa (MicroCMS)
 
 ComfortableMexicanSofa's content management is simple, yet incredibly flexible. Here's how it's done:
-    
-    CMS Layout                          CMS Page Creation                   Final Result
-    ╔═══════════════════════════╗       ╔═══════════════════════════╗       ╔═══════════════════════════╗
-    ║  <html>                   ║       ║                           ║       ║  <html>                   ║
-    ║    {{cms:page:header }}   ║       ║ [ form field for header ] ║       ║    header content         ║
-    ║    {{cms:page:body }}     ║  ==>  ║ [ form field for body   ] ║  ==>  ║    body content           ║
-    ║    {{cms:page:footer }}   ║       ║ [ form field for footer ] ║       ║    footer content         ║
-    ║  </html>                  ║       ║                           ║       ║  </html>                  ║
-    ╚═══════════════════════════╝       ╚═══════════════════════════╝       ╚═══════════════════════════╝
+
+<table>
+  <tr>
+    <th>CMS Layout</th>
+    <th>Cms Page Creation</th>
+    <th>Final Result</th>
+  </tr>
+  <tr>
+    <td>
+      <pre>
+&lt;html&gt;
+  {{ cms:page:header }}
+  {{ cms:page:body }}
+  {{ cms:page:footer }}
+&lt;/html&gt;
+      </pre>
+    </td>
+    <td>
+      <pre>
+[ form field for header ]
+[ form field for body   ]
+[ form field for footer ]
+      </pre>
+    </td>
+    <td>
+      <pre>
+&lt;html&gt;
+  header content
+  body content
+  footer content
+&lt;/html&gt;
+      </pre>
+    </td>
+  </tr>
+</table>
     
 **Step 1:** First, a Layout is created. There you define your HTML structure for the page and tags that are used to populate content.<br/>
 **Step 2:** Tags that were defined in the Layout dictate what form fields are going to be rendered during Page creation.<br/>
