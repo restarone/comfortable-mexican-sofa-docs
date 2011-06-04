@@ -45,6 +45,8 @@ ComfortableMexicanSofa's content management is simple, yet incredibly flexible. 
 * **Tags: [[Field Tag]]**
 * **Tags: [[Snippet Tag]]**
 * **Tags: [[Helper and Partial Tags]]**
+* **Tags: [[Upload Tags]]**
+* **Tags: [[Asset Tags]]**
 * **Layouts: [[Using Application Layout]]**
 * **Layouts: [[Nesting Layouts]]**
 * **Layouts: [[CMS managed CSS and JS]]**
