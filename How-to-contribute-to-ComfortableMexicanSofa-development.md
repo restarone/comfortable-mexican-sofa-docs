@@ -1,3 +1,5 @@
+# How to Contribute
+
 GitHub makes it all too easy:
 
 * Fork the project
