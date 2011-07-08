@@ -1,5 +1,7 @@
 # ComfortableMexicanSofa - CMS Engine for Rails 3 applications
 
+***
+
 * **[[Requirements]]**
 
 ### Managing Content
