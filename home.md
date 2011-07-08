@@ -1,7 +1,7 @@
 # ComfortableMexicanSofa - CMS Engine for Rails 3 applications
 
-* **[[Working with CMS fixtures]]**
 * **[[Upgrading ComfortableMexicanSofa]]**
+* **[[Working with CMS fixtures]]**
 
 ComfortableMexicanSofa's content management is simple, yet incredibly flexible. Here's how it's done:
 
