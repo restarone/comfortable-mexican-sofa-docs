@@ -1,4 +1,4 @@
-# ComfortableMexicanSofa - CMS Engine for Ruby on Rails 3 applications
+# ComfortableMexicanSofa - CMS Engine for Ruby on Rails 3 apps
 
 ***
 
