@@ -8,5 +8,5 @@ It's also a good idea to run `rails generate cms` to update the initializer or i
 * `CmsSite`, `CmsLayout`, `CmsPage`, `CmsSnippet` are changed to `Cms::Site`, `Cms::Layout`, `Cms::Page` and `Cms::Snippet`. It only matters if you directly manipulate those objects somehow.
 
 ## Upgrading from 1.1.x to 1.2.0
-* Revision system is introduced and that's why you need to grab a migration: [[https://github.com/twg/comfortable-mexican-sofa/raw/master/db/migrate/upgrades/03_upgrade_to_1_2_0.rb]]. Just create a new migration, paste content of the above file and `rake db:migrate`.
+* Revision system is introduced and that's why you need to grab this migration: [[https://github.com/twg/comfortable-mexican-sofa/raw/master/db/migrate/upgrades/03_upgrade_to_1_2_0.rb]]. Just create a new migration, paste content of the above file and `rake db:migrate`.
 * New initializer setting is added `revisions_limit`: [[https://github.com/twg/comfortable-mexican-sofa/raw/master/config/initializers/comfortable_mexican_sofa.rb]]
