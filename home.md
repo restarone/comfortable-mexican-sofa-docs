@@ -15,6 +15,7 @@
 
 ### How-Tos
 * **[[Working with CMS fixtures]]**
+* **[[Accessing CMS content from the app]]**
 * **[[Using CMS pages as Rails views]]**
 * **[[Upgrading ComfortableMexicanSofa]]**
 
