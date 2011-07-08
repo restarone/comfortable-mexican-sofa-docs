@@ -1,3 +1,4 @@
+### Installation
 Add gem definition to your Gemfile:
     
     gem 'comfortable_mexican_sofa'
@@ -14,6 +15,7 @@ When upgrading from the older version please take a look at [[Upgrading Comforta
 
 After finishing installation you should be able to navigate to http://yoursite/cms-admin
 
+### Quick Start Guide
 Default username and password is 'username' and 'password'. You probably want to change it right away. Admin credentials (among other things) can be found and changed in the cms initializer: [/config/initializers/comfortable\_mexican\_sofa.rb](https://github.com/twg/comfortable-mexican-sofa/blob/master/config/initializers/comfortable_mexican_sofa.rb)
 
 Before creating pages and populating them with content we need to create a Site. Site defines a hostname, content path and it's language.
