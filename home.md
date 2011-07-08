@@ -3,6 +3,7 @@
 ***
 
 * **[[Requirements]]**
+* **[[Installation]]**
 
 ### Managing Content
 * **[[Overview]]**
