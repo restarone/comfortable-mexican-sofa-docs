@@ -22,6 +22,7 @@
 * **[[Tags]]**
 
 ### How-Tos
+* **[[Changing default authentication]]**
 * **[[Working with CMS fixtures]]**
 * **[[Accessing CMS content from the app]]**
 * **[[Using CMS pages as Rails views]]**
