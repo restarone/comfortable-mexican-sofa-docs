@@ -10,7 +10,7 @@
 ***
 
 * **[[Requirements]]**
-* **[[Installation]]**
+* **[[Installation and Quick Start Guide]]**
 
 ### Managing Content
 * **[[Overview]]**
