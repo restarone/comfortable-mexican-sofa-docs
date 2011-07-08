@@ -4,6 +4,8 @@ If you run `rails generate cms` you should find an example set of fixtures in [/
 
 When fixtures are enabled, database is updated with each request, but only if fixture file is newer than the database entry. Database is also purged of items that are not defined in fixtures. So be careful not to clear out your database by mistake.
 
+### Importing into Database
 To load fixtures into the database just run this rake task: `rake comfortable_mexican_sofa:fixtures:import FROM=example.local TO=example.com`. `from` indicates folder the fixtures are in and `to` is the Site hostname you have defined in the database.
 
+### Exporting into Files
 If you need to dump database contents into fixture files run: `rake comfortable_mexican_sofa:fixtures:export FROM=example.com TO=example.local`. This will create example.local folder and dump all content from example.com Site.
