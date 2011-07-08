@@ -7,7 +7,7 @@ GitHub makes it all too easy:
 * Commit and push until you are happy with your contribution
 * Create a Pull Request
 
-ComfortableMexicanSofa is an engine so you can run it as a standalone for development purposes (you can run it in production too, but hey). Clone your fork into a directory, run `bundle install` and then `rake db:migrate`. Feel free to change Gemfile if you want to work against a particular Rails version. Just don't commit it later.
+ComfortableMexicanSofa is an engine so you can run it as a standalone for development purposes. Clone your fork into a directory, run `bundle install` and then `rake db:migrate`. Feel free to change Gemfile if you want to work against a particular Rails version (just don't commit it later).
 
 You run tests as normal: `rake tests`
 
