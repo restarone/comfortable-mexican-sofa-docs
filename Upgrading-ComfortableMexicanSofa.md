@@ -10,3 +10,7 @@ It's also a good idea to run `rails generate cms` to update the initializer or i
 ## Upgrading from 1.1.x to 1.2.0
 * Revision system is introduced and that's why you need to grab this migration: [[https://github.com/twg/comfortable-mexican-sofa/raw/master/db/migrate/upgrades/03_upgrade_to_1_2_0.rb]]. Just create a new migration, paste content of the above file and `rake db:migrate`.
 * New initializer setting is added `revisions_limit`: [[https://github.com/twg/comfortable-mexican-sofa/raw/master/config/initializers/comfortable_mexican_sofa.rb]]
+
+## Upgrading from 1.2.x to 1.3.0
+* Multiple Sites is a default functionality now. Setting to toggle it in the initializer is gone. `content_prefix_path` is an attribute of the Site now. This way if you want to serve pages from `http://localhost/en/` you need to set up a Site with **hostname** `localhost` and **path** `en`.
+* Migration file can be found here: [[https://github.com/twg/comfortable-mexican-sofa/raw/master/db/migrate/upgrades/04_upgrade_to_1_3_0.rb]]
