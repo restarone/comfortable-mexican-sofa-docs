@@ -1,5 +1,12 @@
 # ComfortableMexicanSofa - CMS Engine for Ruby on Rails 3 apps
 
+**Do you need something to manage content for your Rails 3 application? There's nothing more powerful and easier to bolt-on than Sofa.**
+
+* ComfortableMexicanSofa is open source and completely free
+* It's a Rails Engine so it's easy to install and work with
+* Powerful page templating capability
+* Straightforward integration with your application
+
 ***
 
 * **[[Requirements]]**
