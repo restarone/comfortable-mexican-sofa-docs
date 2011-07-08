@@ -12,3 +12,6 @@ ComfortableMexicanSofa is an engine so you can run it as a standalone for develo
 You run tests as normal: `rake tests`
 
 As far as conventions go, there's only one rule: Erb/Css/UnitTest only please.
+
+### What needs to be worked on
+Take a look in Issues and see if there are any outstanding bug reports or feature requests. Of course, you are welcome and encouraged to submit your own bug fixes and/or features.
