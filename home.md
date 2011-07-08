@@ -21,6 +21,7 @@
 
 ### Contribute
 Be as awesome as [these guys](https://github.com/twg/comfortable-mexican-sofa/contributors) and help Sofa become even better.
+
 * **[[How to contribute to ComfortableMexicanSofa development]]**
 
 ### Contact
