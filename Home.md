@@ -60,8 +60,8 @@ ComfortableMexicanSofa's content management is simple, yet incredibly flexible. 
 ### Extending Admin Area
 * **[[ViewHooks]]**
 
-### [[Working with CMS fixtures]]
-### [[Upgrading ComfortableMexicanSofa]]
+#### [Working with CMS fixtures][fixtures]
+#### [Upgrading ComfortableMexicanSofa][upgrading]
 
 ### Contact
 You if you have any questions feel free to contact me via [GitHub](https://github.com/gbh) or [@GroceryBagHead](http://twitter.com/#!/GroceryBagHead)
