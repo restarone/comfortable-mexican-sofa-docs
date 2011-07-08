@@ -1,4 +1,5 @@
 To upgrade to a newer version of ComfortableMexicanSofa you must bump up the version number in your Gemfile like so:
+
    `gem 'comfortable_mexican_sofa', '1.3.0'` 
 
 and run `bundle install`. 
