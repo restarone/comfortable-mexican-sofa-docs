@@ -1,5 +1,3 @@
-# ComfortableMexicanSofa (CMS Engine for Rails 3 apps)
-
 * **[[Working with CMS fixtures]]**
 * **[[Upgrading ComfortableMexicanSofa]]**
 
