@@ -1,4 +1,7 @@
-# ComfortableMexicanSofa (MicroCMS)
+# ComfortableMexicanSofa (CMS Engine for Rails 3 apps)
+
+* **[[Working with CMS fixtures]]**
+* **[[Upgrading ComfortableMexicanSofa]]**
 
 ComfortableMexicanSofa's content management is simple, yet incredibly flexible. Here's how it's done:
 
@@ -57,11 +60,8 @@ ComfortableMexicanSofa's content management is simple, yet incredibly flexible. 
 * **[[Using CMS Instance Variables]]**
 * **[[View Helpers]]**
 
-### Extending Admin Area
-* **[[ViewHooks]]**
 
-#### [Working with CMS fixtures][fixtures]
-#### [Upgrading ComfortableMexicanSofa][upgrading]
+
 
 ### Contact
 You if you have any questions feel free to contact me via [GitHub](https://github.com/gbh) or [@GroceryBagHead](http://twitter.com/#!/GroceryBagHead)
