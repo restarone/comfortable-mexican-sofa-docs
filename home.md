@@ -19,5 +19,9 @@
 * **[[Using CMS pages as Rails views]]**
 * **[[Upgrading ComfortableMexicanSofa]]**
 
+### Contribute
+Be as awesome as [these guys](https://github.com/twg/comfortable-mexican-sofa/contributors) and help Sofa become even better.
+* **[[How to contribute to ComfortableMexicanSofa development]]**
+
 ### Contact
 You if you have any questions feel free to contact me via [GitHub](https://github.com/gbh) or [@GroceryBagHead](http://twitter.com/#!/GroceryBagHead)
