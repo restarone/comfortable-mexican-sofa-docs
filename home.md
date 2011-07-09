@@ -6,6 +6,7 @@
 * It's a Rails Engine so it's easy to install and work with
 * Powerful page templating capability
 * Straightforward integration with your application
+* Very comfortable
 
 ***
 
