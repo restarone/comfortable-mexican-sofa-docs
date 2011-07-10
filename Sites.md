@@ -9,6 +9,8 @@ When creating a site you can choose one of the provided languages. This will tra
 
 If you want to force admin area to a particular locale (like English), disregarding the site language, see the initializer and set `config.admin_locale = :en`. This will only keep admin area to specified locale, during page rendering Site locale will still apply.
 
+If you wish to include a locale that doesn't exist yet take a peek in [/config/locales](https://github.com/twg/comfortable-mexican-sofa/tree/master/config/locales). You can create your own and extend Sofa's initialization config like so: `config.locales.merge!(:arr=> 'Pirate')`. Also you're welcome to contribute your translations to Sofa.
+
 ### Mirroring
 When you have two or more sites that need to share same structure (think different languages) you should enable mirroring on those sites. This will automatically sync layouts, pages and snippets with same slugs and paths for all sites that are marked as *mirrors*. For example, if you create page `/welcome` on Site A, Site B will also have this page created. Content of the page on Site B will be blank however, you'll need to populate it.
 
