@@ -1,4 +1,4 @@
-### Set up
+### Setup
 When setting up Sofa for the first time you'll be prompted to create a Site. At the very least you'll need to populate the *hostname*. If you wish to serve all content from a particular path, like `http://example.org/en/` you want to set *path* to `en`. You can go even deeper, like so: `en/content/to/read`
 
 ### Multiple Sites
