@@ -28,6 +28,7 @@
 * **[[Accessing CMS content from the app]]**
 * **[[Using CMS pages as Rails views]]**
 * **[[Upgrading ComfortableMexicanSofa]]**
+* **[[Troubleshooting common problems]]**
 
 ### Contribute
 Be as awesome as [these guys](https://github.com/twg/comfortable-mexican-sofa/contributors) and help Sofa become even better.
