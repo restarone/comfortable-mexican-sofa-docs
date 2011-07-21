@@ -19,6 +19,7 @@
 * **[[Layouts]]**
 * **[[Pages]]**
 * **[[Snippets]]**
+* **[[Revisions]]**
 * **[[Uploads]]**
 * **[[Tags]]**
 
