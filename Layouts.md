@@ -1,5 +1,3 @@
-### Overview
-
 Layout defines content areas for the page. For example, if you need a page with header, footer, and some content you'd need something like this:
 
     <html>
