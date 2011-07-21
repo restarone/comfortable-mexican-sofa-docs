@@ -28,6 +28,7 @@
 * **[[Working with CMS fixtures]]**
 * **[[Accessing CMS content from the app]]**
 * **[[Using CMS pages as Rails views]]**
+* **[[Reusing Sofa's admin area]]**
 * **[[Upgrading ComfortableMexicanSofa]]**
 * **[[Troubleshooting common problems]]**
 
