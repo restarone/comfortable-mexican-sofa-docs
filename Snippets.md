@@ -9,4 +9,6 @@ Snippets are reusable pieces of content that you'd want to manage from Sofa. Thi
       </body>
     </html>
     
-If you ever need to access snippet content from inside your app you can use this helper: `cms_snippet_content(snippet_slug, cms_site = nil)`
+If you ever need to access snippet content from inside your app you can use this helper:
+    
+    <%= cms_snippet_content(snippet_slug, cms_site = nil) %>
