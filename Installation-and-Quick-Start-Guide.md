@@ -18,11 +18,11 @@ After finishing installation you should be able to navigate to http://yoursite/c
 
 The default username and password after installation is 'username' and 'password', which you will probably want to change right away. You can do so by editing the admin credentials, which can be found and changed in the cms initializer: [/config/initializers/comfortable\_mexican\_sofa.rb](https://github.com/twg/comfortable-mexican-sofa/blob/master/config/initializers/comfortable_mexican_sofa.rb)
 
-Before creating ***Pages*** and populating them with content we need to create a ***Site***. ***Site*** defines a hostname, content path and it's language.
+Before creating Pages and populating them with content we need to create a Site. Site defines a hostname, content path and it's language.
 
-Before we can populate the site with content, we will need to create a **Site**. The **Site** is what defines the hostname, content path, and the language. After creating a **Site**, you need to make a **Layout**, which is the template for your content; allowing you to define reusable content (such as the header and footer) and placeholders for content.
+Before we can populate the site with content, we will need to create a Site. The Site is what defines the hostname, content path, and the language. After creating a Site, you need to make a Layout, which is the template for your content; allowing you to define reusable content (such as the header and footer) and placeholders for content.
 
-A very simple **Layout** can look like this:
+A very simple Layout can look like this:
     
     <html>
       <body>
@@ -31,4 +31,4 @@ A very simple **Layout** can look like this:
       </body>
     </html>
 
-Once you have a **Layout**, you can create **Pages**, where the content is populated for your **Layouts**. It's that easy.
+Once you have a Layout, you can create Pages, where the content is populated for your Layouts. It's that easy.
