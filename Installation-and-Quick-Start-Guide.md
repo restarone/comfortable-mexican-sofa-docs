@@ -16,11 +16,13 @@ When upgrading from the older version please take a look at [[Upgrading Comforta
 ### Quick Start Guide
 After finishing installation you should be able to navigate to http://yoursite/cms-admin
 
-Default username and password is 'username' and 'password'. You probably want to change it right away. Admin credentials (among other things) can be found and changed in the cms initializer: [/config/initializers/comfortable\_mexican\_sofa.rb](https://github.com/twg/comfortable-mexican-sofa/blob/master/config/initializers/comfortable_mexican_sofa.rb)
+The default username and password after installation is 'username' and 'password', which you will probably want to change right away. You can do so by editing the admin credentials, which can be found and changed in the cms initializer: [/config/initializers/comfortable\_mexican\_sofa.rb](https://github.com/twg/comfortable-mexican-sofa/blob/master/config/initializers/comfortable_mexican_sofa.rb)
 
-Before creating pages and populating them with content we need to create a Site. Site defines a hostname, content path and it's language.
+Before creating ***Pages*** and populating them with content we need to create a ***Site***. ***Site*** defines a hostname, content path and it's language.
 
-After creating a Site, you need to make a Layout. Layout is the template of your pages; it defines some reusable content (like header and footer, for example) and places where the content goes. A very simple layout can look like this:
+Before we can populate the site with content, we will need to create a **Site**. The **Site** is what defines the hostname, content path, and the language. After creating a **Site**, you need to make a **Layout**, which is the template for your content; allowing you to define reusable content (such as the header and footer) and placeholders for content.
+
+A very simple **Layout** can look like this:
     
     <html>
       <body>
@@ -29,4 +31,4 @@ After creating a Site, you need to make a Layout. Layout is the template of your
       </body>
     </html>
 
-Once you have a layout, you may start creating pages and populating content. It's that easy.
+Once you have a **Layout**, you can create **Pages**, where the content is populated for your **Layouts**. It's that easy.
