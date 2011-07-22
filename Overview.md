@@ -1,7 +1,9 @@
-Content creation in ComfortableMexicanSofa happens in 3 stages:
+There are three stages of development when creating content in ComfortableMexicanSofa.
 
 ### Layout Creation
-Layout defines the structure of the page. Here's a simple example of one:
+A Layout defines the structure of the page, allowing you to define reusable content (such as the header and footer) and placeholders for content.
+
+Here's a simple example of one:
 
     <html>
       <body>
@@ -15,10 +17,10 @@ Layout defines the structure of the page. Here's a simple example of one:
       </body>
     </html>
 
-Here we have one 3 page elements that we can manage: `title`, `left_column` and `right_column`, and one snippet element: `footer`.
+Here we have created three content placeholder elements for a Page that allow us to manage content on the Page Creation side of things: `title`, `left_column` and `right_column`, and one snippet element: `footer`.
 
 ### Page Creation
-Based on the page tags defined in the Layout during page creation you'll see 3 corresponding form fields. Snippets are managed in their own section. Populate the content and save the page.
+Because of the Page placeholders defined when we created our example Layout above, when you create a Page that utilizes that Layout, you will see three corresponding fields to be populated with content. Snippets are managed separately from Page tags and have their own section. You can populate the fields with content and save the page.
 
 You may always return back to layout editing and add/remove tags. Page management view will adjust based on what tags you have defined in the layout.
 
