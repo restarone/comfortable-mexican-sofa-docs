@@ -18,10 +18,8 @@ After finishing installation you should be able to navigate to http://yoursite/c
 
 The default username and password after installation is 'username' and 'password', which you will probably want to change right away. You can do so by editing the admin credentials, which can be found and changed in the cms initializer: [/config/initializers/comfortable\_mexican\_sofa.rb](https://github.com/twg/comfortable-mexican-sofa/blob/master/config/initializers/comfortable_mexican_sofa.rb)
 
-  # Default credentials for ComfortableMexicanSofa::HttpAuth
-  # YOU REALLY WANT TO CHANGE THIS BEFORE PUTTING YOUR SITE LIVE
-  ComfortableMexicanSofa::HttpAuth.username = 'username'
-  ComfortableMexicanSofa::HttpAuth.password = 'password'
+    ComfortableMexicanSofa::HttpAuth.username = 'username'
+    ComfortableMexicanSofa::HttpAuth.password = 'password'
 
 Before creating Pages and populating them with content we need to create a Site. Site defines a hostname, content path and it's language.
 
