@@ -1,5 +1,5 @@
 ### Installation
-Add gem definition to your Rails project's Gemfile:
+Add the gem definition to your Rails project's Gemfile:
     
     gem 'comfortable_mexican_sofa'
     
