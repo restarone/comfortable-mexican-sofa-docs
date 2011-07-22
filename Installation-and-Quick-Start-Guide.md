@@ -16,9 +16,7 @@ If you are upgrading from an older version of ComfortableMexicanSofa, please tak
 ### Quick Start Guide
 After finishing installation you should be able to navigate to http://yoursite/cms-admin
 
-The default username and password after installation is 'username' and 'password', which you will probably want to change right away. You can do so by editing the admin credentials, which can be found and changed in the cms initializer: 
-
-[/config/initializers/comfortable\_mexican\_sofa.rb](https://github.com/twg/comfortable-mexican-sofa/blob/master/config/initializers/comfortable_mexican_sofa.rb)
+The default username and password after installation is 'username' and 'password', which you will probably want to change right away. You can do so by editing the admin credentials, which can be found and changed in the cms initializer: [/config/initializers/comfortable\_mexican\_sofa.rb](https://github.com/twg/comfortable-mexican-sofa/blob/master/config/initializers/comfortable_mexican_sofa.rb)
 
     ComfortableMexicanSofa::HttpAuth.username = 'username'
     ComfortableMexicanSofa::HttpAuth.password = 'password'
