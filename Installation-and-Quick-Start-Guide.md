@@ -21,8 +21,6 @@ The default username and password after installation is 'username' and 'password
     ComfortableMexicanSofa::HttpAuth.username = 'username'
     ComfortableMexicanSofa::HttpAuth.password = 'password'
 
-Before creating Pages and populating them with content we need to create a Site. Site defines a hostname, content path and it's language.
-
 Before we can populate the site with content, we will need to create a Site. The Site is what defines the hostname, content path, and the language. After creating a Site, you need to make a Layout, which is the template for your content; allowing you to define reusable content (such as the header and footer) and placeholders for content.
 
 A very simple Layout can look like this:
