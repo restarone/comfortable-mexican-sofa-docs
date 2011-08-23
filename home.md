@@ -20,7 +20,7 @@
 * **[[Pages]]**
 * **[[Snippets]]**
 * **[[Revisions]]**
-* **[[Uploads]]**
+* **[[Files]]**
 * **[[Tags]]**
 
 ### How-Tos
