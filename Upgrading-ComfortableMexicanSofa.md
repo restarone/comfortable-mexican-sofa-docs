@@ -23,4 +23,4 @@ It's also a good idea to run `rails generate cms` to update the initializer or i
 ## Upgrading from 1.3.x to 1.4.0
 * You can manage your uploads from the dedicated Files section. It will even allow you to upload multiple files at the same time.
 * Pages, snippets and files can be categorized. Helps with management and allows you to pull collections like this: `@site.files.for_category('red_category', 'blue_category')`
-* Don't forget to apply the migration [[https://github.com/twg/comfortable-mexican-sofa/raw/master/db/migrate/upgrades/04_upgrade_to_1_4_0.rb]]
+* Don't forget to apply the migration [[https://github.com/twg/comfortable-mexican-sofa/raw/master/db/migrate/upgrades/05_upgrade_to_1_4_0.rb]]
