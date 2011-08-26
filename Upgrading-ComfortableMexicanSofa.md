@@ -1,6 +1,6 @@
 To upgrade to a newer version of ComfortableMexicanSofa you must bump up the version number in your Gemfile like so:
 
-    gem 'comfortable_mexican_sofa', '>=1.3.0'
+    gem 'comfortable_mexican_sofa', '>=1.4.0'
 
 and run `bundle install`. 
 
@@ -19,3 +19,8 @@ It's also a good idea to run `rails generate cms` to update the initializer or i
 * Multiple Sites is a default functionality now. Setting to toggle it in the initializer is gone. `content_prefix_path` is an attribute of the Site now. This way if you want to serve pages from `http://localhost/en/` you need to set up a Site with **hostname** `localhost` and **path** `en`.
 * Migration file can be found here: [[https://github.com/twg/comfortable-mexican-sofa/raw/master/db/migrate/upgrades/04_upgrade_to_1_3_0.rb]]
 * Page caching (along with the initializer setting) is removed for the time being as it doesn't work for multiple sites.
+
+## Upgrading from 1.3.x to 1.4.0
+* You can manage your uploads from the dedicated Files section. It will even allow you to upload multiple files at the same time.
+* Pages, snippets and files can be categorized. Helps with management and allows you to pull collections like this: `@site.files.for_category('red_category', 'blue_category')`
+* Don't forget to apply migration [[https://github.com/twg/comfortable-mexican-sofa/raw/master/db/migrate/upgrades/04_upgrade_to_1_4_0.rb]]
