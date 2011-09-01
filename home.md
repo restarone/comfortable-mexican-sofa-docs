@@ -31,6 +31,7 @@
 * **[[Using CMS pages as Rails views]]**
 * **[[Reusing Sofa's admin area]]**
 * **[[Password protecting pages]]**
+* **[[Serving CMS content from separate database]]**
 
 ### Help
 * **[[Troubleshooting common problems]]**
