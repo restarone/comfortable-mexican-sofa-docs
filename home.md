@@ -30,6 +30,9 @@
 * **[[Accessing CMS content from the app]]**
 * **[[Using CMS pages as Rails views]]**
 * **[[Reusing Sofa's admin area]]**
+* **[[Password protecting pages]]**
+
+### Help
 * **[[Troubleshooting common problems]]**
 
 ### Contribute
