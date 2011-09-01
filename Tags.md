@@ -7,7 +7,7 @@ There are a number of cms tags that define where the content goes and how it's p
            \    ‾‾‾‾‾‾‾‾‾‾‾‾ tag type (page, field, snippet, helper, partial)
             ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ cms tag identifier
            
-### Page
+#### Page
 Page tags are pieces of text content that will get rendered on the page. Format defines how form field gets rendered in the page editing/creation section of the admin area.
     
     {{ cms:page:some_label:text }}
