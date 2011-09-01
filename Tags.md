@@ -43,3 +43,21 @@ Partial tags are wrappers just like above helper ones.
     {{ cms:partial:path/to/partial }}     # same as <%= render :partial => 'path/to/partial' %>
     {{ cms:partial:path/to/partial:a:b }} # same as <%= render :partial => 'path/to/partial',
                                           #   :locals => { :param_1 => 'a', :param_1 => 'b' } %>
+                                          
+### File
+Uploaded files can be linked using these tags:
+
+    {{ cms:file:file_name.ext }}              # File URL: /system/files/123/file_name.ext
+    {{ cms:file:file_name.ext:link }}         # Link tag: <a href='file_url'>file_label</a>
+    {{ cms:file:file_name.ext:link:label }}   # Link tag with label: <a href='file_url'>label</a>
+    {{ cms:file:file_name.ext:image }}        # Image tag: <img src='file_url' alt='file_label' />
+    {{ cms:file:file_name.ext:image:label }}  # Image tag with label: <img src='file_url' alt='label' />
+    
+### Assets (Layout CSS and JS)
+You can define CSS and Javascript in your CMS Layouts. This is how you can easily pull it in:
+
+    {{ cms:asset:layout_slug:css }}           # URL for CSS: /cms-css/site_id/layout_slug.css
+    {{ cms:asset:layout_slug:css:html_tag }}  # Link tag: <link href='css_url' />
+    {{ cms:asset:layout_slug:js }}            # URL for JS: /cms-js/site_id/layout_slug.js
+    {{ cms:asset:layout_slug:js:html_tag }}   # Script tag: <script src='js_url'></script>
+    
