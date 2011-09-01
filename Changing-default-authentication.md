@@ -8,4 +8,8 @@ Do you have other authentication system in place (like Devise, AuthLogic, etc) a
       end
     end
     
-You can put this module in /config/initializers/comfortable\_mexican\_sofa.rb and change authentication method: `config.authentication = 'CmsDeviseAuth'`. Now to access Sofa's admin area users will be authenticated against your existing authentication system.
+You can put this module in /config/initializers/comfortable\_mexican\_sofa.rb and change authentication method:
+    
+    config.admin_auth = 'CmsDeviseAuth'
+
+Now to access Sofa's admin area users will be authenticated against your existing authentication system.
