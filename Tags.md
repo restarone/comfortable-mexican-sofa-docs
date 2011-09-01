@@ -17,7 +17,7 @@ Page tags are pieces of text content that will get rendered on the page. Format 
     {{ cms:page:some_label:integer }}     # a number field
     {{ cms:page:some_label:rich_text }}   # wymiwyg editor will be used to edit this content
     
-### Field
+#### Field
 Field tags are pieces of text content that are NOT rendered on the page. They can be accessed via your application's layout / helpers / partials etc. Useful for populating this like <meta> tags.
     
     {{ cms:field:some_label:string }}
@@ -26,25 +26,25 @@ Field tags are pieces of text content that are NOT rendered on the page. They ca
     {{ cms:page:some_label:datetime }}    # similarly, datetime widget in the admin area
     {{ cms:page:some_label:integer }}     # a number field
     
-### Snippet
+#### Snippet
 Snippet tags are bits or reusable content that can be used anywhere. Imagine creating content like a sharing widget, or business address that you want to randomly use across your site.
     
     {{ cms:snippet:some_label }}
     
-### Helper
+#### Helper
 Helper is a wrapper for your regular helpers. Normally you cannot have IRB in CMS content, so there are tags that allow calling helpers and partials.
     
     {{ cms:helper:method_name }}          # same as <%= method_name() %>
     {{ cms:helper:method_name:x:y:z }}    # same as <%= method_name('x', 'y', 'z') %>
     
-### Partial
+#### Partial
 Partial tags are wrappers just like above helper ones.
     
     {{ cms:partial:path/to/partial }}     # same as <%= render :partial => 'path/to/partial' %>
     {{ cms:partial:path/to/partial:a:b }} # same as <%= render :partial => 'path/to/partial',
                                           #   :locals => { :param_1 => 'a', :param_1 => 'b' } %>
                                           
-### File
+#### File
 Uploaded files can be linked using these tags:
 
     {{ cms:file:file_name.ext }}              # File URL: /system/files/123/file_name.ext
@@ -53,7 +53,7 @@ Uploaded files can be linked using these tags:
     {{ cms:file:file_name.ext:image }}        # Image tag: <img src='file_url' alt='file_label' />
     {{ cms:file:file_name.ext:image:label }}  # Image tag with label: <img src='file_url' alt='label' />
     
-### Assets (Layout CSS and JS)
+#### Assets (Layout CSS and JS)
 You can define CSS and Javascript in your CMS Layouts. This is how you can easily pull it in:
 
     {{ cms:asset:layout_slug:css }}           # URL for CSS: /cms-css/site_id/layout_slug.css
