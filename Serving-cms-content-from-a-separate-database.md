@@ -3,3 +3,5 @@ You can setup ComfortableMexicanSofa so it serves content from a different datab
     config.database_config = 'custom'
 
 Now you need to create definition in your `database.yml` file for `custom_development` and `custom_production`, and other environments you may have. Note that in `test` environment it will use only same database as your main app for testing. That's just what Rails does.
+
+You'll need to edit migrations to include `ComfortableMexicanSofa.establish_connection(ActiveRecord::Base)` so they are run using proper database configuration.
