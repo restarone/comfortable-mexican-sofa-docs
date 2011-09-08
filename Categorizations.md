@@ -8,3 +8,18 @@ For example, on the homepage we have some sort of a carousel element with a numb
 If you have multiple sites going on you'll need to make sure that you're not pulling content from a wrong site:
 
     - @cms_site.snippets.of_type('carousel')
+
+## Using CMS Categories on your own models
+If you wish to use this functionality for your own models all you need to do is include `cms_is_categorized` in your model. Like this:
+
+   class Events < ActiveRecord::Base
+     cms_is_categorized
+     # ... more stuff
+   end
+
+Then all you need to do is add the form partial in the view like this:
+  
+    = cms_form_for @event do |form|
+      = form.text_field :title
+      = render :partial => 'cms_admin/categories/form', :object => form
+      = form.submit 'Save'
