@@ -22,7 +22,7 @@
 * **[[Snippets]]**
 * **[[Revisions]]**
 * **[[Files]]**
-* **[[Categories]]**
+* **[[Categorizations]]**
 * **[[Tags]]**
 
 ### How-Tos
