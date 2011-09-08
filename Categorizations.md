@@ -12,7 +12,7 @@ If you have multiple sites going on you'll need to make sure that you're not pul
 ### Using CMS Categories on your own models
 If you wish to use this functionality for your own models all you need to do is include `cms_is_categorized` in your model. Like this:
 
-    class Events < ActiveRecord::Base
+    class Event < ActiveRecord::Base
       cms_is_categorized
       # ... more stuff
     end
