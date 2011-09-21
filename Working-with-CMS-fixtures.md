@@ -9,3 +9,16 @@ To load fixtures into the database just run this rake task: `rake comfortable_me
 
 ### Exporting into Files
 If you need to dump database contents into fixture files run: `rake comfortable_mexican_sofa:fixtures:export FROM=example.com TO=example.local`. This will create example.local folder and dump all content from example.com Site.
+
+### Using Fixtures in tests
+All you need to do is create a rake task like this:
+    
+    namespace :test do
+      task :prepare do
+        ENV['FROM'] = 'localhost'
+        ENV['TO']   = 'test.host'
+        Rake::Task['comfortable_mexican_sofa:fixtures:import'].invoke
+      end
+    end
+
+Now, when runnining `rake` or `rake:test` CMS fixtures will be loaded in.
