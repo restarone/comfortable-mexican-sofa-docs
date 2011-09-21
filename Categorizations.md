@@ -23,3 +23,6 @@ Then all you need to do is add the form partial in the view like this:
       = form.text_field :title
       = render :partial => 'cms_admin/categories/form', :object => form
       = form.submit 'Save'
+
+### Automatic Categorization
+Files that are uploaded via the side widget when managing layouts, pages or snippets can be automatically categorized. For that you need to enable this config in the initializer: `config.auto_file_categorization = true`. For example if we are editing a page with full path `/about-us/our-people` all files uploaded for that page will be attached to category with label `[page] /about-us/our-people`. Then you can easily use that category to display all files associated with that page.
