@@ -60,4 +60,22 @@ You can define CSS and Javascript in your CMS Layouts. This is how you can easil
     {{ cms:asset:layout_slug:css:html_tag }}  # Link tag: <link href='css_url' />
     {{ cms:asset:layout_slug:js }}            # URL for JS: /cms-js/site_id/layout_slug.js
     {{ cms:asset:layout_slug:js:html_tag }}   # Script tag: <script src='js_url'></script>
+
+#### Collection
+Collection is somewhat similar to the partial tag. The difference is that you define the partial on the Layout level and then you can choose what object will be rendered during Page creation and editing. Here's a simple example: Imagine that your app has many Albums and you would like to inject that album somewhere on the page. You could use a partial on the Page level, but then you need to deal with the tag. Instead you can define this on your Layout:
+
+    {{ cms:collection:album:albums/show }}
     
+This tag will accomplish two things. First of all, during Page editing you'll see a select element for Album with all your albums available for selection. This control will not render unless Album has `label` and `id` attributes. If you happen to have `title` and wish to use `slug` as an identifier adjust tag to be this:
+
+    {{ cms:collection:album:albums/show:title:slug }}
+    
+You also may attach extra parameters:
+    
+    {{ cms:collection:album:albums/show:title:slug:a:b }}
+    
+During the render, this will be transformed into a partial tag:
+
+    <%= render :partial => 'albums/show', :locals => { :model => 'Album', :identifier => '<album_slug>', :param_1 => 'a', :param_1 => 'b' } %>
+    
+Inside the partial you can load Album based on the identifier provided and render whatever you need.
