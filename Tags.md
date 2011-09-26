@@ -62,20 +62,23 @@ You can define CSS and Javascript in your CMS Layouts. This is how you can easil
     {{ cms:asset:layout_slug:js:html_tag }}   # Script tag: <script src='js_url'></script>
 
 #### Collection
-Collection is somewhat similar to the partial tag. The difference is that you define the partial on the Layout level and then you can choose what object will be rendered during Page creation and editing. Here's a simple example: Imagine that your app has many Albums and you would like to inject that album somewhere on the page. You could use a partial on the Page level, but then you need to deal with the tag. Instead you can define this on your Layout:
+Collection is just a smarter, more user-friendly Partial tag. Collection automatically generates a partial tag for an object selected during page creation/editing.
+This a tag that you generally want to use on the Layout level, as it's not going to do anything anywhere else. Here's a signature of the Collection tag:
+    
+    {{ cms:collection:some_label:collection_class:collection_partial:collection_title:collection_identifier:collection_params }}
+    
+Looks a bit complicated so let's deconstruct it:
 
-    {{ cms:collection:album:albums/show }}
+    collection_class      -> Class name of the object that you want to render.
+                             If it's something like Herp::HerpityDerp then the value should be: `herp/herpity_derp`
+    collection_partial    -> (optional) Based on the above will default to: `partials/herp/herpity_derps`
+    collection_title      -> (optional) In the admin form what method identifies the object? Defaults to `label`
+    collection_identifier -> (optional) What we are storing to identify object. Defaults to `id`
+    collection_params     -> (optional) Like for the Partial you can pass extra params that will be used to render the tag
     
-This tag will accomplish two things. First of all, during Page editing you'll see a select element for Album with all your albums available for selection. This control will not render unless Album has `label` and `id` attributes. If you happen to have `title` and wish to use `slug` as an identifier adjust tag to be this:
-
-    {{ cms:collection:album:albums/show:title:slug }}
+What if don't want to list all objects in the admin? You can define a scope called `cms_collection` that takes arguments from the `collection_params`. Observe:
     
-You also may attach extra parameters:
+    class Herp::HerpityDerp < ActiveRecord::Base
+      scope cms_collection, lambda{|*args| where(:color => args[0], :smell => args[1])}
+    end
     
-    {{ cms:collection:album:albums/show:title:slug:a:b }}
-    
-During the render, this will be transformed into a partial tag:
-
-    <%= render :partial => 'albums/show', :locals => { :model => 'Album', :identifier => '<album_slug>', :param_1 => 'a', :param_1 => 'b' } %>
-    
-Inside the partial you can load Album based on the identifier provided and render whatever you need.
