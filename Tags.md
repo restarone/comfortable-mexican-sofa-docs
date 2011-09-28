@@ -57,7 +57,7 @@ Uploaded files can be linked using these tags:
 You can define CSS and Javascript in your CMS Layouts. This is how you can easily pull it in:
 
     {{ cms:asset:layout_slug:css }}           # URL for CSS: /cms-css/site_id/layout_slug.css
-    {{ cms:asset:layout_slug:css:html_tag }}  # Link tag: <link href='css_url' />
+    {{ cms:asset:layout_slug:css:html_tag }}  # Link tag: <a href='css_url' />
     {{ cms:asset:layout_slug:js }}            # URL for JS: /cms-js/site_id/layout_slug.js
     {{ cms:asset:layout_slug:js:html_tag }}   # Script tag: <script src='js_url'></script>
 
@@ -81,4 +81,28 @@ What if don't want to list all objects in the admin? You can define a scope call
     class Herp::HerpityDerp < ActiveRecord::Base
       scope cms_collection, lambda{|*args| where(:color => args[0], :smell => args[1])}
     end
+
+#### PageFile and PageFiles
+This tag allows you to attach files directly to the page and render them out. Let's assume that we have an image tag on the Layout and it's source needs to be populated via file that is uploaded for some page. All you need to do is add this tag in place of the `src` content:
     
+    {{ cms:page_file:header }}
+    
+This will output the URL of the uploaded file. There are other variations of this tag:
+    
+    {{ cms:page_file:header:url }}          # File URL: /system/files/123/file_name.ext
+    {{ cms:page_file:header:link }}         # Link tag: <a href='file_url'>file_label</a>
+    {{ cms:page_file:header:link:label }}   # Link tag with label: <a href='file_url'>label</a>
+    {{ cms:page_file:header:image }}        # Image tag: <img src='file_url' alt='file_label' />
+    {{ cms:page_file:header:image:label }}  # Image tag with label: <img src='file_url' alt='label' />
+    
+The most useful way to render this tag is via a partial:
+    
+    {{ cms:page_file:header:partial }}                      # with default path to 'partials/page_file'
+    {{ cms:page_file:header:partial:path/to/partial }}      # with defined path
+    {{ cms:page_file:header:partial:path/to/partial:a:b }}  # with params 'a' and 'b'. See partial tag
+    
+If you need to handle multiple files at the same time you need to use PageFiles tag:
+    
+    {{ cms:page_files:header }}
+    
+Everything else is pretty much the same as for the single file.
