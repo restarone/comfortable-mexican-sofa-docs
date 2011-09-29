@@ -7,7 +7,7 @@ For example, on the homepage we have some sort of a carousel element with a numb
 
 If you have multiple sites going on you'll need to make sure that you're not pulling content from a wrong site:
 
-    - @cms_site.snippets.of_type('carousel')
+    - @cms_site.snippets.for_category('carousel')
 
 ### Using CMS Categories on your own models
 If you wish to use this functionality for your own models all you need to do is include `cms_is_categorized` in your model. Like this:
