@@ -2,7 +2,7 @@ Pages, Snippets and Files can be categorized. It allows for easier organization 
 
 For example, on the homepage we have some sort of a carousel element with a number of slides that client wants to manage. However, that client doesn't have experience with HTML, so we going to use Snippets to solve this problem. All we need to do is assign snippets to category `carousel` and then from your application we can easily access them like so:
 
-    - Cms::Snippet.of_type('carousel').each do |slide|
+    - Cms::Snippet.for_category('carousel').each do |slide|
       .slide= slide.content
 
 If you have multiple sites going on you'll need to make sure that you're not pulling content from a wrong site:
