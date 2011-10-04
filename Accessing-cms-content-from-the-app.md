@@ -21,7 +21,7 @@ Now a page with full_path '/events/index' will be rendered. You probably want to
 Note that ComfortableMexicanSofa will attempt to rescue `ActionView::MissingTemplate` by serving a matching CMS page.
 
 ## Render CMS Layout
-What if you want want to create CMS pages and partials but want to render your regular Rails template inside CMS layout? You can do it like so:
+What if you don't want to create CMS pages and partials but want to render your regular Rails template inside CMS layout? You can do it like so:
     
     def index
       @events = Event.all
