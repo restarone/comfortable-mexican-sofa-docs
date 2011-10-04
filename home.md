@@ -30,7 +30,6 @@
 * **[[Working with CMS fixtures]]**
 * **[[Accessing CMS content from the app]]**
 * **[[Creating navigation from pages]]**
-* **[[Using CMS pages as Rails views]]**
 * **[[Reusing Sofa's admin area]]**
 * **[[Password protecting pages]]**
 * **[[Serving CMS content from a separate database]]**
