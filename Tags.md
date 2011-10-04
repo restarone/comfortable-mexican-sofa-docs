@@ -18,7 +18,7 @@ Page tags are pieces of text content that will get rendered on the page. Format 
     {{ cms:page:some_label:rich_text }}   # wymiwyg editor will be used to edit this content
     
 ## Field
-Field tags are pieces of text content that are NOT rendered on the page. They can be accessed via your application's layout / helpers / partials etc. Useful for populating this like <meta> tags.
+Field tags are pieces of text content that are NOT rendered on the page. They can be accessed in your application's layout / helpers / partials via `cms_page_content(:some_label)` helper method. Useful for populating things like `<meta>` tags.
     
     {{ cms:field:some_label:string }}
     {{ cms:field:some_label }}            # same as above. 'string' is default format for fields
