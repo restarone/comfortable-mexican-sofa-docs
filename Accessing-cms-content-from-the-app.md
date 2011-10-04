@@ -1,5 +1,3 @@
-There are several ways you can interface with ComfortableMexicanSofa from your application.
-
 ## Instance Variables
 When rendering partials, helpers from CMS you have access to `@cms_site`, `@cms_layout` and `@cms_page`. For example, you can probably use page object to render a navigation. Application layout also has access to those variables if used in the Cms::Layout.
 
@@ -34,9 +32,9 @@ What if you want want to create CMS pages and partials but want to render your r
       }
     end
     
-So if you have a layout with slug `three_column` with content like this: `{{cms:page:column_a}} {{cms:page:column_b}} {{cms:page:column_c}}`. It should be pretty obvious that `column_a` will be populated with provided text, `column_b` will use rendered template and `column_c` will have rendered partial as its content.
+So if you have a layout with slug `three_column` with content like this: "`{{cms:page:column_a}} {{cms:page:column_b}} {{cms:page:column_c}}`". It should be pretty obvious that `column_a` will be populated with provided text, `column_b` will use rendered template and `column_c` will have rendered partial as its content.
 
-If layout has a simple tag like this: `{{cms:page:content}}` and you're OK with rendering the actual default template for that action you can simplify render call to this:
+If layout has a simple tag like this: "`{{cms:page:content}}`" and you're OK with rendering the actual default template for that action you can simplify render call to this:
 
     def index
       # same as:
