@@ -101,8 +101,12 @@ The most useful way to render this tag is via a partial:
     {{ cms:page_file:header:partial:path/to/partial }}      # with defined path
     {{ cms:page_file:header:partial:path/to/partial:a:b }}  # with params 'a' and 'b'. See partial tag
     
-If you need to handle multiple files at the same time you need to use PageFiles tag:
+If you need to handle multiple files at the same time you need to use PageFiles tag. Everything else is pretty much the same as for the single file.
     
     {{ cms:page_files:header }}
+
+When using to upload images you can actually automatically resize/crop them. See the available [resize/crop options](http://www.imagemagick.org/Usage/resize/#resize).
+
+   {{ cms:page_file:header:image[50x50#]:label }}
+   {{ cms:page_files:photos:partial[100x50>]:path/to/partial }}
     
-Everything else is pretty much the same as for the single file.
