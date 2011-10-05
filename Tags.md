@@ -107,6 +107,6 @@ If you need to handle multiple files at the same time you need to use PageFiles 
 
 When using to upload images you can actually automatically resize/crop them. See the available [resize/crop options](http://www.imagemagick.org/Usage/resize/#resize).
 
-   {{ cms:page_file:header:image[50x50#]:label }}
-   {{ cms:page_files:photos:partial[100x50>]:path/to/partial }}
+    {{ cms:page_file:header:image[50x50#]:label }}
+    {{ cms:page_files:photos:partial[100x50>]:path/to/partial }}
     
