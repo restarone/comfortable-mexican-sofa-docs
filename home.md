@@ -34,13 +34,12 @@
 * **[[Password protecting pages]]**
 * **[[Serving CMS content from a separate database]]**
 
-### Help
-* **[[Troubleshooting common problems]]**
-
 ### Contribute
 Be as awesome as [these guys](https://github.com/twg/comfortable-mexican-sofa/contributors) and help Sofa become even better.
 
 * **[[How to contribute to ComfortableMexicanSofa development]]**
 
-### Contact
+### Help and Contact
+GoogleGroups [[http://groups.google.com/group/comfortable-mexican-sofa]]
+
 You if you have any questions feel free to contact me via [GitHub](https://github.com/gbh) or [@GroceryBagHead](http://twitter.com/#!/GroceryBagHead)
