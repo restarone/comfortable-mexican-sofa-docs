@@ -1,2 +1,0 @@
-### Routing Errors
-If you're getting any errors related to routes take a look what you have going on with `rake routes`. Sofa's routes should be last and there should be no catch-all routes like `match '*path' => 'some_controller#some_action'`. Also routes like these will cause problems as well: `match '/:controller(/:action(/:id))'`
