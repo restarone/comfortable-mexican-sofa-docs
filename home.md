@@ -33,6 +33,7 @@
 * **[[Reusing Sofa's admin area]]**
 * **[[Password protecting pages]]**
 * **[[Serving CMS content from a separate database]]**
+* **[[Customizing the WYSIWYG editor]]**
 
 ### Contribute
 Be as awesome as [these guys](https://github.com/twg/comfortable-mexican-sofa/contributors) and help Sofa become even better.
