@@ -29,5 +29,14 @@ It's also a good idea to run `rails generate cms` to update the initializer or i
 ## Upgrading from 1.4.x to 1.5.0
 * Introducing Collection and PageFile(s) tags.
 * Reordering functionality for Layouts, Snippets and Files.
-* As always migration is needed: [[https://raw.github.com/twg/comfortable-mexican-sofa/master/db/migrate/upgrades/06_upgrade_to_1_5_0.rb]]
+* As always migration is needed: [[https:Re//raw.github.com/twg/comfortable-mexican-sofa/master/db/migrate/upgrades/06_upgrade_to_1_5_0.rb]]
 * Rails 3.0 users please run `rails g cms` to refresh CSS.
+
+## Upgrading from 1.5.x to 1.6.0
+* Replaced Wymeditor with elRTE.
+* Integrated image insertion with uploaded files.
+* Categories are scoped on Sites.
+* Cleaned up mess with slugs/labels. Now if your `find_by_slug` method is failing you want to replace it with `find_by_identifier`. Sites have identifiers now too.
+* Bumped up paperclip version in the Gemfile. Anything above 2.3.0 is OK. Choose your version wisely.
+* Migration file: [[https:Re//raw.github.com/twg/comfortable-mexican-sofa/master/db/migrate/upgrades/07_upgrade_to_1_6_0.rb]]
+* Don't forget to `rails g cms` if not using asset pipeline.
