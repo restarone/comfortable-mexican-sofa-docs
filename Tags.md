@@ -22,9 +22,9 @@ Field tags are pieces of text content that are **NOT** rendered on the page. The
     
     {{ cms:field:some_label:string }}
     {{ cms:field:some_label }}            # same as above. 'string' is default format for fields
-    {{ cms:page:some_label:string }}      # in admin area text field is displayed instead of textarea
-    {{ cms:page:some_label:datetime }}    # similarly, datetime widget in the admin area
-    {{ cms:page:some_label:integer }}     # a number field
+    {{ cms:field:some_label:string }}      # in admin area text field is displayed instead of textarea
+    {{ cms:field:some_label:datetime }}    # similarly, datetime widget in the admin area
+    {{ cms:field:some_label:integer }}     # a number field
     
 ## Snippet
 Snippet tags are bits or reusable content that can be used anywhere. Imagine creating content like a sharing widget, or business address that you want to randomly use across your site.
