@@ -40,3 +40,4 @@ It's also a good idea to run `rails generate cms` to update the initializer or i
 * Bumped up paperclip version in the Gemfile. Anything above 2.3.0 is OK. Choose your version wisely.
 * Migration file: [[https://raw.github.com/twg/comfortable-mexican-sofa/master/db/migrate/upgrades/07_upgrade_to_1_6_0.rb]]
 * Don't forget to `rails g cms` if not using asset pipeline.
+* You also might need to refresh thumbnails for previously uploaded images with: `rake paperclip:refresh CLASS=Cms::File`
