@@ -7,7 +7,7 @@ and run `bundle install`.
 It's also a good idea to run `rails generate cms` to update the initializer or image/css/js assets (if using Rails3.0). Sometimes you'll need to create migrations to adjust the database. Generally it happens during major and minor version changes. Meaning that upgrade from 1.1.5 to 1.2.2 will probably require a migration, but 1.1.5 to 1.1.9 will not. If upgrading several minor version you'll need to apply all database migrations sequentially.
 
 ## Upgrading from 1.0.x to 1.1.1
-* There was slight reorganization of internals so there's a quick migration to make everything work again: [[https://github.com/twg/comfortable-mexican-sofa/raw/db/upgrade_migrations/02_upgrade_to_1_1_0.rb]]. Just create a new migration, paste content of the above file and `rake db:migrate`.
+* There was slight reorganization of internals so there's a quick migration to make everything work again: [[https://raw.github.com/twg/comfortable-mexican-sofa/master/db/upgrade_migrations/02_upgrade_to_1_1_0.rb]]. Just create a new migration, paste content of the above file and `rake db:migrate`.
 * Some initializer settings got changed/removed. See: [[https://github.com/twg/comfortable-mexican-sofa/raw/master/config/initializers/comfortable_mexican_sofa.rb]]
 * `CmsSite`, `CmsLayout`, `CmsPage`, `CmsSnippet` are changed to `Cms::Site`, `Cms::Layout`, `Cms::Page` and `Cms::Snippet`. It only matters if you directly manipulate those objects somehow.
 
