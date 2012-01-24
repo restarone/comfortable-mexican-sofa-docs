@@ -54,10 +54,10 @@ What happened here is that content of this layout is merged into the parent via 
 ### CSS and JS
 You can manage CSS right here in Sofa. Helps in those cases when you need to move that logo 2px to the left without redeploying the application. The trick is to somehow link that resource to the page. You'll notice that you have routes available:
     
-    cms_css GET    /cms-css/:site_id/:layout_slug(.:format) {:controller=>"cms_content", :action=>"render_css"}
-    cms_js  GET    /cms-js/:site_id/:layout_slug(.:format)  {:controller=>"cms_content", :action=>"render_js"}
+    cms_css GET    /cms-css/:site_id/:layout_identifier(.:format) {:controller=>"cms_content", :action=>"render_css"}
+    cms_js  GET    /cms-js/:site_id/:layout_identifier(.:format)  {:controller=>"cms_content", :action=>"render_js"}
     
-So all you need to do is link to a proper path. So if your site has _id_ `1` and layout slug is `default` the path to css will be: `/cms-css/1/default.css`. Same applies to javascript link.
+So all you need to do is link to a proper path. So if your site has _id_ `1` and layout identifier is `default` the path to css will be: `/cms-css/1/default.css`. Same applies to javascript link.
 
 If you fully manage layouts you can use a tag to link to css/js:
 
@@ -70,5 +70,5 @@ If you fully manage layouts you can use a tag to link to css/js:
     
 If you use application layout this is how you'd access assets:
   
-    <%= stylesheet_link_tag cms_css_path(@cms_site.id, @cms_layout.slug) %>
-    <%= javascript_include_tag cms_js_path(@cms_site.id, @cms_layout.slug) %>
+    <%= stylesheet_link_tag cms_css_path(@cms_site.id, @cms_layout.identifier) %>
+    <%= javascript_include_tag cms_js_path(@cms_site.id, @cms_layout.identifier) %>
