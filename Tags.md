@@ -94,6 +94,7 @@ This will output the URL of the uploaded file. There are other variations of thi
     {{ cms:page_file:header:link:label }}   # Link tag with label: <a href='file_url'>label</a>
     {{ cms:page_file:header:image }}        # Image tag: <img src='file_url' alt='file_label' />
     {{ cms:page_file:header:image:label }}  # Image tag with label: <img src='file_url' alt='label' />
+    {{ cms:page_file:header:field }}        # Won't render anything out. Access via cms_page_content helper
     
 The most useful way to render this tag is via a partial:
     
