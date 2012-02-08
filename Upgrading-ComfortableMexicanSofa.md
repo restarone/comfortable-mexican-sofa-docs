@@ -8,7 +8,7 @@ It's also a good idea to run `rails generate comfy:cms` to update the initialize
 
 ---
 
-## Upgrading to 1.6.11
+## Upgrading to 1.6.11+
 Discovered a crappy paperclip default that now corrected with `config.upload_file_options`. Now default attachment `url` is set to `/system/:class/:id/:attachment/:style/:filename` instead of `/system/:attachment/:id/:style/:filename`. This means you'll need to move directories to adjust for this change. Not a problem if you never uploaded any files through CMS, or have your own override in place.
 
 ## Upgrading from 1.5.x to 1.6.0
