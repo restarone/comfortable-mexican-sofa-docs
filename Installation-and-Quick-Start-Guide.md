@@ -6,7 +6,7 @@ Add the gem definition to your Rails project's Gemfile:
 Then from your Rails project's root run these commands:
     
     bundle install
-    rails generate cms
+    rails generate comfy:cms
     rake db:migrate
 
 The generator will create the initializer, database migration, example CMS fixtures, and, if running Rails 3.0, will copy all necessary assets into `/public` directory.
