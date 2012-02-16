@@ -8,6 +8,7 @@ In your comfortable_mexican_sofa.rb
 
 ```
   # A class that is included as a sweeper to admin base controller if it's set  
+  # You could also give a array of sweepers
   config.admin_cache_sweeper = CmsAdminSweeper
 ```
 
