@@ -34,6 +34,7 @@
 * **[[Password protecting pages]]**
 * **[[Serving CMS content from a separate database]]**
 * **[[Customizing the WYSIWYG editor]]**
+* **[[Using CacheSweeper to Inform Updates or to Clear Caches]]**
 
 ### Contribute
 Be as awesome as [these guys](https://github.com/twg/comfortable-mexican-sofa/contributors) and help Sofa become even better.
