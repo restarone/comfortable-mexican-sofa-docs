@@ -35,6 +35,7 @@
 * **[[Serving CMS content from a separate database]]**
 * **[[Customizing the WYSIWYG editor]]**
 * **[[Using CacheSweeper to Inform Updates or to Clear Caches]]**
+* **[[How to protect other engines from catch all route]]**
 
 ### Contribute
 Be as awesome as [these guys](https://github.com/twg/comfortable-mexican-sofa/contributors) and help Sofa become even better.
