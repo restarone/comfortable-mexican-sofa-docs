@@ -24,6 +24,7 @@
 * **[[Files]]**
 * **[[Categorizations]]**
 * **[[Tags]]**
+* **[[Sitemaps]]**
 
 ### How-Tos
 * **[[Changing default authentication]]**
