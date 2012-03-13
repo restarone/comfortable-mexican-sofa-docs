@@ -13,9 +13,9 @@ The callback is passed the current cms_site, an instance of the view being rende
 This allows the following to work, which would add the site news to the sitemap:
 
 <pre>
-class SiteNews < ActiveRecord::Base
+class SiteNews &lt; ActiveRecord::Base
   def self.sitemap_callback(cms_site, view, xml)
-    scoped.where(:cms_site_id => cms_site).published.each do |news|
+    scoped.where(:cms_site_id =&gt; cms_site).published.each do |news|
       xml.url do
         xml.loc view.site_news_url(news)
         xml.lastmod news.updated_at.strftime('%Y-%m-%d')
