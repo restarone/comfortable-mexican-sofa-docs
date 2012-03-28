@@ -9,7 +9,7 @@ GitHub makes it all too easy:
 
 ComfortableMexicanSofa is an engine so you can run it as a standalone for development purposes. Clone your fork into a directory, run `bundle install` and then `rake db:migrate`. Feel free to change Gemfile if you want to work against a particular Rails version (just don't commit it later).
 
-You run tests as normal: `rake tests`
+You run tests as normal: `rake test`
 
 As far as conventions go, there's only one rule: Erb/Css/UnitTest only please.
 
