@@ -10,6 +10,7 @@ Here's a simple example of one:
         <h1>{{cms:page:title:string}}</h1>
         <div class="left_column">
           {{cms:page:left_column}}
+        </div>
         <div class="right_column">
           {{cms:page:right_column}}
         </div>
