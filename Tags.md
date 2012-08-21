@@ -27,12 +27,12 @@ Field tags are pieces of text content that are **NOT** rendered on the page. The
     {{ cms:field:some_label:integer }}     # a number field
     
 ## Snippet
-Snippet tags are bits or reusable content that can be used anywhere. Imagine creating content like a sharing widget, or business address that you want to randomly use across your site.
+Snippet tags are bits of reusable content that can be used anywhere. Imagine creating content like a sharing widget, or business address that you want to randomly use across your site.
     
     {{ cms:snippet:some_label }}
     
 ## Helper
-Helper is a wrapper for your regular helpers. Normally you cannot have IRB in CMS content, so there are tags that allow calling helpers and partials.
+Helper is a wrapper for your regular helpers. Normally you cannot have ERB in CMS content, so there are tags that allow calling helpers and partials.
     
     {{ cms:helper:method_name }}          # same as <%= method_name() %>
     {{ cms:helper:method_name:x:y:z }}    # same as <%= method_name('x', 'y', 'z') %>
@@ -42,7 +42,7 @@ Partial tags are wrappers just like above helper ones.
     
     {{ cms:partial:path/to/partial }}     # same as <%= render :partial => 'path/to/partial' %>
     {{ cms:partial:path/to/partial:a:b }} # same as <%= render :partial => 'path/to/partial',
-                                          #   :locals => { :param_1 => 'a', :param_1 => 'b' } %>
+                                          #   :locals => { :param_1 => 'a', :param_2 => 'b' } %>
                                           
 ## File
 Uploaded files can be linked using these tags:
@@ -114,4 +114,4 @@ When using to upload images you can actually automatically resize/crop them. See
 ## Namespaces
 When you have way too many pieces of content on a single page namespacing content tags might help a bit. Namespaced tags will appear in their own tab in the admin area. This an example of such tag:
 
-    {{ cms:page.some_namespace.some_label:rich_text }}
+    {{ cms:page:some_namespace.some_label:rich_text }}
