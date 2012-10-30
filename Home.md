@@ -1,4 +1,4 @@
-# ComfortableMexicanSofa - CMS Engine for Ruby on Rails 3 apps
+## ComfortableMexicanSofa - Rails3 CMS Engine
 
 **Do you need something to manage content for your Rails 3 application? There's nothing more powerful and easier than ComfortableMexicanSofa.**
 
