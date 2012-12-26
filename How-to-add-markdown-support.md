@@ -23,4 +23,15 @@ end
 
 ```
 
+You also need to inject a helper to render the markdown.  Put the following after the above class in the same file (e.g. config/initializers/markdown_tag.rb):
+
+```
+ComfortableMexicanSofa::FormBuilder.class_eval %Q^
+  def page_markdown(tag, index)
+    default_tag_field(tag, index, :method => :text_area_tag)
+  end
+^
+```
+
+
 Bam! Now you can define tags as such: {{cms:page:something:markdown}}
