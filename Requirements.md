@@ -1,7 +1,7 @@
 * ComfortableMexicanSofa is tested to work on ruby 1.8.7, 1.9.2 and rubinius.
 * It uses ActiveRecord, so it plays well with SQLite, MySQL and Postgres.
 * It's designed and tested to work on both Rails 3.0 and 3.1 (with or without asset pipeline)
-* Note: Problems recognizing the tags are known with ruby 1.9,3,p327
+* Note: Problems recognizing the tags are known with ruby 1.9,3,p327 -> downgrade to p125
 
 ## Dependencies
 
