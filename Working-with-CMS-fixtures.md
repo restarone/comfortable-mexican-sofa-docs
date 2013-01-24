@@ -5,18 +5,18 @@ If you run `rails generate cms` you should find an example set of fixtures in [/
 When fixtures are enabled, database is updated with each request, but only if fixture file is newer than the database entry. Database is also purged of items that are not defined in fixtures. So be careful not to clear out your database by mistake.
 
 ### Importing into Database
-To load fixtures into the database just run this rake task: `rake comfortable_mexican_sofa:fixtures:import FROM=example.local TO=example.com`. `from` indicates folder the fixtures are in and `to` is the Site hostname you have defined in the database.
+To load fixtures into the database just run this rake task: `rake comfortable_mexican_sofa:fixtures:import FROM=forder-name TO=site-identifier`. `from` indicates folder the fixtures are in and `to` is the Site identifier you have defined in the database.
 
 ### Exporting into Files
-If you need to dump database contents into fixture files run: `rake comfortable_mexican_sofa:fixtures:export FROM=example.com TO=example.local`. This will create example.local folder and dump all content from example.com Site.
+If you need to dump database contents into fixture files run: `rake comfortable_mexican_sofa:fixtures:export FROM=site-identifier TO=folder-name`. This will create forder-name folder and dump all content from example.com Site.
 
 ### Using Fixtures in tests
 All you need to do is create a rake task like this:
     
     namespace :test do
       task :prepare do
-        ENV['FROM'] = 'localhost'
-        ENV['TO']   = 'test.host'
+        ENV['FROM'] = 'folder-name'
+        ENV['TO']   = 'site-identifier'
         Rake::Task['comfortable_mexican_sofa:fixtures:import'].invoke
       end
     end
