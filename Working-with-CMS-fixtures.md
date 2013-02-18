@@ -8,7 +8,7 @@ When fixtures are enabled, the database is updated with each request, but only i
 To load fixtures into the database just run this rake task: `rake comfortable_mexican_sofa:fixtures:import FROM=folder-name TO=site-identifier`. `from` indicates folder the fixtures are in and `to` is the Site identifier you have defined in the database.
 
 ### Exporting into Files
-If you need to dump database contents into fixture files run: `rake comfortable_mexican_sofa:fixtures:export FROM=site-identifier TO=folder-name`. This will create forder-name folder and dump all content from example.com Site.
+If you need to dump database contents into fixture files run: `rake comfortable_mexican_sofa:fixtures:export FROM=site-identifier TO=folder-name`. This will create folder-name folder and dump all content from site-identifier Site.
 
 ### Using Fixtures in tests
 All you need to do is create a rake task like this:
