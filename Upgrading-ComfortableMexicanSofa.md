@@ -4,7 +4,7 @@ To upgrade to a newer version of ComfortableMexicanSofa you must bump up the ver
 
 and run `bundle install`. 
 
-It's also a good idea to run `rails generate comfy:cms` to update the initializer or image/css/js assets (if using Rails3.0). Sometimes you'll need to create migrations to adjust the database. Generally it happens during major and minor version changes. Meaning that upgrade from 1.1.5 to 1.2.2 will probably require a migration, but 1.1.5 to 1.1.9 will not. If upgrading several minor version you'll need to apply all database migrations sequentially.
+Sometimes you'll need to create migrations to adjust the database. Generally it happens during major and minor version changes. Meaning that upgrade from 1.1.5 to 1.2.2 will probably require a migration, but 1.1.5 to 1.1.9 will not. If upgrading several minor version you'll need to apply all database migrations sequentially.
 
 ---
 
