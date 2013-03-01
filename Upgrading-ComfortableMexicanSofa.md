@@ -19,7 +19,7 @@ It's also a good idea to run `rails generate comfy:cms` to update the initialize
 * Added support for Markdown. You can define markdown fields like this: `{{ cms:page:content:markdown }}`
 * Added support for Ruby 2.0.0
 * Dropped support for Ruby 1.8.7
-* Dropped support for Rails 3.0. It still should work, but you'll need to manually move assets.
+* Dropped support for Rails 3.0
 * Introduced a few common dependencies. HAML/SASS replace HTML/CSS. CoffeeScript will replace JS scripts.
 
 ## Upgrading to 1.6.26+
