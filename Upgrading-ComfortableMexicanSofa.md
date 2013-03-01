@@ -13,7 +13,7 @@ Sometimes you'll need to create migrations to adjust the database. Generally it 
 * Admin interface is styled using [Bootstrap 2.3.0](http://twitter.github.com/bootstrap/)
 * Forms are handled with [formatted_form](https://github.com/twg/formatted_form)
 * Upgraded to [CodeMirror 3](http://codemirror.net/)
-* Bumped up paperclip version requirement. Default config is fixed now.
+* Bumped up Paperclip version requirement to 3.4.0. Default config is fixed now.
 * Replaced elRTE wysiwyg editor with [wysihtml5](http://xing.github.com/wysihtml5/)
 * Due to wysiwyg editor replacement file insertion and management is temporarily missing.
 * Added support for Markdown. You can define markdown fields like this: `{{ cms:page:content:markdown }}`
@@ -23,10 +23,10 @@ Sometimes you'll need to create migrations to adjust the database. Generally it 
 * Introduced a few common dependencies. HAML/SASS replace HTML/CSS. CoffeeScript will replace JS scripts.
 
 ## Upgrading to 1.6.26+
-Fixture importing/exporting uses site identifiers instead of hostnames. You may need to adjust folder names.
+* Fixture importing/exporting uses site identifiers instead of hostnames. You may need to adjust folder names.
 
 ## Upgrading to 1.6.11+
-Discovered a crappy paperclip default that now corrected with `config.upload_file_options`. Now default attachment `url` is set to `/system/:class/:id/:attachment/:style/:filename` instead of `/system/:attachment/:id/:style/:filename`. This means you'll need to move directories to adjust for this change. Not a problem if you never uploaded any files through CMS, or have your own override in place.
+* Discovered a crappy paperclip default that now corrected with `config.upload_file_options`. Now default attachment `url` is set to `/system/:class/:id/:attachment/:style/:filename` instead of `/system/:attachment/:id/:style/:filename`. This means you'll need to move directories to adjust for this change. Not a problem if you never uploaded any files through CMS, or have your own override in place.
 
 ## Upgrading from 1.5.x to 1.6.0
 * Replaced Wymeditor with elRTE.
