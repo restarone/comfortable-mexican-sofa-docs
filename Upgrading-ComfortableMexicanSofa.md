@@ -9,7 +9,6 @@ Sometimes you'll need to create migrations to adjust the database. Generally it 
 ---
 
 ## Upgrading from 1.6.x to 1.7.0+
-* No new migrations to worry about.
 * Admin interface is styled using [Bootstrap 2.3.0](http://twitter.github.com/bootstrap/)
 * Forms are handled with [formatted_form](https://github.com/twg/formatted_form)
 * Upgraded to [CodeMirror 3](http://codemirror.net/)
@@ -21,6 +20,7 @@ Sometimes you'll need to create migrations to adjust the database. Generally it 
 * Dropped support for Ruby 1.8.7
 * Dropped support for Rails 3.0 (upgrade to 3.1 or 3.2)
 * Introduced a few common dependencies. HAML/SASS replace HTML/CSS. CoffeeScript will replace JS scripts.
+* No new migrations to worry about.
 
 ## Upgrading to 1.6.26+
 * Fixture importing/exporting uses site identifiers instead of hostnames. You may need to adjust folder names.
