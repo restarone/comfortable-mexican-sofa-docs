@@ -1,4 +1,6 @@
-You can add markdown support pretty easily though. Just create a tag class to handle it [see existing tags as a reference](https://github.com/comfy/comfortable-mexican-sofa/tree/master/lib/comfortable_mexican_sofa/tags): 
+You can add markdown support pretty easily though. Just create a tag class to handle it [see existing tags as a reference](https://github.com/comfy/comfortable-mexican-sofa/tree/master/lib/comfortable_mexican_sofa/tags):
+
+**NOTE** As of 1.7.0 markdown is supported out of the box. 
 
 ```ruby
 require 'redcarpet'
