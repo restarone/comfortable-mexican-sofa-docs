@@ -1,12 +1,16 @@
 To upgrade to a newer version of ComfortableMexicanSofa you must bump up the version number in your Gemfile like so:
 
-    gem 'comfortable_mexican_sofa', '~> 1.7.0'
+    gem 'comfortable_mexican_sofa', '~> 1.8.0'
 
 and run `bundle install`. 
 
 Sometimes you'll need to create migrations to adjust the database. Generally it happens during major and minor version changes. Meaning that upgrade from 1.1.5 to 1.2.2 will probably require a migration, but 1.1.5 to 1.1.9 will not. If upgrading several minor version you'll need to apply all database migrations sequentially.
 
 ---
+
+## Upgrading from 1.7.x to 1.8.0+
+* Routing is now explicit. No more hoping that the globbing content serving route attaches itself at the bottom. Now you have to specify where routes go. All you need to do it either run `rails g comfy:cms` and move newly created routes (they'll probably end up at the top of the file), or manually paste this at the bottom of your routes.rb: `ComfortableMexicanSofa::Routing.content :path => '/', :sitemap => false`. You should also add this, if you want to access admin area: `ComfortableMexicanSofa::Routing.admin :path => '/cms-admin'`
+* Added extra manifests for easy admin area customization. If you want to change css within admin area, simply create `app/assets/stylesheets/comfortable_mexican_sofa/admin/application.css` (.sass/.scss/.whatever). For javascript, same idea: `app/assets/javascripts/comfortable_mexican_sofa/admin/application.js` (.coffee?).
 
 ## Upgrading from 1.6.x to 1.7.0+
 * Admin interface is styled using [Bootstrap 2.3.0](http://twitter.github.com/bootstrap/)
