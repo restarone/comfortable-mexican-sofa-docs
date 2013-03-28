@@ -9,11 +9,19 @@ Then from your Rails project's root run these commands:
     rails generate comfy:cms
     rake db:migrate
 
-The generator will create the initializer, database migration, example CMS fixtures, and, if running Rails 3.0, will copy all necessary assets into `/public` directory.
+The generator will create the initializer, database migration, example CMS fixtures and will move route sets.
+
+Take a look at `routes.rb` and make sure that the content serving route appears last
+
+```ruby
+ComfortableMexicanSofa::Routing.admin   :path => '/cms-admin'
+ComfortableMexicanSofa::Routing.content :path => '/', :sitemap => false
+```
 
 If you are upgrading from an older version of ComfortableMexicanSofa, please take a look at [[Upgrading ComfortableMexicanSofa]]
 
 ### Quick Start Guide
+
 After finishing installation you should be able to navigate to http://yoursite/cms-admin
 
 The default username and password after installation is 'username' and 'password', which you will probably want to change right away. You can do so by editing the admin credentials, which can be found and changed in the cms initializer: [/config/initializers/comfortable\_mexican\_sofa.rb](https://github.com/comfy/comfortable-mexican-sofa/blob/master/config/initializers/comfortable_mexican_sofa.rb)
