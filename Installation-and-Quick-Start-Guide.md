@@ -52,4 +52,4 @@ A very simple Layout can look like this:
 </html>
 ```
 
-Once you have a Layout, you can create Pages, where the content is populated for your Layouts. It's that easy. Hint: if the system cannot find any content tags in the chosen layout when using 1.9,3,p327 -> downgrade to 1.9,3,p125 and it will work.
+Once you have a layout, you may start creating pages and populating content. It's that easy.
