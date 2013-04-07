@@ -39,13 +39,9 @@ ComfortableMexicanSofa::HttpAuth.password = 'password'
 
 Before we can populate the site with content, we will need to create a Site. The Site is what defines the hostname, content path, and the language. After creating a Site, you need to make a Layout, which is the template for your content; allowing you to define reusable content (such as the header and footer) and placeholders for content.
 
-A Layout can look like this:
+A very simple Layout can look like this:
 ```html
 <html>
-  <head>
-    {{ cms:asset:default:css:html_tag }}
-    {{ cms:asset:default:js:html_tag }}
-  </head>
   <body>
     <h1>{{ cms:page:header:string }}</h1>
     {{ cms:page:content:text }}
