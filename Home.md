@@ -47,4 +47,4 @@ Be as awesome as [these guys](https://github.com/twg/comfortable-mexican-sofa/co
 ### Help and Contact
 GoogleGroups [[http://groups.google.com/group/comfortable-mexican-sofa]]
 
-You if you have any questions feel free to contact me via [GitHub](https://github.com/gbh) or [@GroceryBagHead](http://twitter.com/#!/GroceryBagHead)
+You if you have any questions feel free to contact me via [@GroceryBagHead](http://twitter.com/#!/GroceryBagHead)
