@@ -33,7 +33,7 @@
 * **[[Creating navigation from pages]]**
 * **[[Reusing Sofa's admin area]]**
 * **[[Password protecting pages]]**
-* **[[Replacing default WYSIWYG editor with Redactor]]
+* **[[Replacing default WYSIWYG editor with Redactor]]**
 * **[[Serving CMS content from a separate database]]**
 * **[[Using CacheSweeper to Inform Updates or to Clear Caches]]**
 * **[[How to protect other engines from catch all route]]**
