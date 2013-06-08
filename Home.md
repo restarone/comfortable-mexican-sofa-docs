@@ -38,7 +38,7 @@
 * **[[Using CacheSweeper to Inform Updates or to Clear Caches]]**
 * **[[How to protect other engines from catch all route]]**
 * **[[How to add markdown support]]**
-* **[[Using CMS for emails]]
+* **[[Using CMS for emails]]**
 
 ### Contribute
 Be as awesome as [these guys](https://github.com/twg/comfortable-mexican-sofa/contributors) and help Sofa become even better.
