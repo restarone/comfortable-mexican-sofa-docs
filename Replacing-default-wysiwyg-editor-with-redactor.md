@@ -35,3 +35,7 @@ window.CMS.wysiwyg = ->
 * Move `redactor.css` to `/app/assets/stylesheets/comfortable_mexican_sofa/lib/`
 
 Now all `{{cms:page:label:rich_text}}` fields will be rendered with Redactor.
+
+
+Some pages use CodeMirror by default i.e. `textarea[data-cm-mode]`.
+To override that just override  `window.CMS.codemirror` in your `application.js`. See [application.js.coffee](https://github.com/comfy/comfortable-mexican-sofa/blob/19ecff3ca382c0e1bd607d6e1b62ff2ec0b47280/app/assets/javascripts/comfortable_mexican_sofa/application.js.coffee)
