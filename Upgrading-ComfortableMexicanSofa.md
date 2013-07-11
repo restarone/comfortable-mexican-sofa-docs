@@ -8,6 +8,10 @@ Sometimes you'll need to create migrations to adjust the database. Generally it 
 
 ---
 
+## Upgrading from 1.8.x to 1.9.0+
+* This is upgrade from Rails 3 to Rails 4.
+* You shouldn't need to do anything at all as everything is identical to 1.8.0
+
 ## Upgrading from 1.7.x to 1.8.0+
 * Routing is now explicit. No more hoping that the globbing content serving route attaches itself at the bottom. Now you have to specify where routes go. All you need to do it either run `rails g comfy:cms` and move newly created routes (they'll probably end up at the top of the file), or manually paste this at the bottom of your routes.rb: `ComfortableMexicanSofa::Routing.content :path => '/', :sitemap => false`. You should also add this, if you want to access admin area: `ComfortableMexicanSofa::Routing.admin :path => '/cms-admin'`
 * Added extra manifests for easy admin area customization. If you want to change css within admin area, simply create `app/assets/stylesheets/comfortable_mexican_sofa/admin/application.css` (.sass/.scss/.whatever). For javascript, same idea: `app/assets/javascripts/comfortable_mexican_sofa/admin/application.js` (.coffee?).
