@@ -9,3 +9,7 @@ Fill the blank array with the items you'd like in the toolbar.
 For example, to use HTML table controls, you'd specify:
 
 `$.CMS.config['elRTE']['toolbar'] = ['tables'];`
+
+## Replacing wysihtml5 with a different WYSIWYG editor
+* [[Replacing-default-wysiwyg-editor-with-redactor]]
+* [[Replacing-default-wysiwyg-editor-with-tinymce]]
