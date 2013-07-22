@@ -7,4 +7,6 @@ Gem / Plugin  & Project Page  | Goal / Purpose | Alternative Page
 [ComfyPoll](https://github.com/comfy/comfy-poll) | ComfyPoll is a poll engine for Rails 3.1 apps. Also it integrates with ComfortableMexicanSofa CMS Engine | 
 [ComfyCarousel](https://github.com/comfy/comfy-carousel) | This is a small engine that allows you to manage slideshows. |
 [ComfyImprint](https://github.com/konung/comfy_imprint) | This is what is commonly known as a "Contact Us" page, done as a mountable Rails 3 engine. It integrates with ComfortableMexicanSofa CMS Engine |
+[ComfyAdminConstructor](https://github.com/bgilham/comfy-admin-constructor) | ComfyAdminConstructor allows you to quickly and easily build basic admin interfaces in ComfortableMexicanSofa |
+
               |                |   
