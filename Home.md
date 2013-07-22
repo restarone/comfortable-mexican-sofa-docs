@@ -41,6 +41,9 @@
 * **[[How to add markdown support]]**
 * **[[Using CMS for emails]]**
 
+### Gems / Engines / Plugins
+Here is a list of CMS engines that can be used to enhance CMS and extend feature set. Some can be used separately from Comfortable Mexican Sofa. List of [CMS Engines](https://github.com/comfy/comfortable-mexican-sofa/wiki/Comfy-Gems:-Plugins---Engines--for-Comfortable-Mexican-Sofa)
+
 ### Contribute
 Be as awesome as [these guys](https://github.com/twg/comfortable-mexican-sofa/contributors) and help Sofa become even better.
 
