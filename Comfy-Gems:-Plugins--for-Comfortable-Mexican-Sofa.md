@@ -1,1 +1,0 @@
-This a list of plugins / gems that add extended features to Comfortable Mexican Sofa - Comfy Gems. The purpose is to keep a list of all available plugins / gems in one place, however it is suggested to check each projects  page / issues for the latest compatibility information, as plugins like in any big project tend to lag behind a version or 2 behind.   
