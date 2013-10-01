@@ -13,7 +13,7 @@ Layout defines content areas for the page. For example, if you need a page with 
           {{ cms:snippet:footer }}
         </div>
       </body>
-    <html>
+    </html>
     
 If this layout is chosen during page creation you will notice that you are presented with form fields that correspond to the tags defined in the layout content. In this case you'll have a _Title_ text field and _Content_ text area. When page is rendered, tags are replaced with content that you defined.
 
