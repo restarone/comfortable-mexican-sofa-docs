@@ -4,3 +4,5 @@ Sofa doesn't make assumptions about how you want to render navigation elements, 
       = link_to page.label, page.full_path
 
 Then you can use that from the application layout, or CMS layout/page via a tag.
+
+[Zhao Lu](http://github.com/zlu): Instead of page.full_path, using page.url maybe more useful especially for a multi-site configuration.
