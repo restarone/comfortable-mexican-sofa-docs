@@ -38,7 +38,16 @@
 * **[[Using CMS for emails]]**
 
 ### Gems / Engines / Plugins
-Here is a list of CMS engines that can be used to enhance CMS and extend feature set. Some can be used separately from Comfortable Mexican Sofa. List of [CMS Engines](https://github.com/comfy/comfortable-mexican-sofa/wiki/Comfy-Gems:-Plugins---Engines--for-Comfortable-Mexican-Sofa)
+This a list of plugins / gems / engines that add extended features to Comfortable Mexican Sofa - Comfy Gems.
+
+Gem / Plugin  & Project Page  | Goal / Purpose | CMS Version
+----------------------------- | -------------- | -----------
+[ComfyBlog](https://github.com/comfy/comfy-blog) | ComfyBlog is an simple blog management engine. | >= 1.10
+[ComfyGallery](https://github.com/comfy/comfy-gallery) | ComfyGallery is an image gallery engine. Currenly not up to date. Try: https://github.com/geisimarrech/comfy-gallery | <= 1.6
+[ComfyPoll](https://github.com/comfy/comfy-poll) | ComfyPoll is a poll engine. | <= 1.6
+[ComfyCarousel](https://github.com/comfy/comfy-carousel) | Slideshow management engine. | <= 1.6
+[ComfyImprint](https://github.com/konung/comfy_imprint) | Contact Us form engine | ???
+
 
 ### Contribute
 Be as awesome as [these guys](https://github.com/twg/comfortable-mexican-sofa/contributors) and help Sofa become even better.
