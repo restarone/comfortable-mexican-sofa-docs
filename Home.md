@@ -5,12 +5,10 @@
 * ComfortableMexicanSofa is open source and completely free
 * It's a Rails Engine so it's easy to install and work with
 * Powerful page templating capability
-* Straightforward integration with your application
-* Very comfortable
+* Straightforward integration with your Rails 4 application
 
 ***
 
-* **[[Requirements]]**
 * **[[Installation and Quick Start Guide]]**
 * **[[Upgrading ComfortableMexicanSofa]]**
 
