@@ -19,3 +19,9 @@ Easiest way to generate your admin crud interface is to run `rails g comfy:scaff
 * `app/views/admin/locations/` with all the views
 * `routes.rb` will be updated, but you want to put new route in a proper spot.
 * `app/views/admin/cms/partials/_navigation_inner.html.haml` will be updated/created to add link to the side nav
+
+# Changing Views
+You can outright modify any view from your application by creating same file with a matching path. However there are a pile of partials that can be used to inject bits of html all over the place. To see what's available change `config.reveal_cms_partials` to `true` and restart application.
+
+# Changing Models/Controllers
+If you need to do some serious hacking I recommend forking entire project. You can always do monkey-patching or file overwrites from your application.
