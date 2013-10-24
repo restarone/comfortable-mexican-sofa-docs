@@ -38,9 +38,7 @@
 * **[[Using CMS for emails]]**
 
 ### Gems / Engines / Plugins
-This a list of plugins / gems / engines that add extended features to Comfortable Mexican Sofa - Comfy Gems.
-
-This a list of plugins / gems / engines that add extended features to Comfortable Mexican Sofa - Comfy Gems.
+This a list of plugins / gems / engines that add extended features to ComfortableMexicanSofa - Comfy Gems.
 
 Name  | Description | CMS Version
 ----- | ----------- | -----------
