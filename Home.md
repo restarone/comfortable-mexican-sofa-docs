@@ -35,8 +35,6 @@
 * **[[Replacing default WYSIWYG editor with TinyMCE]]**
 * **[[Serving CMS content from a separate database]]**
 * **[[Using CacheSweeper to Inform Updates or to Clear Caches]]**
-* **[[How to protect other engines from catch all route]]**
-* **[[How to add markdown support]]**
 * **[[Using CMS for emails]]**
 
 ### Gems / Engines / Plugins
