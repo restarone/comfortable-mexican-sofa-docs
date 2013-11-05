@@ -51,7 +51,7 @@ Name  | Description | CMS Version
 
 
 ### Contribute
-Be as awesome as [these guys](https://github.com/twg/comfortable-mexican-sofa/contributors) and help Sofa become even better.
+Be as awesome as [these guys](https://github.com/comfy/comfortable-mexican-sofa/contributors) and help Sofa become even better.
 
 * **[[How to contribute to ComfortableMexicanSofa development]]**
 
