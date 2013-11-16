@@ -16,8 +16,8 @@ The generator will create the initializer, database migration, example CMS fixtu
 Take a look at `routes.rb` and make sure that the content serving route appears last:
 
 ```ruby
-ComfortableMexicanSofa::Routing.admin   :path => '/cms-admin'
-ComfortableMexicanSofa::Routing.content :path => '/', :sitemap => false
+comfy_route :cms_admin, :path => '/cms-admin'
+comfy_route :cms, :path => '/', :sitemap => false
 ```
 
 If you are upgrading from an older version of ComfortableMexicanSofa, please take a look at [[Upgrading ComfortableMexicanSofa]].
