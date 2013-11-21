@@ -17,7 +17,7 @@ window.CMS.wysiwyg = ->
   if (csrf_param != undefined && csrf_token != undefined)
     params = csrf_param + "=" + encodeURIComponent(csrf_token)
   
-  $('textarea[data-rich-text]').redactor
+  $('textarea[data-cms-rich-text]').redactor
     minHeight: 400
     buttons: ['formatting', '|', 'bold', 'italic', '|', 'unorderedlist', 'orderedlist', '|', 'image', 'link']
     imageUpload: "#{CMS.file_upload_path}?ajax=1&#{params}"
