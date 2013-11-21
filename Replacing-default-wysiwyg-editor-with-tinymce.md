@@ -11,6 +11,6 @@ gem 'tinymce-rails'
 
 window.CMS.wysiwyg = ->
   tinymce.init
-    selector: 'textarea[data-rich-text]'
+    selector: 'textarea[data-cms-rich-text]'
     # any additional tinymce configuration can go here
 ```
