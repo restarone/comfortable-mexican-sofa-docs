@@ -1,5 +1,5 @@
 ## Instance Variables
-When rendering partials, helpers from CMS you have access to `@cms_site`, `@cms_layout` and `@cms_page`. For example, you can probably use page object to render a navigation. Application layout also has access to those variables if used in the Cms::Layout.
+When rendering partials and helpers from CMS, you have access to `@cms_site`, `@cms_layout` and `@cms_page`. For example, you can probably use the page object to render a navigation bar. The application layout also has access to those variables if used in Cms::Layout.
 
 ## Helper methods
 There are two helper methods available: `cms_page_content()` and more frequently used `cms_snippet_content()`.
