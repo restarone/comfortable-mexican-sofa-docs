@@ -12,14 +12,19 @@ If you have multiple sites going on you'll need to make sure that you're not pul
 ### Using CMS Categories on your own models
 If you wish to use this functionality for your own models all you need to do is include `cms_is_categorized` in your model. Like this:
 
-    class Event < ActiveRecord::Base
+    class YourCustomModel < ActiveRecord::Base
       cms_is_categorized
       # ... more stuff
     end
 
-Then all you need to do is add the form partial in the view like this:
-  
-    = cms_form_for @event do |form|
-      = form.text_field :title
-      = render :partial => 'cms_admin/categories/form', :object => form
-      = form.submit 'Save'
+To create new categories add this line in /app/views/admin/your_model_name/index.html.haml
+
+    = render :partial => 'admin/cms/categories/index', :object => 'YourCustomModel'
+
+To assign new categories for your object add these lines:
+
+    = form.text_field :title
+    = form.text_area :content
+    = render :partial => 'admin/cms/categories/form', :object => form
+    .form-actions
+      = form.submit, :class => 'btn btn-primary'
