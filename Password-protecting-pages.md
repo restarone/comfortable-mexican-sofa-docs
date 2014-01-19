@@ -21,8 +21,8 @@ Here's example of how to protect `/secret/page/path` page with BasicAuth
 ```ruby
 module CmsPagesAuth
   def authenticate
-    protected_paths = ['/secret/page/path', '/so/very/protected', '/no-access']
-    return unless protected_paths.member?(@cms_page.full_path)
+    protected_paths = ['secret/page/path', 'so/very/protected', 'no-access']
+    return unless protected_paths.member?(params['cms_path'])
     authenticate_or_request_with_http_basic do |username, password|
       username == 'secret_username' && password == 'secret_password'
     end
