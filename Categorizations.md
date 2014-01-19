@@ -32,6 +32,7 @@ To assign new categories for your object add these lines:
 You will also need to permit categories parameters in your controller
   
     class Admin::CustomController < Admin::Cms::BaseController
+       # .... staff ...
        private
          def page_params
            params.fetch(:page, {}).permit!
