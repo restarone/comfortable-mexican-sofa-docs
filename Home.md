@@ -44,8 +44,6 @@ Name  | Description | CMS Version
 ----- | ----------- | -----------
 [ComfyBlog](https://github.com/comfy/comfy-blog) | ComfyBlog is an simple blog management engine. | >= 1.10
 [ComfyGallery](https://github.com/comfy/comfy-gallery) | ComfyGallery is an image gallery engine. Currenly not up to date. Try: https://github.com/geisimarrech/comfy-gallery | <= 1.6
-[ComfyPoll](https://github.com/comfy/comfy-poll) | ComfyPoll is a poll engine. | <= 1.6
-[ComfyCarousel](https://github.com/comfy/comfy-carousel) | Slideshow management engine. | <= 1.6
 [ComfyImprint](https://github.com/konung/comfy_imprint) | Contact Us form engine | ???
 
 
