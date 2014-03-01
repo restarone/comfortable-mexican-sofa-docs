@@ -46,13 +46,6 @@ Name  | Description | CMS Version
 [ComfyGallery](https://github.com/comfy/comfy-gallery) | ComfyGallery is an image gallery engine. Currenly not up to date. Try: https://github.com/geisimarrech/comfy-gallery | <= 1.6
 [ComfyImprint](https://github.com/konung/comfy_imprint) | Contact Us form engine | ???
 
-
-
-### Contribute
-Be as awesome as [these guys](https://github.com/comfy/comfortable-mexican-sofa/contributors) and help Sofa become even better.
-
-* **[[How to contribute to ComfortableMexicanSofa development]]**
-
 ### Help and Contact
 GoogleGroups [[http://groups.google.com/group/comfortable-mexican-sofa]]
 
