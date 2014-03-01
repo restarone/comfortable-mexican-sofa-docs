@@ -14,3 +14,4 @@ window.CMS.wysiwyg = ->
     selector: 'textarea[data-cms-rich-text]'
     # any additional tinymce configuration can go here
 ```
+If you have an app/assets/javascript/comfortable_mexican_sofa/admin/application.js you'll have to remove that file for the coffee script file to take effect.
