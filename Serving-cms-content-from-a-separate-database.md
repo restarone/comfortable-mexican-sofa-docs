@@ -7,3 +7,4 @@ Now you need to create definition in your `database.yml` file for `custom_develo
 #### Things to keep in mind:
 - Note that in `test` environment it will use only same database as your main app for testing. That's just what Rails does.
 - You'll need to edit migrations to include `ComfortableMexicanSofa.establish_connection(ActiveRecord::Base)` so they are run using proper database configuration.
+- the line abowe is crap (for v. 1.11.2), the feature may be useful, but only for a legacy database, maitained only via cms panel, plus it will spawn a db connection for each model
