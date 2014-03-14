@@ -26,6 +26,7 @@ Field tags are pieces of text content that are **NOT** rendered on the page. The
     {{ cms:field:some_label:text }}        # in admin area text field is displayed instead of text area
     {{ cms:field:some_label:datetime }}    # similarly, datetime widget in the admin area
     {{ cms:field:some_label:integer }}     # a number field
+    {{ cms:field:some_label:boolean }}     # a boolean (checkbox) field
     
 ## Snippet
 Snippet tags are bits of reusable content that can be used anywhere. Imagine creating content like a sharing widget, or business address that you want to randomly use across your site.
