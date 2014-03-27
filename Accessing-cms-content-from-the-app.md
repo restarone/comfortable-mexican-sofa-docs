@@ -42,4 +42,4 @@ If layout has a simple tag like this: "`{{cms:page:content}}`" and you're OK wit
       render :cms_layout => 'one_column'
     end
     
-Please note that for `render :cms_layout` instance variable `@cms_page` is not available as there's no actual page. For purposes of generating navs, etc consider either reusing one of the existing pages of instantiating a new one with attributes that you need.
+Please note that for `render :cms_layout` instance variable `@cms_page` is not available as there's no actual page. For purposes of generating navs, etc consider either reusing one of the existing pages or instantiating a new one with attributes that you need.
