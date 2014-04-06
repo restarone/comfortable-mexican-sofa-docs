@@ -4,7 +4,7 @@
 ```
 gem 'tinymce-rails', :git => 'git@github.com:spohlenz/tinymce-rails.git', :branch => 'tinymce-4'
 ```
-* Optionally, add [i18n support](https://github.com/spohlenz/tinymce-rails-langs/tree/tinymce-4):
+* _Optionally_, add [i18n support](https://github.com/spohlenz/tinymce-rails-langs/tree/tinymce-4):
 ```
 gem 'tinymce-rails-langs', :git => 'git@github.com:spohlenz/tinymce-rails-langs.git', :branch => 'tinymce-4'
 
@@ -13,6 +13,12 @@ gem 'tinymce-rails-langs', :git => 'git@github.com:spohlenz/tinymce-rails-langs.
 ```
 //= require tinymce
 ```
+* _Optionally_, if you like to prefer the jQuery version use
+```
+//= require tinymce-jquery
+```
+instead. Please note this verison might perform [worse](http://stackoverflow.com/questions/6376133/tinymce-jquery-version-vs-jquery-plugin) or better depending on browsers and stuff.
+
 * Run bundler:
 ```
 $ bundle install
@@ -34,7 +40,7 @@ window.CMS.wysiwyg = ->
     language: 'de'
 ```
 
-* Optionally enable [plugins](http://www.tinymce.com/wiki.php/Plugins) (please see the [TinyMCE documentation](https://github.com/spohlenz/tinymce-rails/blob/tinymce-4/README.md) for further info):
+* _Optionally_ enable [plugins](http://www.tinymce.com/wiki.php/Plugins) (please see the [TinyMCE documentation](https://github.com/spohlenz/tinymce-rails/blob/tinymce-4/README.md) for further info):
 
 ```
     plugins: 'autosave anchor image charmap contextmenu fullscreen link paste preview print visualchars'
