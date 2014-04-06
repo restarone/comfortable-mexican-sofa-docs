@@ -43,7 +43,7 @@ window.CMS.wysiwyg = ->
 * _Optionally_ enable [plugins](http://www.tinymce.com/wiki.php/Plugins) (please see the [TinyMCE documentation](https://github.com/spohlenz/tinymce-rails/blob/tinymce-4/README.md) for further info):
 
 ```
-    plugins: 'autosave anchor image charmap contextmenu fullscreen link paste preview print visualchars'
+    plugins: 'autosave anchor image charmap link paste preview print visualchars'
 ```
 
 * Delete `app/assets/javascript/comfortable_mexican_sofa/admin/application.js` if it exists. If you have stuff defined in there you need to migrate it to coffeesript as comfy will use that first (and exclusivley then).
