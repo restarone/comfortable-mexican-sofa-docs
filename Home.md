@@ -32,7 +32,8 @@
 * **[[Reusing Sofa's admin area]]**
 * **[[Password protecting pages]]**
 * **[[Replacing default WYSIWYG editor with Redactor]]**
-* **[[Replacing default WYSIWYG editor with TinyMCE]]**
+* **[[Replacing default WYSIWYG editor with TinyMCE-3]]**
+* **[[Replacing default WYSIWYG editor with TinyMCE-4]] Beta!**
 * **[[Serving CMS content from a separate database]]**
 * **[[Using CacheSweeper to Inform Updates or to Clear Caches]]**
 * **[[Using CMS for emails]]**
