@@ -6,9 +6,9 @@ gem 'tinymce-rails'
 ```
 gem 'tinymce-rails-langs'
 ```
-* Include assets accordingly in `app/assets/javascripts/application.js` (we are going to use the jquery version):
+* Include assets accordingly in `app/assets/javascripts/application.js`:
 ```
-//= require tinymce-jquery
+//= require tinymce
 ```
 * Run bundler:
 ```
