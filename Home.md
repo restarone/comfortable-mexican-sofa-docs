@@ -50,4 +50,4 @@ Name  | Description | CMS Version
 ### Help and Contact
 GoogleGroups [[http://groups.google.com/group/comfortable-mexican-sofa]]
 
-You if you have any questions feel free to contact me via [@GroceryBagHead](http://twitter.com/#!/GroceryBagHead)
+If you have any questions feel free to contact me via Twitter [@GroceryBagHead](http://twitter.com/#!/GroceryBagHead)
