@@ -16,7 +16,7 @@ The generator will create the initializer, database migration, example CMS fixtu
 Take a look at `routes.rb` and make sure that the content serving route appears last:
 
 ```ruby
-comfy_route :cms_admin, :path => '/cms-admin'
+comfy_route :cms_admin, :path => '/admin'
 comfy_route :cms, :path => '/', :sitemap => false
 ```
 
@@ -28,7 +28,7 @@ Run the default web server:
 ```ruby
 rails server
 ```
-Now visit **http://0.0.0.0:3000/cms-admin** and you should be able to connect with **username** and **password**.
+Now visit **http://0.0.0.0:3000/admin** and you should be able to connect with **username** and **password**.
 
 You can change the default credentials by editing [/config/initializers/comfortable\_mexican\_sofa.rb](https://github.com/comfy/comfortable-mexican-sofa/blob/master/config/initializers/comfortable_mexican_sofa.rb):
 
