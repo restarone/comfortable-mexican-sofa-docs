@@ -1,6 +1,6 @@
 * Add this to your Gemfile:
 ```
-gem 'tinymce-rails'
+gem 'tinymce-rails', '~> 3.0'
 ```
 * Optionally, add [i18n support](https://github.com/spohlenz/tinymce-rails-langs/):
 ```
