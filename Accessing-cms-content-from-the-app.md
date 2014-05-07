@@ -8,6 +8,8 @@ There are two helper methods available: `cms_page_content()` and more frequently
 
 Similarly, you can get the snippet content with `cms_snippet_content(:example)` if you have a Cms::Snippet with slug 'example'. Once again, outside CMS rendering you may need to provide Cms::Site object (although it's usually found automatically): `cms_snippet_content(:example, Cms::Site.find_by_hostname('example.com'))`
 
+Update: In version 1.12.0 `cms_page_content()` was replaced by `cms_block_content()`.
+
 ## Render CMS Page
 You can use CMS pages as regular views:
 
