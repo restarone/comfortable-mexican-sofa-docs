@@ -2,7 +2,7 @@
 
 If you wish, you can re-use Sofa's admin area for things you need to administer in your application. To do this, first you will need to make your admin controllers to inherit from Admin::Cms::BaseController. This way, your admin views will be using Sofa's admin layout and it's basic HttpAuth.
     
-    class Admin::CategoriesController < Admin::Cms::BaseController
+    class Admin::CategoriesController < Comfy::Admin::Cms::BaseController
       # your code goes here
     end
     
