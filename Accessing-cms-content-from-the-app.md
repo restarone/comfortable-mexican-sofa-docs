@@ -4,9 +4,9 @@ When rendering partials and helpers from CMS, you have access to `@cms_site`, `@
 ## Helper methods
 There are two helper methods available: `cms_block_content()` and more frequently used `cms_snippet_content()`.
 
-`cms_block_content` is used to access content inside page blocks. If you have a page that has its content stored against `{{cms:page:content}}` or `{{cms:field:content}}` you can easily retrieve it like so: `cms_page_content(:content)`. If you want to use this method outside CMS rendering, like in your own view/controller, you need to provide a Cms::Page object: `cms_block_content(:content, Cms::Page.find_by_full_path('/herp/derp'))`
+`cms_block_content` is used to access content inside page blocks. If you have a page that has its content stored against `{{cms:page:content}}` or `{{cms:field:content}}` you can easily retrieve it like so: `cms_page_content(:content)`. If you want to use this method outside CMS rendering, like in your own view/controller, you need to provide a Comfy::Cms::Page object: `cms_block_content(:content, Cms::Page.find_by_full_path('/herp/derp'))`
 
-Similarly, you can get the snippet content with `cms_snippet_content(:example)` if you have a Cms::Snippet with slug 'example'. Once again, outside CMS rendering you may need to provide Cms::Site object (although it's usually found automatically): `cms_snippet_content(:example, Cms::Site.find_by_hostname('example.com'))`
+Similarly, you can get the snippet content with `cms_snippet_content(:example)` if you have a Cms::Snippet with slug 'example'. Once again, outside CMS rendering you may need to provide Comfy::Cms::Site object (although it's usually found automatically): `cms_snippet_content(:example, Cms::Site.find_by_hostname('example.com'))`
 
 In versions prior to 1.12.0 `cms_page_content()` is used instead of `cms_block_content()`.
 
