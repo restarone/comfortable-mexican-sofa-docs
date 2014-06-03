@@ -1,4 +1,4 @@
-**!!! TineMCE-4 is work in progress, please be very careful applying this to a production setup. Better go for [TinyMCE-3](https://github.com/comfy/comfortable-mexican-sofa/wiki/Replacing-default-WYSIWYG-editor-with-TinyMCE-3).**
+**TinyMCE-4 is work in progress, please be very careful applying this to a production setup. Better go for [TinyMCE-3](https://github.com/comfy/comfortable-mexican-sofa/wiki/Replacing-default-WYSIWYG-editor-with-TinyMCE-3).**
 
 * Add this to your Gemfile:
 ```
