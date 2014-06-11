@@ -4,5 +4,5 @@ Make sure that in `routes.rb` you have sitemap route enabled: `ComfortableMexica
 
 If you want to modify what gets outputted feel free to overwrite view template file:
 * Copy https://raw.github.com/comfy/comfortable-mexican-sofa/master/app/views/comfy/cms/content/render_sitemap.xml.builder
-* Paste it into `app/views/cms/content/` folder inside your application
+* Paste it into `app/views/comfy/cms/content/` folder inside your application
 * Modify away
