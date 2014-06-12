@@ -12,4 +12,3 @@ For example, to use HTML table controls, you'd specify:
 
 ## Replacing wysihtml5 with a different WYSIWYG editor
 * [[Replacing-default-wysiwyg-editor-with-redactor]]
-* [[Replacing-default-wysiwyg-editor-with-tinymce]]
