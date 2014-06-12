@@ -5,8 +5,8 @@ Gem / Plugin  & Project Page  | Goal / Purpose | Alternative Page
 [ComfyBlog](https://github.com/comfy/comfy-blog) | ComfyBlog is an simple blog management engine for Rails 3.1 apps. It also integrates with ComfortableMexicanSofa CMS Engine | https://github.com/joshuaogle/comfy-blog
 [ComfyGallery](https://github.com/comfy/comfy-gallery) | ComfyGallery is an image gallery engine for Rails 3.1 apps. Also it integrates with ComfortableMexicanSofa CMS Engine | https://github.com/geisimarrech/comfy-gallery
 [ComfyPoll](https://github.com/comfy/comfy-poll) | ComfyPoll is a poll engine for Rails 3.1 apps. Also it integrates with ComfortableMexicanSofa CMS Engine | 
-[ComfyCarousel](https://github.com/comfy/comfy-carousel) | This is a small engine that allows you to manage slideshows. |
+[ComfyCarousel](https://github.com/comfy/comfy-carousel) | This is a small engine that allows you to manage slideshows.|
 [ComfyImprint](https://github.com/konung/comfy_imprint) | This is what is commonly known as a "Contact Us" page, done as a mountable Rails 3 engine. It integrates with ComfortableMexicanSofa CMS Engine |
 [ComfyAdminConstructor](https://github.com/bgilham/comfy-admin-constructor) | ComfyAdminConstructor allows you to quickly and easily build basic admin interfaces in ComfortableMexicanSofa |
+[CMS Fortress](https://github.com/melvinsembrano/cms-fortress) | Users and Role Management extension. Also does caching, page workflow and theming.|
 
-              |                |   
