@@ -70,5 +70,5 @@ If you fully manage layouts you can use a tag to link to css/js:
     
 If you use application layout this is how you'd access assets:
   
-    <%= stylesheet_link_tag cms_render_css_path(@cms_site.id, @cms_layout.identifier) %>
-    <%= javascript_include_tag cms_render_js_path(@cms_site.id, @cms_layout.identifier) %>
+    <%= stylesheet_link_tag comfy_cms_render_css_path(@cms_site.id, @cms_layout.identifier) %>
+    <%= javascript_include_tag comfy_cms_render_js_path(@cms_site.id, @cms_layout.identifier) %>
