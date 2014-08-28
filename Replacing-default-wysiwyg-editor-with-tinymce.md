@@ -1,4 +1,7 @@
 # h1
 ## h2
 ### h3
-**bold**
+**bold**norml _italics_
+***
+* sdfdsfsdf
+1. sdfsdf
