@@ -20,8 +20,8 @@ window.CMS.wysiwyg = ->
   $('textarea[data-cms-rich-text]').redactor
     minHeight: 400
     buttons: ['formatting', '|', 'bold', 'italic', '|', 'unorderedlist', 'orderedlist', '|', 'image', 'link']
-    imageUpload: "#{CMS.file_upload_path}?ajax=1&#{params}"
-    imageGetJson: "#{CMS.file_upload_path}?ajax=1"
+    imageUpload: $('.cms-files-modal').data('iframe-src') + '?ajax=1'
+    imageGetJson: $('.cms-files-modal').data('iframe-src') + '?ajax=1'
     formattingTags: ['p', 'h1', 'h2', 'h3', 'h4']
 ```
 
