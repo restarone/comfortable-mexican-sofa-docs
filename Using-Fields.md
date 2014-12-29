@@ -2,11 +2,11 @@ Here is an example of using a field to add meta information to pages.
 
 1. Inside of a Rails layout (e.g. app/views/application.html.erb) add a meta tag to the head content of the page:
 
-```html
-  <meta name="description" content="<%= cms_block_content(:meta_description) %>">
-```
+  ```html
+    <meta name="description" content="<%= cms_block_content(:meta_description) %>">
+  ```
 
-Where `:meta_description` is the label for the content that you will add.
+  Where `:meta_description` is the label for the content that you will add.
 
 2. Inside of the Comfy CMS layout add a field:
 
