@@ -16,4 +16,4 @@ Here is an example of using a field to add meta information to pages.
 
   This field includes the label (meta_description) and the type of content (string).
 
-3. Inside of a page, you will now see see a text input that you can fill in with your string content.
+3. Inside of a page using the above layout, you will now see see a text input that you can fill in with your string content.
