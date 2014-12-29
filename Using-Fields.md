@@ -10,11 +10,10 @@ Here is an example of using a field to add meta information to pages.
 
 2. Inside of the Comfy CMS layout add a field:
 
-```html
-{{ cms:field:meta_description:string }}
-```
+  ```html
+  {{ cms:field:meta_description:string }}
+  ```
 
-This field includes the label (meta_description) and the type of content (string).
+  This field includes the label (meta_description) and the type of content (string).
 
 3. Inside of a page, you will now see see a text input that you can fill in with your string content.
-
