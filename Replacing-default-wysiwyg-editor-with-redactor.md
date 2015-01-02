@@ -4,6 +4,8 @@ While this editor is not free, it has a number of neat features. Big one is imag
 
 Due to licensing I can't ship CMS with this editor. However now it's easy to integrate in few easy steps.
 
+* Use version 1.12.2 of Comfortable Mexican Sofa due to changes in recent version not supporting the script provided on this page.
+
 * Download Redactor: http://imperavi.com/redactor/download/. No more trial version unfortunately. It's a good editor though, worth the money.
 
 * Within your application create `/app/assets/javascripts/comfortable_mexican_sofa/admin/application.js.coffee` and paste this in:
