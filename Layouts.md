@@ -17,6 +17,18 @@ Layout defines content areas for the page. For example, if you need a page with 
     
 If this layout is chosen during page creation you will notice that you are presented with form fields that correspond to the tags defined in the layout content. In this case you'll have a _Title_ text field and _Content_ text area. When page is rendered, tags are replaced with content that you defined.
 
+### Namespaces
+
+You can organize your page fields into tabbed sections by prefixing field names in layouts with a namespace. If you wanted to organize a set of Open Graph fields into an "Og" tab, your layout might look something like this:
+
+    {{ cms:field:title:string }}
+    {{ cms:field:description:string }}
+    ...
+    {{ cms:field:og.open_graph_description }}
+    {{ cms:field:og.open_graph_title }}
+
+Comfy will create two tabs in the page editor: Default and Og. The `title` and `description` fields will be displayed in the Default tab and the two `og.` prefixed fields will be displayed in the Og tab.
+
 ### Application Layout
 In most cases you'll want to use stylesheets/javascripts and general html layout that you already have in your application. For that it's enough to select an `App Layout`. It will be listed as a file that is found in `/views/layouts`. This way you limit exposure of what can be managed in Sofa. Let's say your application layout is `application.html.haml`:
 
