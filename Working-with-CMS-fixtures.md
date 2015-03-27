@@ -18,7 +18,7 @@ All you need to do is create a rake task like this:
         ENV['FROM'] = 'folder-name'
         ENV['TO']   = 'site-identifier'
         
-        Cms::Site.create!(:identifier => 'site-identifier', :hostname => 'localhost')
+        Comfy::Cms::Site.create!(:identifier => 'site-identifier', :hostname => 'localhost')
 
         Rake::Task['comfortable_mexican_sofa:fixtures:import'].invoke
       end
