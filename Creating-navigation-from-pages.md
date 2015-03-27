@@ -6,3 +6,24 @@ Sofa doesn't make assumptions about how you want to render navigation elements, 
 Then you can use that from the application layout, or CMS layout/page via a tag.
 
 [Zhao Lu](http://github.com/zlu): Instead of page.full_path, using page.url maybe more useful especially for a multi-site configuration.
+
+## Children pages for nested menus
+by [Pablo Fernandez](http://www.onboardinglab.com)
+
+`_navigation_links.slim`:
+```slim
+ul#js-navigation-menu.navigation-menu.show
+  == render partial: 'layouts/navigation_link', collection: Comfy::Cms::Site.first.pages.root.children.published, as: :page
+```
+
+`_navigation_link.slim`:
+```slim
+- classes = 'nav-link'
+- if page.children.any?
+  - classes << ' more'
+li[class=classes]
+  a[href=page.full_path]= page.label
+  - if page.children.any?
+    ul.submenu
+      == render partial: 'layouts/navigation_link', collection: page.children.published, as: :page
+```
