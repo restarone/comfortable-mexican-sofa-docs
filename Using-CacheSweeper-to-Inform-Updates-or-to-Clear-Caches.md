@@ -1,6 +1,12 @@
 You can use CacheSweepers to inform about page/site updates or to clear cache.
 
-Rails api for sweepers: http://api.rubyonrails.org/classes/ActionController/Caching/Sweeping.html (404 - API seems to have changed with Rails 4)
+## Adding Sweepers to Rails 4
+
+In Rail 4, Sweepers have been moved into a separate gem [rails-observers](https://github.com/rails/rails-observers)
+
+Their use is described [here](https://github.com/rails/rails-observers#action-controller-sweeper)
+
+For Rails 3 usage, you can find the instructions [here](http://apidock.com/rails/ActionController/Caching/Sweeping)
 
 ## Configuring sweepers
 
