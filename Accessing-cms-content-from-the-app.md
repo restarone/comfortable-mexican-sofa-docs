@@ -2,7 +2,9 @@
 When rendering partials and helpers from CMS, you have access to `@cms_site`, `@cms_layout` and `@cms_page`. For example, you can probably use the page object to render a navigation bar. The application layout also has access to those variables if used in Cms::Layout.
 
 ## Helper methods
-There are two helper methods available: `cms_block_content()` and more frequently used `cms_snippet_content()`.
+There are four helper methods available: `cms_block_content()`, `cms_block_render()` and more frequently used `cms_snippet_content()` and `cms_snippet_render()`.
+
+Difference between `content` and `render` is that `render` does tag expansion. So if you have tags defined inside your block/snippet you want to use `render` variant.
 
 `cms_block_content` is used to access content inside page blocks. If you have a page that has its content stored against `{{cms:page:content}}` or `{{cms:field:content}}` you can easily retrieve it like so: `cms_block_content(:content)`. If you want to use this method outside CMS rendering, like in your own view/controller, you need to provide a Comfy::Cms::Page object: `cms_block_content(:content, Comfy::Cms::Page.find_by_full_path('/herp/derp'))`
 
