@@ -1,4 +1,4 @@
-## ComfortableMexicanSofa - Rails CMS Engine - 2.0+
+## ComfortableMexicanSofa - Rails CMS Engine
 
 **Do you need something to manage content for your Rails application? There's nothing more powerful and easier than ComfortableMexicanSofa.**
 
