@@ -9,15 +9,15 @@ Then you can use that from the application layout, or CMS layout/page via a tag.
 
 For those not using haml, something like this can be used:
 
-<% @cms_page.children.published.each do |p| %>
-  <%= link_to p.label, p.url(:relative) %>
-<% end %>
+> <% @cms_page.children.published.each do |p| %>
+>   <%= link_to p.label, p.url(:relative) %>
+> <% end %>
 
 or:
 
-<% Comfy::Cms::Site.first.pages.root.children.published.each do |page| %>
-  <%= link_to page.label, page.url(:relative) %>
-<% end %>
+> <% Comfy::Cms::Site.first.pages.root.children.published.each do |page| %>
+>   <%= link_to page.label, page.url(:relative) %>
+> <% end %>
 
 ## Children pages for nested menus
 by [Pablo Fernandez](http://www.onboardinglab.com)
