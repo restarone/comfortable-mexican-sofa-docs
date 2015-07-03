@@ -44,3 +44,10 @@ To List Categories:
               <% Comfy::Cms::Site.first.categories.each do |c| %>
                 <li><%= c.inspect %></li>
               <% end %>
+
+
+To List all the Pages in a Category:
+
+            <% Comfy::Cms::Page.for_category('myfavoritecategory').each do |page| %>
+              <%= link_to page.label, page.url(:relative) %>
+            <% end %>
