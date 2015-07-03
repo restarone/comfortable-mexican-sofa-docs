@@ -8,6 +8,10 @@ Difference between `content` and `render` is that `render` does tag expansion. S
 
 `cms_block_content` is used to access content inside page blocks. If you have a page that has its content stored against `{{cms:page:content}}` or `{{cms:field:content}}` you can easily retrieve it like so: `cms_block_content(:content)`. If you want to use this method outside CMS rendering, like in your own view/controller, you need to provide a Comfy::Cms::Page object: `cms_block_content(:content, Comfy::Cms::Page.find_by_full_path('/herp/derp'))`
 
+For instance, if you want to get the URL for an image attached as a page_file to a page, you can use:
+
+<% img_url = cms_block_render(:icon, page) %>
+
 Similarly, you can get the snippet content with `cms_snippet_content(:example)` if you have a Comfy::Cms::Snippet with slug 'example'. Once again, outside CMS rendering you may need to provide Comfy::Cms::Site object (although it's usually found automatically): `cms_snippet_content(:example, Comfy::Cms::Site.find_by_hostname('example.com'))`
 
 In versions prior to 1.12.0 `cms_page_content()` is used instead of `cms_block_content()`.
