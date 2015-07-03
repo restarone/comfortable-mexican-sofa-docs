@@ -37,3 +37,10 @@ You will also need to permit categories parameters in your controller
          def page_params
            params.fetch(:page, {}).permit!
          end
+
+
+To List Categories:
+
+              <% Comfy::Cms::Site.first.categories.each do |c| %>
+                <li><%= c.inspect %></li>
+              <% end %>
