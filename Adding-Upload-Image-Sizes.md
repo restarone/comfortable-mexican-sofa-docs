@@ -1,4 +1,4 @@
-When working with image files you may need to change the size to allow them to work with different different parts of your website. Comfy CMS makes this easy by allowing users to add image sizes in their config file. 
+When working with image files you may need to change the size to allow them to work with different parts of your website. Comfy CMS makes this easy by allowing users to add image sizes in their config file. 
 
 Inside of config/comfortable_mexican_sofa.rb 
 
