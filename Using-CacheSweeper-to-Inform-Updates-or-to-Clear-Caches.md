@@ -27,6 +27,8 @@ Autoload this class somewhere.
 
 class CmsAdminSweeper < ActionController::Caching::Sweeper
   observe Cms::Page, Cms::Layout, Cms::Snippet
+  # For CMS 1.12.0+
+  # observe Comfy::Cms::Page, Comfy::Cms::Layout, Comfy::Cms::Snippet
   
   def after_create(model)
     do_sweeping(model)
