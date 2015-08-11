@@ -10,5 +10,13 @@ For example, to use HTML table controls, you'd specify:
 
 `$.CMS.config['elRTE']['toolbar'] = ['tables'];`
 
+### Getting the WYSIWYG (Redactor) to not add paragraph on new lines
+In your custom.js.coffee, you need to add the following line: 
+
+`if window.CMS != undefined && window.CMS.wysiwyg != undefined
+  window.CMS.wysiwyg = ->
+    $('textarea.rich-text-editor, textarea[data-cms-rich-text]').redactor
+      paragraphize: false`
+
 ## Replacing wysihtml5 with a different WYSIWYG editor
 * [[Replacing-default-wysiwyg-editor-with-redactor]]
