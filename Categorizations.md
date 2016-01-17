@@ -45,6 +45,11 @@ To List Categories:
                 <li><%= c.inspect %></li>
               <% end %>
 
+To List Page Catergories:
+
+              <% Comfy::Cms::Category.where("categorized_type = 'Comfy::Cms::Page'") do |c| %>
+                <li><%= c.inspect %></li>
+              <% end %>
 
 To List all the Pages in a Category:
 
