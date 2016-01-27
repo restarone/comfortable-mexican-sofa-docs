@@ -1,4 +1,4 @@
-Sofa allows you to build entire site using files instead of updating database via admin area. This significantly speeds up initial content population. Go to the initializer and set this to enable fixtures in development environment: `config.enable_fixtures = Rails.env.development?`. You may also change the folder that is used to store fixtures.
+Sofa allows you to build your entire site using files instead of updating the database via the admin area. This significantly speeds up initial content population. Go to the initializer and set this to enable fixtures in development environment: `config.enable_fixtures = Rails.env.development?`. You may also change the folder that is used to store fixtures.
 
 If you run `rails g comfy:cms` you should find an example set of fixtures in [/db/cms\_fixtures](https://github.com/comfy/comfortable-mexican-sofa/tree/master/db/cms_fixtures).
 
