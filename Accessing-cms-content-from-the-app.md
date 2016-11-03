@@ -10,7 +10,9 @@ Difference between `content` and `render` is that `render` does tag expansion. S
 
 For instance, if you want to get the URL for an image attached as a page_file to a page, you can use:
 
+```
 <% img_url = cms_block_render(:icon, page) %>
+```
 
 Similarly, you can get the snippet content with `cms_snippet_content(:example)` if you have a Comfy::Cms::Snippet with slug 'example'. Once again, outside CMS rendering you may need to provide Comfy::Cms::Site object (although it's usually found automatically): `cms_snippet_content(:example, Comfy::Cms::Site.find_by_hostname('example.com'))`
 
