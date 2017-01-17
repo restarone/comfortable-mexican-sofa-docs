@@ -8,7 +8,7 @@ Due to licensing I can't ship CMS with this editor. However now it's easy to int
 
 * Download Redactor: http://imperavi.com/redactor/download/. No more trial version unfortunately. It's a good editor though, worth the money.
 
-* Within your application create `/app/assets/javascripts/comfortable_mexican_sofa/admin/application.js.coffee` and paste this in:
+* Within your application create `/app/assets/javascripts/comfy/admin/cms/application.js.coffee` and paste this in:
 
 ```coffeescript
 #= require comfortable_mexican_sofa/lib/redactor
@@ -40,4 +40,4 @@ Now all `{{cms:page:label:rich_text}}` fields will be rendered with Redactor.
 
 
 Some pages use CodeMirror by default i.e. `textarea[data-cm-mode]`.
-To override that just override  `window.CMS.codemirror` in your `application.js`. See [application.js.coffee](https://github.com/comfy/comfortable-mexican-sofa/blob/master/app/assets/javascripts/comfortable_mexican_sofa/application.js.coffee)
+To override that just override  `window.CMS.codemirror` in your `application.js`. See [application.js.coffee](https://github.com/comfy/comfortable-mexican-sofa/blob/master/app/assets/javascripts/comfy/admin/cms/application.js.coffee)
