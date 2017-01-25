@@ -16,4 +16,12 @@ Here is an example of using a field to add meta information to pages.
 
   This field includes the label (meta_description) and the type of content (string).
 
-3. Inside of a page using the above layout, you will now see see a text input that you can fill in with your string content.
+3. Inside of a page using the above layout, you will now see a text input that you can fill in with your string content.
+
+4. The new field will have the label "Meta Description". If you want to change this, you need to add a localisation. Below example translates the label for meta_description into German (config/locales/de.comfy.yml): 
+  ```
+  de:
+    activerecord:
+      attributes:
+        comfy/cms/page:
+          meta_description: "Kurzbeschreibung"
