@@ -117,3 +117,7 @@ When using to upload images you can actually automatically resize/crop them. See
 When you have way too many pieces of content on a single page namespacing content tags might help a bit. Namespaced tags will appear in their own tab in the admin area. This an example of such tag:
 
     {{ cms:page:some_namespace.some_label:rich_text }}
+
+You can reference a namespaced content tag in your non-CMS views like this:
+
+    = cms_block_content("some_namespace.some_label".to_sym)
