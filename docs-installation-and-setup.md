@@ -3,7 +3,7 @@ Add to the Gemfile of your Rails project:
 ```bash
 gem 'comfortable_mexican_sofa'
 ```
-    
+
 Then from your Rails project's folder run these commands:
 ```bash
 bundle install

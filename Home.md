@@ -20,9 +20,11 @@
 * [CMS Render Methods]()
 
 ### How-Tos
+
 * [Changing default authentication]()
 * [Creating navigation from pages]()
 * [Reusing Admin Area]()
+* [Changing Wysiwyg Editor]()
 * [Password protecting pages]()
 * [Serving CMS content from a separate database]()
 * [Using CacheSweeper to Inform Updates or to Clear Caches]()
