@@ -1,50 +1,28 @@
 ## ComfortableMexicanSofa - Rails CMS Engine
 
-**Do you need something to manage content for your Rails application? There's nothing more powerful and easier than ComfortableMexicanSofa.**
+**ComfortableMexicanSofa is a powerful Rails 5.2+ CMS (Content Management System) Engine**
 
-* ComfortableMexicanSofa is open source and completely free
-* It's a Rails Engine so it's easy to install and work with
-* Powerful page templating capability
-* Straightforward integration with your Rails 4 application
+## Documentation
 
-***
+### Getting Started
 
-* **[[Installation and Quick Start Guide]]**
-* **[[Upgrading ComfortableMexicanSofa]]**
+* [Installation and Setup](https://github.com/comfy/comfortable-mexican-sofa/wiki/docs-installation-and-setup)
 
 ### Managing Content
-* **[[Overview]]**
-* **[[Sites]]**
-* **[[Layouts]]**
-* **[[Pages]]**
-* **[[Snippets]]**
-* **[[Revisions]]**
-* **[[Files]]**
-* **[[Categorizations]]**
-* **[[Tags]]**
-* **[[Sitemaps]]**
+
+* [Overview]()
+* [Content Tags]()
+* [Attachments]()
+* [Revisions]()
+* [Taggings]()
+* [CMS Seeds]()
+* [CMS View Helpers]()
+* [CMS Render Methods]()
 
 ### How-Tos
-* **[[Changing default authentication]]**
-* **[[Working with CMS fixtures]]**
-* **[[Accessing CMS content from the app]]**
-* **[[Creating navigation from pages]]**
-* **[[Reusing Sofa's admin area]]**
-* **[[Password protecting pages]]**
-* **[[Serving CMS content from a separate database]]**
-* **[[Using CacheSweeper to Inform Updates or to Clear Caches]]**
-* **[[Using CMS for emails]]**
-
-### Gems / Engines / Plugins
-This a list of plugins / gems / engines that add extended features to ComfortableMexicanSofa - Comfy Gems.
-
-Name  | Description | CMS Version
------ | ----------- | -----------
-[ComfyBlog](https://github.com/comfy/comfy-blog) | ComfyBlog is an simple blog management engine. | >= 1.10
-[ComfyGallery](https://github.com/comfy/comfy-gallery) | ComfyGallery is an image gallery engine. Currenly not up to date. Try: https://github.com/geisimarrech/comfy-gallery | <= 1.6
-[ComfyImprint](https://github.com/konung/comfy_imprint) | Contact Us form engine | ???
-
-### Help and Contact
-GoogleGroups [[http://groups.google.com/group/comfortable-mexican-sofa]]
-
-If you have any questions feel free to contact me via Twitter [@GroceryBagHead](http://twitter.com/#!/GroceryBagHead)
+* [Changing default authentication]()
+* [Creating navigation from pages]()
+* [Reusing Admin Area]()
+* [Password protecting pages]()
+* [Serving CMS content from a separate database]()
+* [Using CacheSweeper to Inform Updates or to Clear Caches]()
