@@ -27,4 +27,4 @@
 * [Password protecting pages]()
 * [Serving CMS content from a separate database]()
 * [Using CacheSweeper to Inform Updates or to Clear Caches]()
-* [Fixing unaccessible routes](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTos:-Fix-Inaccessible-Routes)
+* [Fixing inaccessible routes](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Fix-Inaccessible-Routes)
