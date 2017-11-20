@@ -1,6 +1,7 @@
 ### Getting Started
 
-* [Installation and Setup](https://github.com/comfy/comfortable-mexican-sofa/wiki/docs-installation-and-setup)
+* [Installation and Setup](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-Installation-and-Setup)
+* [Quick Start Guide](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-Quick-Start-Guide)
 
 ### Managing Content
 

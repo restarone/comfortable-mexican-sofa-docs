@@ -1,55 +1,59 @@
+## Dependencies
+
+* File attachments are handled by [ActiveStorage](https://github.com/rails/rails/tree/master/activestorage). You will need to copy over database migrations by running
+  `rails active_storage:install`
+* To resize attached images you'll need to have [ImageMagic](http://www.imagemagick.org/script/download.php) installed.
+* Pagination is handled by either [Kaminari](https://github.com/kaminari/kaminari) or [WillPaginate](https://github.com/mislav/will_paginate). Make sure you have one
+  defined in your Gemfile.
+
+## Installation for pre-Rails 5.2 release (master branch)
+
+Rails 5.2 is not out yet, so some gems are not ready or published. Use the following
+in your Gemfile to install everything:
+
+```ruby
+gem "comfortable_mexican_sofa",
+  github: "comfy/comfortable-mexican-sofa"
+
+# until [PR#30783](https://github.com/rails/rails/pull/30783) gets resolved
+gem "rails",
+  github: "GBH/rails",
+  branch: "active-storage-routes-prepend"
+gem "arel",
+  github: "rails/arel"
+
+# There's no gem published for Bootstrap4 just yet
+gem "bootstrap_form",
+  github: "bootstrap-ruby/rails-bootstrap-forms",
+  branch: "bootstrap-v4"
+```
+
 ## Installation
+
 Add to the Gemfile of your Rails project:
-```bash
-gem 'comfortable_mexican_sofa'
+
+```ruby
+gem 'comfortable_mexican_sofa', '~> 2.0.0'
 ```
 
 Then from your Rails project's folder run these commands:
+
 ```bash
 bundle install
 rails generate comfy:cms
 rake db:migrate
 ```
 
-The generator will create the initializer, database migration, example CMS fixtures and will move route sets.
+The generator will create the initializer, database migration, example CMS Seeds and will move route sets.
 
 Take a look at `routes.rb` and make sure that the content serving route appears last:
 
 ```ruby
-comfy_route :cms_admin, :path => '/admin'
-comfy_route :cms, :path => '/', :sitemap => false
+comfy_route :cms_admin, path: '/admin'
+comfy_route :cms, path: "/"
 ```
 
-If you are upgrading from an older version of ComfortableMexicanSofa, please take a look at [[Upgrading ComfortableMexicanSofa]].
-
-## Quick Start Guide
-
-Run the default web server:
-```ruby
-rails server
-```
-Now visit **http://0.0.0.0:3000/admin** and you should be able to connect with **username** and **password**.
-
-You can change the default credentials by editing [/config/initializers/comfortable\_mexican\_sofa.rb](https://github.com/comfy/comfortable-mexican-sofa/blob/master/config/initializers/comfortable_mexican_sofa.rb):
-
-```ruby
-ComfortableMexicanSofa::HttpAuth.username = 'username'
-ComfortableMexicanSofa::HttpAuth.password = 'password'
-```
-
-Before we can populate the site with content, we will need to create a Site. The Site is what defines the hostname, content path, and the language. After creating a Site, you need to make a Layout, which is the template for your content; allowing you to define reusable content (such as the header and footer) and placeholders for content.
-
-A very simple Layout can look like this:
-```html
-<html>
-  <body>
-    <h1>{{ cms:page:header:string }}</h1>
-    {{ cms:page:content:text }}
-
-    <!-- You can add as many blocks as you want -->
-    {{ cms:page:another_block:rich_text }}
-  </body>
-</html>
-```
-
-Once you have a layout, you may start creating pages and populating content. It's that easy.
+*Note:* All routes appearing after `comfy_route :cms` will not be accessible as it's a
+[globbing route](http://guides.rubyonrails.org/routing.html#route-globbing-and-wildcard-segments). This includes routes included
+by other Rails Engines. Make sure that everything looks ok by running `rails routes`
+and confirming that `comfy_cms_render_page` appears last.
