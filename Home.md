@@ -9,7 +9,7 @@
 
 ### Managing Content
 
-* [Overview]()
+* [Overview](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-Overview)
 * [Content Tags]()
 * [Attachments]()
 * [Revisions]()

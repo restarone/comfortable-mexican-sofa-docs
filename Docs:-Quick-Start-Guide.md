@@ -31,21 +31,8 @@ pre-filled with
 This just means that *Pages* using this layout will have a single text field
 that is presented in a Wysiwyg editor in the admin area.
 
-*Layouts* may have many more content tags decorated with HTML content. A simple
-example may look something like this:
-
-```html
-<h1>{{ cms:text header }}</h1>
-{{ cms:file header-image, as: image, resize: "400x50^" }}
-<div class="row">
-  <div class="col-md-6">
-    {{ cms:markdown left-column }}
-  </div>
-  <div class="col-md-6">
-    {{ cms:markdown right-column }}
-  </div>
-</div>
-```
-
 Once you have *Layout* ready you may start creating pages. Pages editing view
 should reflect the *Layout* chosen.
+
+After page is created you should be able to navigate to it via
+http://localhost:3000/admin
