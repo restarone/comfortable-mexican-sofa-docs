@@ -2,8 +2,6 @@
 
 **ComfortableMexicanSofa is a powerful Rails 5.2+ CMS (Content Management System) Engine**
 
-## Documentation
-
 ### Getting Started
 
 * [Installation and Setup](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-Installation-and-Setup)
@@ -29,3 +27,4 @@
 * [Password protecting pages]()
 * [Serving CMS content from a separate database]()
 * [Using CacheSweeper to Inform Updates or to Clear Caches]()
+* [Fixing unaccessible routes](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTos:-Fix-Inaccessible-Routes)
