@@ -30,7 +30,7 @@
 * [Categories](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-Categories)
 * [CMS Seeds](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-CMS-Seeds)
 * [CMS View Helpers]()
-* [CMS Render Methods]()
+* [CMS Render Methods](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-CMS-Render-Methods)
 
 ### How-Tos
 
