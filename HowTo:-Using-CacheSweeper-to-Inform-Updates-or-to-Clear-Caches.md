@@ -1,35 +1,29 @@
 You can use CacheSweepers to inform about page/site updates or to clear cache.
 
-## Adding Sweepers to Rails 4
+## Adding Sweepers to Rails 5
 
-In Rail 4, Sweepers have been moved into a separate gem [rails-observers](https://github.com/rails/rails-observers)
+In Rails 4, Sweepers have been moved into a separate gem [rails-observers](https://github.com/rails/rails-observers)
 
 Their use is described [here](https://github.com/rails/rails-observers#action-controller-sweeper)
-
-For Rails 3 usage, you can find the instructions [here](http://apidock.com/rails/ActionController/Caching/Sweeping)
 
 ## Configuring sweepers
 
 In your comfortable_mexican_sofa.rb
 
 ```
-  # A class that is included as a sweeper to admin base controller if it's set  
-  # You could also give a array of sweepers
-  config.admin_cache_sweeper = CmsAdminSweeper
+# A class that is included as a sweeper to admin base controller if it's set
+# You could also give a array of sweepers
+config.admin_cache_sweeper = CmsAdminSweeper
 ```
-
 
 ## Example of sweeper
 
 Autoload this class somewhere.
 
-```
-
+```ruby
 class CmsAdminSweeper < ActionController::Caching::Sweeper
-  observe Cms::Page, Cms::Layout, Cms::Snippet
-  # For CMS 1.12.0+
   # observe Comfy::Cms::Page, Comfy::Cms::Layout, Comfy::Cms::Snippet
-  
+
   def after_create(model)
     do_sweeping(model)
   end

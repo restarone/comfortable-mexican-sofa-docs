@@ -39,7 +39,7 @@
 * [Reusing Admin Area](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Reusing-Admin-Area)
 * [Changing Wysiwyg Editor]()
 * [Password protecting pages](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Password-protecting-pages)
-* [Using CacheSweeper to Inform Updates or to Clear Caches]()
+* [Using CacheSweeper to Inform Updates or to Clear Caches](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Using-CacheSweeper-to-Inform-Updates-or-to-Clear-Caches)
 * [Fixing inaccessible routes](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Fix-Inaccessible-Routes)
 * [Devise CanCan Authentication/Authorization](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Devise-CanCan-Authentication-Authorization)
 * [Upgrading Redactor Wysiwyg](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Upgrading-Redactor-Wysiwyg)
