@@ -26,5 +26,5 @@ If you want to force the admin area to use a particular locale that is different
 
 If you wish to include a locale that doesn't exist yet, take a peek in
 [/config/locales](https://github.com/comfy/comfortable-mexican-sofa/tree/master/config/locales). You can create your own and extend Sofa's initialization config;
-for example, `config.locales.merge!(:arr => 'Pirate')`. Also you're welcome to
+for example, `config.locales.merge!(arr: 'Pirate')`. Also you're welcome to
 contribute your translations to Sofa.

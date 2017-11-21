@@ -12,7 +12,7 @@
 * [Overview](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-Overview)
 * [Sites](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-Sites)
 * [Layouts](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-Layouts)
-* [Pages]()
+* [Pages](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-Pages)
 * [Snippets]()
 * [Content Tags]()
 * [Attachments]()
