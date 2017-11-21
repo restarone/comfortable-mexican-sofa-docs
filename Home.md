@@ -43,3 +43,4 @@
 * [Fixing inaccessible routes](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Fix-Inaccessible-Routes)
 * [Devise CanCan Authentication/Authorization](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Devise-CanCan-Authentication-Authorization)
 * [Upgrading Redactor Wysiwyg](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Upgrading-Redactor-Wysiwyg)
+* [Deploying Comfy App to Heroku](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Deploying-Comfy-App-to-Heroku)
