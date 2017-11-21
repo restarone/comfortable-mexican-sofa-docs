@@ -39,7 +39,6 @@
 * [Creating navigation from pages](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Creating-navigation-from-pages)
 * [Reusing Admin Area](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Reusing-Admin-Area)
 * [Creating Custom Content Tag](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Creating-Custom-Content-Tag)
-* [Changing Wysiwyg Editor]()
 * [Password protecting pages](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Password-protecting-pages)
 * [Using CacheSweeper to Inform Updates or to Clear Caches](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Using-CacheSweeper-to-Inform-Updates-or-to-Clear-Caches)
 * [Fixing inaccessible routes](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Fix-Inaccessible-Routes)
