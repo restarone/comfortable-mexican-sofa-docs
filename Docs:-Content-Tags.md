@@ -23,12 +23,36 @@ records.
 These tags function the same. Content is stored against `content` attribute of
 the page fragment. The only difference is how they get rendered in the admin area.
 
-| Tag | Description |
-| --- | ---         |
-|`{{ cms:text example }}`     | Displayed as a simple text input |
-|`{{ cms:textarea example }}` | Displayed in a HTML text editor |
-|`{{ cms:markdown example }}` | Displayed in a Markdown text editor. Converted to HTML during rendering |
-|`{{ cms:wysiwyg example }}`  | Displayed in a Wysiwyg text editor |
+```
+{{ cms:text example }}
+```
+Text tag content is displayed as a simple text input
+
+```
+{{ cms:textarea example }}
+```
+Textarea tag content is displayed as HTML text editor powered by CodeMirror.
+
+```
+{{ cms:wysiwyg example }}
+```
+Wysiwyg tag content is displayed in Redactor Wysiwyg text editor. Redactor is
+capable of handling file and image attachments. Everything uploaded through
+this editor will create a *File* tagged as "wysiwyg". This allows creating
+attachments to non-persisted record. However, take care with removing those
+files as you can't really tell if any pages actually use them.
+
+Redactor 10.2.5 is a premium editor that has OEM license that allows it to be
+used on apps that utilize ComfortableMexicanSofa. While it's not the most current
+Redactor, it's the only one I have licence to bundle. But it's great and works
+great.
+
+```
+{{ cms:markdown example }}
+```
+Markdown tag content is displayed as Markdown editor powered by CodeMirror.
+Fragment content is stored as markdown and converted to HTML when rendered.
+
 
 ### Date and Datetime
 

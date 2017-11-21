@@ -15,7 +15,7 @@
 * [Pages](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-Pages)
 * [Snippets](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-Snippets)
 * [Files](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-Files)
-* [Content Tags]()
+* [Content Tags](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-Content-Tags)
 * [Revisions]()
 * [Categories]()
 * [CMS Seeds]()
