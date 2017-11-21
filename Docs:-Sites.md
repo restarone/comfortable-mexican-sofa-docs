@@ -1,4 +1,4 @@
-## Setup
+## Sites
 
 When setting up Sofa for the first time you'll be prompted to create a Site.
 At the very least you'll need to populate the hostname. If you wish to serve
