@@ -2,8 +2,7 @@
 
 **ComfortableMexicanSofa is a powerful Rails 5.2+ CMS (Content Management System) Engine**
 
-## !!!Note!!!
-All documentation in this Wiki is for currently unreleased CMS v2.0. If you have any questions about v1.12 throw a question on Gitter: https://gitter.im/comfy/comfortable-mexican-sofa
+**!!!Note!!!*** All documentation in this Wiki is for currently unreleased CMS v2.0. If you have any questions about v1.12 throw a question on Gitter: https://gitter.im/comfy/comfortable-mexican-sofa
 
 ### Getting Started
 
