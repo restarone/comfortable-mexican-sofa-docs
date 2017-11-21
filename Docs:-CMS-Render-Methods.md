@@ -1,4 +1,4 @@
-# View Rendering
+## Overview
 
 ComfortableMexicanSofa extends functionality of the `render` method to allow
 rendering of CMS pages, just like regular templates. When you have
