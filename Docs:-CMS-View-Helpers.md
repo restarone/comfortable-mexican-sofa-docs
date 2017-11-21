@@ -7,6 +7,9 @@ variables if used in `Comfy::Cms::Layout`.
 
 ## Helper Methods
 
+*Note:* If your app has `config.action_controller.include_all_helpers = false`
+make sure you have `helper Comfy::CmsHelper` defined in your `ApplicationController`.
+
 There are four helper methods available: `cms_fragment_content()`,
 `cms_fragment_render()` and more frequently used `cms_snippet_content()` and `cms_snippet_render()`.
 
