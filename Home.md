@@ -35,7 +35,7 @@
 ### How-Tos
 
 * [Changing Default Authentication](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Changing-Default-Authentication)
-* [Creating navigation from pages]()
+* [Creating navigation from pages](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Creating-navigation-from-pages)
 * [Reusing Admin Area]()
 * [Changing Wysiwyg Editor]()
 * [Password protecting pages]()
