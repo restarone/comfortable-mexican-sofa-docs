@@ -10,10 +10,14 @@
 ### Managing Content
 
 * [Overview](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-Overview)
+* [Sites](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-Sites)
+* [Layouts]()
+* [Pages]()
+* [Snippets]()
 * [Content Tags]()
 * [Attachments]()
 * [Revisions]()
-* [Taggings]()
+* [Categories]()
 * [CMS Seeds]()
 * [CMS View Helpers]()
 * [CMS Render Methods]()

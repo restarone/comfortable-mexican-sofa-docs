@@ -9,8 +9,8 @@ via content tags that look something like this `{{ cms:tag_name param, foo: bar 
 
 Minimal *Layout* may hold this kind of content:
 
-```ruby
-{{ cms:textarea content}}
+```
+{{ cms:textarea content }}
 ```
 
 This means that all pages using this *Layout* will have a single fragment that
