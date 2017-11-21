@@ -18,7 +18,7 @@ from elsewhere.
 Following content tags interact with data stored on the `Comfy::Cms::Fragment`
 records.
 
-### Text, TextArea, Markdown and Wysiwyg
+### Text, TextArea, Wysiwyg, and Markdown
 
 These tags function the same. Content is stored against `content` attribute of
 the page fragment. The only difference is how they get rendered in the admin area.
@@ -39,7 +39,7 @@ Textarea tag content is displayed as HTML text editor powered by CodeMirror.
 Wysiwyg tag content is displayed in Redactor Wysiwyg text editor. Redactor is
 capable of handling file and image attachments. Everything uploaded through
 this editor will create a *File* tagged as "wysiwyg". This allows creating
-attachments to non-persisted record. However, take care with removing those
+attachments to a non-persisted record. However, take care with removing those
 files as you can't really tell if any pages actually use them.
 
 Redactor 10.2.5 is a premium editor that has OEM license that allows it to be
@@ -53,7 +53,6 @@ great.
 Markdown tag content is displayed as Markdown editor powered by CodeMirror.
 Fragment content is stored as markdown and converted to HTML when rendered.
 
-
 ### Date and Datetime
 
 
@@ -62,6 +61,23 @@ Fragment content is stored as markdown and converted to HTML when rendered.
 
 ### Files and File
 
+
+#### Non-Renderable Fragments
+
+What if you don't want to render content and want to handle it in some other way.
+For example meta tags. You don't want to render meta description. Just pass
+`render: false` parameter. For example:
+
+```
+{{ cms:text meta-description, render: false }}
+```
+
+This tag's content will not be rendered out. Now you may manually grab that
+fragment's content like this (part of application.html.erb):
+
+```erb
+<meta name="description" content="<%= cms_fragment_content("meta-description") %>">
+```
 
 ## Other Tags
 ### Snippet
@@ -79,7 +95,7 @@ Fragment content is stored as markdown and converted to HTML when rendered.
 ### Asset
 
 
-### NonRenderable Fragments
+
 
 
 ## Content Tag Namespaces
