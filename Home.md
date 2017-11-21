@@ -36,7 +36,7 @@
 
 * [Changing Default Authentication](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Changing-Default-Authentication)
 * [Creating navigation from pages](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Creating-navigation-from-pages)
-* [Reusing Admin Area]()
+* [Reusing Admin Area](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Reusing-Admin-Area)
 * [Changing Wysiwyg Editor]()
 * [Password protecting pages](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Password-protecting-pages)
 * [Serving CMS content from a separate database]()

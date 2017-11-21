@@ -1,11 +1,11 @@
 Password protecting CMS pages is easy. All you need to do is create a module with `authenticate` method. Like so:
 
 ```ruby
-  module CmsPagesAuth
-    def authenticate
-      redirect_to login_path unless current_user
-    end
+module CmsPagesAuth
+  def authenticate
+    redirect_to login_path unless current_user
   end
+end
 ```
 
 Then in the initializer un-comment and change following line to this:
