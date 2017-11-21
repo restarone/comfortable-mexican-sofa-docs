@@ -37,5 +37,5 @@ page (if there's one).
 
 While Translation is a separate record from Page, we don't handle it on the views.
 @cms_page object is mutated with translation data. So you don't need to handle
-it in a spacial way. All view helpers like `cms_fragment_content` should work
+it in a special way. All view helpers like `cms_fragment_content` should work
 without worrying about translations either.
