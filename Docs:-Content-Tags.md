@@ -148,6 +148,23 @@ Comfy will create two tabs in the page editor: Default and OG. The `title` and
 `description` fields will be displayed in the Default tab and the two namespaced
 fields will be displayed in the OG tab.
 
+#### Localizing Tag Labels and Namespaces
+
+Let's say you have tag like this: `{{ cms:markdown foo, namespace: bar }}`and
+would like to localize it for admin area. All you need is to add this entry to
+your `config/locales/your_locale.yml` file:
+
+```yml
+your_locale:
+  comfy:
+    cms:
+      content:
+        tag:
+          foo: Localized Foo
+        namespace:
+          bar: Localized Bar
+```
+
 ## Other Tags
 ### Snippet
 
