@@ -55,6 +55,7 @@ great.
 Markdown tag content is displayed as Markdown editor powered by CodeMirror.
 Fragment content is stored as markdown and converted to HTML when rendered.
 
+### Number
 ```
 {{ cms:number example }}
 ```

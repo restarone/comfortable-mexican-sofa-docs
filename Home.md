@@ -17,6 +17,7 @@
 * [Files](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-Files)
 * [Content Tags](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-Content-Tags)
   * [Text, TextArea, Wysiwyg and Markdown](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-Content-Tags#text-textarea-wysiwyg-and-markdown)
+  * [Number](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-Content-Tags#number)
   * [Date and Datetime](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-Content-Tags#date-and-datetime)
   * [Checkbox](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-Content-Tags#checkbox)
   * [File and Files](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-Content-Tags#file-and-files)
