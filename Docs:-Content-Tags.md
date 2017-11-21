@@ -53,13 +53,61 @@ great.
 Markdown tag content is displayed as Markdown editor powered by CodeMirror.
 Fragment content is stored as markdown and converted to HTML when rendered.
 
+```
+{{ cms:number example }}
+```
+For all those times where you need number input. It still stores it as text though.
+
 ### Date and Datetime
 
+```
+{{ cms:date example }}
+```
+Stores content in `datetime` attribute of the page fragment. So it comes out as
+a proper DateTime value. Rendered using Flatpickr in the admin area.
+
+```
+{{ cms:datetime example }}
+```
+Same as Date, but with option to set Time!
 
 ### Checkbox
 
+```
+{{ cms:checkbox example }}
+```
+Allows to set a `boolean` attribute on the page fragment. Displayed as a checkbox
+in the admin area. Unchecked by default.
 
-### Files and File
+### File and Files
+
+```
+{{ cms:file example }}
+```
+This tag handles attachments on page fragments. Attachments are handled by
+[ActiveStorage](https://github.com/rails/rails/tree/master/activestorage). In
+the admin area you can select attachments that need to be removed during page
+save. File tag will replace existing attachment, if there's one.
+
+This tag accepts several options. Let's go through them:
+
+```
+{{ cms:file example, as: image, label: "My Photo", resize: "100x50>", gravity: "center", crop: "100x50+0+0"}}
+```
+- `as` can be set to following values:
+  - `url` - This is the default. Will render URL pointing to uploaded attachment.
+  - `link` - Will wrap URL in `<a href=>` tag.
+  - `image` - Will wrap URL in `<img src=>` tag.
+- `label` - Will use this as text for links or alt attibute value for images.
+- `resize`, `gravity`, `crop` - Only applicable for image variants. These are
+  transform options that are passed into ImageMagick via ActiveStorage.
+
+```
+{{ cms:files example }}
+```
+Same as "files" tag, all attached files are appended to the existing ones. Out
+of the box, you'll probably will be unhappy with its rendered output. I suggest
+doing `render: false` and manually rendering files out using view helper.
 
 
 #### Non-Renderable Fragments
@@ -78,6 +126,25 @@ fragment's content like this (part of application.html.erb):
 ```erb
 <meta name="description" content="<%= cms_fragment_content("meta-description") %>">
 ```
+
+#### Content Tag Namespaces
+
+You can organize your page fragments into tabbed sections by passing `namespace`
+parameter. If you wanted to organize a set of Open Graph fields into an "Og"
+tab, your layout might look something like this:
+
+```html
+{{ cms:text title }}
+{{ cms:text description }}
+...
+{{ cms:text open_graph_description, namespace: OG }}
+{{ cms:text open_graph_title, namespace: OG }}
+```
+
+Comfy will create two tabs in the page editor: Default and OG. The `title` and
+`description` fields will be displayed in the Default tab and the two namespaced
+fields will be displayed in the OG tab.
+
 
 ## Other Tags
 ### Snippet
@@ -98,20 +165,3 @@ fragment's content like this (part of application.html.erb):
 
 
 
-## Content Tag Namespaces
-
-You can organize your page fragments into tabbed sections by passing `namespace`
-parameter. If you wanted to organize a set of Open Graph fields into an "Og"
-tab, your layout might look something like this:
-
-```html
-    {{ cms:text title }}
-    {{ cms:text description }}
-    ...
-    {{ cms:text open_graph_description, namespace: OG }}
-    {{ cms:text open_graph_title, namespace: OG }}
-```
-
-Comfy will create two tabs in the page editor: Default and OG. The `title` and
-`description` fields will be displayed in the Default tab and the two namespaced
-fields will be displayed in the OG tab.
