@@ -43,3 +43,4 @@
 * [Using CacheSweeper to Inform Updates or to Clear Caches]()
 * [Fixing inaccessible routes](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Fix-Inaccessible-Routes)
 * [Devise CanCan Authentication/Authorization](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Devise-CanCan-Authentication-Authorization)
+* [Upgrading Redactor Wysiwyg](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Upgrading-Redactor-Wysiwyg)
