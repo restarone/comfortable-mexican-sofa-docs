@@ -18,6 +18,8 @@ from elsewhere.
 Following content tags interact with data stored on the `Comfy::Cms::Fragment`
 records.
 
+Content of these tags may contain other *non-fragment* tags (don't cross the beams).
+
 ### Text, TextArea, Wysiwyg, and Markdown
 
 These tags function the same. Content is stored against `content` attribute of
@@ -145,16 +147,44 @@ Comfy will create two tabs in the page editor: Default and OG. The `title` and
 `description` fields will be displayed in the Default tab and the two namespaced
 fields will be displayed in the OG tab.
 
-
 ## Other Tags
 ### Snippet
 
+```
+{{ cms:snippet identifier }}
+```
+Snippet tags are bits of reusable content that can be used anywhere. Imagine
+creating content like a sharing widget, or business address that you want to
+randomly use across your site.
+
+They are managed in *Snippets* section of the admin area.
 
 ### Helper
 
+```
+{{ cms:helper some_helper, param_a, key: param_b }}
+```
+Helper is a wrapper for your regular view helpers. Normally you cannot have ERB
+in CMS content, so there are tags that allow calling helpers and partials. All
+keys and arguments are strings. Keep that in mind when handling them inside the
+helper.
+
+When rendered, this tag will be converted to:
+
+```erb
+<%= some_helper("param_a", {"key" => "param_b"}) %>
+```
 
 ### Partial
 
+```
+{{ cms:partial "path/to/partial", local_var: "value" }}
+```
+Same idea as with view helpers. This tag will be converted to:
+
+```erb
+<%= render partial: "path/to/partial", locals: {"local_var" => "value"} %>
+```
 
 ### FileLink
 
