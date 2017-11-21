@@ -1,5 +1,3 @@
-## Quick Start Guide
-
 Assuming that you followed steps to install everything, start the server:
 
 ```bash
