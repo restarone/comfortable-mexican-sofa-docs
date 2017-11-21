@@ -175,6 +175,10 @@ When rendered, this tag will be converted to:
 <%= some_helper("param_a", {"key" => "param_b"}) %>
 ```
 
+It's possible to set a whitelist of helpers that can be called. There's a default
+blacklist of methods that cannot be called this way: `eval`, `class_eval`,
+`instance_eval`, and `render`.
+
 ### Partial
 
 ```
@@ -185,13 +189,26 @@ Same idea as with view helpers. This tag will be converted to:
 ```erb
 <%= render partial: "path/to/partial", locals: {"local_var" => "value"} %>
 ```
+It's possible to define whitelist of partials that can be called via this tag.
 
 ### FileLink
 
+```
+{{ cms:file_link file_id }}
+```
+
+This tag is identical to "file" tags in a way it's rendered. But instead of
+dealing with page fragment attachments, it renders previously uploaded files
+(`Comfy::Cms::File` records) in *Files* section of the admin area.
 
 ### Asset
 
+```
+{{cms:asset layout_identifier, type: css, as: tag}}
+```
 
+Mentioned in Layouts section of the Wiki. This is how we can output content
+of the Layout's CSS/JS fields into a page.
 
-
-
+`type` is either `css` or `js`. `as` can be ommited and only URL will be
+rendered out.
