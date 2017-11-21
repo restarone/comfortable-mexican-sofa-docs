@@ -29,12 +29,12 @@
 * [Revisions](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-Revisions)
 * [Categories](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-Categories)
 * [CMS Seeds](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-CMS-Seeds)
-* [CMS View Helpers]()
+* [CMS View Helpers](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-CMS-View-Helpers)
 * [CMS Render Methods](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-CMS-Render-Methods)
 
 ### How-Tos
 
-* [Changing default authentication]()
+* [Changing Default Authentication](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Changing-Default-Authentication)
 * [Creating navigation from pages]()
 * [Reusing Admin Area]()
 * [Changing Wysiwyg Editor]()
