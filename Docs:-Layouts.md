@@ -21,7 +21,7 @@ Layout defines content areas for the page. For example, if you need a page with 
 
 If this layout is chosen during page creation you will notice that you are
 presented with form fields that correspond to the tags defined in the layout
-content. In this case you'll have a *titleT text field and *content* text area.
+content. In this case you'll have a *title* text field and *content* text area.
 When page is rendered, tags are replaced with content that you defined.
 
 ### Application Layout
