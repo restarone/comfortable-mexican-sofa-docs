@@ -47,10 +47,9 @@
 * [Deploying Comfy App to Heroku](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Deploying-Comfy-App-to-Heroku)
 
 ### Documentation for old versions
-For [legacy wiki](https://github.com/comfy/comfortable-mexican-sofa/wiki/Home/9c0f79fcec13cf7f62a7bf3be0c45fa6451f96d8) it's best to do this: 
+To access documentation for CMS prior to version 2.0 it's best to checkout wiki locally: 
 ```
 git clone https://github.com/comfy/comfortable-mexican-sofa.wiki.git
 cd comfortable-mexican-sofa.wiki
 git checkout 9c0f79fcec13cf7f62a7bf3be0c45fa6451f96d8
 ```
-And browse locally.
