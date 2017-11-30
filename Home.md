@@ -2,8 +2,6 @@
 
 **ComfortableMexicanSofa is a powerful Rails 5.2+ CMS (Content Management System) Engine**
 
-**!!! Note !!!** All documentation in this Wiki is for currently unreleased CMS v2.0 and might be different from outgoing v1.12. If you have any questions about v1.12 throw a question on Gitter: https://gitter.im/comfy/comfortable-mexican-sofa
-
 ### Getting Started
 
 * [Installation and Setup](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-Installation-and-Setup)
@@ -47,3 +45,12 @@
 * [Devise CanCan Authentication/Authorization](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Devise-CanCan-Authentication-Authorization)
 * [Upgrading Redactor Wysiwyg](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Upgrading-Redactor-Wysiwyg)
 * [Deploying Comfy App to Heroku](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Deploying-Comfy-App-to-Heroku)
+
+### Documentation for old versions
+For [legacy wiki](https://github.com/comfy/comfortable-mexican-sofa/wiki/Home/9c0f79fcec13cf7f62a7bf3be0c45fa6451f96d8) it's best to do this: 
+```
+git clone https://github.com/comfy/comfortable-mexican-sofa.wiki.git
+cd comfortable-mexican-sofa.wiki
+git checkout 9c0f79fcec13cf7f62a7bf3be0c45fa6451f96d8
+```
+And browse locally.
