@@ -6,28 +6,6 @@
 * Pagination is handled by either [Kaminari](https://github.com/kaminari/kaminari) or [WillPaginate](https://github.com/mislav/will_paginate). Make sure you have one
   defined in your Gemfile.
 
-## Installation for pre-Rails 5.2 release (master branch)
-
-Rails 5.2 is not out yet, so some gems are not ready or published. Use the following
-in your Gemfile to install everything:
-
-```ruby
-gem "comfortable_mexican_sofa",
-  github: "comfy/comfortable-mexican-sofa"
-
-# until [PR#30783](https://github.com/rails/rails/pull/30783) gets resolved
-gem "rails",
-  github: "GBH/rails",
-  branch: "active-storage-routes-prepend"
-gem "arel",
-  github: "rails/arel"
-
-# There's no gem published for Bootstrap4 just yet
-gem "bootstrap_form",
-  github: "bootstrap-ruby/rails-bootstrap-forms",
-  branch: "bootstrap-v4"
-```
-
 ## Installation
 
 Add to the Gemfile of your Rails project:
