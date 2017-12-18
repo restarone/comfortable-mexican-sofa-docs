@@ -159,3 +159,24 @@ Copyright 2021
 ```
 
 #### For Files
+
+File seeds live in `/db/cms_seeds/site_identifier/files`. You can just dump
+files in there as-is. If you need to add attributes like label, descriptions, etc
+you need to add `_filename.extension.yml`
+
+```text
+files
+  +-- header.jpg
+  +-- footer.jpg
+  +-- _footer.jpg.yml
+```
+
+Here's an example yml file:
+
+```yml
+label: Footer File
+description: Footer File Description
+categories:
+  - purple
+  - beige
+```
