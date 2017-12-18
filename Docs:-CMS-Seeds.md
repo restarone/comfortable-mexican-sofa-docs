@@ -136,5 +136,26 @@ Home Page content
 
 #### For Snippets
 
+Snippet seed files located in `/db/cms_seeds/site_identifier/snippets`. Each
+snippet is denoted by a file name like this: `snippet_identifier.html`
+
+```text
+snippets
+  +-- footer.html
+  +-- contact.html
+```
+
+Here's a simple example:
+
+```html
+[attributes]
+label:Footer Snippet
+categories:
+  - blue
+  - yellow
+
+[content]
+Copyright 2021
+```
 
 #### For Files
