@@ -35,6 +35,7 @@
 
 ### How-Tos
 
+* [Upgrading from 1.12 to 2.0](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Upgrade-From-1.12-to-2.0)
 * [Changing Default Authentication](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Changing-Default-Authentication)
 * [Creating navigation from pages](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Creating-navigation-from-pages)
 * [Reusing Admin Area](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Reusing-Admin-Area)
@@ -47,7 +48,7 @@
 * [Deploying Comfy App to Heroku](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Deploying-Comfy-App-to-Heroku)
 
 ### Documentation for old versions
-To access documentation for CMS prior to version 2.0 it's best to checkout wiki locally: 
+To access documentation for CMS prior to version 2.0 it's best to checkout wiki locally:
 ```
 git clone https://github.com/comfy/comfortable-mexican-sofa.wiki.git
 cd comfortable-mexican-sofa.wiki
