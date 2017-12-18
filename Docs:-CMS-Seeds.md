@@ -50,3 +50,48 @@ end
 ```
 
 Now, when runnining `rake` or `rake:test` CMS seeds will be loaded in.
+
+### Seed File Structure
+
+#### For Layouts
+
+Layout seed files live in this default folder: `/db/cms_seeds/site_identifier/layouts`.
+Each Layout is denoted by the folder name and associated `content.html` file.
+Nested layouts are just sub-folders. Here's an example of a layout seed and a nested one.
+
+```text
+layouts
+  +-- default
+  |  +-- nested
+  |     +-- content.html
+  +-- content.html
+```
+
+Here's an example of content.html structure. Lines with `[something]` indicate
+file sections.
+
+```html
+[attributes]
+label: Main Layout
+
+[content]
+<html>
+  <body>
+    {{ cms:wysiwyg content }}
+  </body>
+</html>
+
+[js]
+console.log("hello")
+
+[css]
+body{color: black}
+```
+
+#### For Pages
+
+
+#### For Snippets
+
+
+#### For Files
