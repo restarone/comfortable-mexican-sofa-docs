@@ -90,6 +90,49 @@ body{color: black}
 
 #### For Pages
 
+Page seed files located in this default folder: `/db/cms_seeds/site_identifier/pages`.
+Each Page is denoted by folder name. Root page is named `index`. All other pages
+are nested under that folder.
+
+Translations are handled by files with locale in the filename: `cotnent.locale.html`.
+
+Attachments are put on the same level as content file and linked from there.
+
+```text
+pages
+  +-- index
+  |  +-- child-a
+  |  |  +-- content.html
+  |  +-- child-b
+  |     +-- content.html
+  +-- content.html
+  +-- content.fr.html
+  +-- content.es.html
+  +-- header.jpg
+```
+
+Here's an example content.html structure. Segments like `[type name]` maps to
+a fragment type and name. For example, if you have `{{cms:markdown right-column}}`
+you'll have `[markdown right-column]` section in content.html file.
+
+```html
+[attributes]
+label: Homepage
+layout: default
+categories:
+  - red
+  - green
+
+[file header]
+header.jpg
+
+[wysiwyg content]
+Home Page content
+{{ cms:snippet default }}
+
+[date published_on]
+2015-10-31
+```
 
 #### For Snippets
 
