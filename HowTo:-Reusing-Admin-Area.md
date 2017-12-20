@@ -17,7 +17,7 @@ end
 
 ### Adding custom JS/CSS to the admin area
 
-After installing CMS you should be able to find `/app/assets/javascripts/comfy/admin/cms/custom.js` and `/app/assets/stylesheets/comfy/admin/cms/custom.sass`. Anything you put in there will be available in all admin views. 
+After installing CMS you should be able to find `/app/assets/javascripts/comfy/admin/cms/custom.js` and `/app/assets/stylesheets/comfy/admin/cms/custom.sass` in your app. Anything you put in there will be available in all admin views. 
 
 ### Scaffold Generator
 
