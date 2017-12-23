@@ -1,7 +1,5 @@
 ## ComfortableMexicanSofa - Rails CMS Engine
 
-**ComfortableMexicanSofa is a powerful Rails 5.2+ CMS (Content Management System) Engine**
-
 ### Getting Started
 
 * [Installation and Setup](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-Installation-and-Setup)
