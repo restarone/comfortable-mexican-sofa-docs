@@ -1,5 +1,6 @@
 ## Dependencies
 
+* Rails 5.2+. At the moment the latest version is [5.2.beta2](https://rubygems.org/gems/rails/versions/5.2.0.beta2)
 * File attachments are handled by [ActiveStorage](https://github.com/rails/rails/tree/master/activestorage). You will need to copy over database migrations by running
   `rails active_storage:install`
 * To resize attached images you'll need to have [ImageMagic](http://www.imagemagick.org/script/download.php) installed.
