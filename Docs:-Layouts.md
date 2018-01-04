@@ -28,7 +28,7 @@ When page is rendered, tags are replaced with content that you defined.
 
 In most cases you'll want to use stylesheets/javascripts and general html layout
 that you already have in your application. For that it's enough to select an
-*App Layout*. It will be listed as a file that is found in `/views/layouts`.
+*App Layout*. It will be listed as a file that is found in `/views/layouts` when you edit a layout in Sofa.
 This way you limit exposure of what can be managed in Sofa. Let's say your
 application layout is `application.html.haml`:
 
