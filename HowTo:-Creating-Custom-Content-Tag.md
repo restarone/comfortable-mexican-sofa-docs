@@ -11,7 +11,7 @@ class LoremPicsum < ComfortableMexicanSofa::Content::Tag
 
   attr_reader :path, :locals
 
-  def initialize(context, params_string)
+  def initialize(context:, params: [], source: "")
     super
     @width  = params[0]
     @height = params[1]
