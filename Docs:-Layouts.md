@@ -64,7 +64,7 @@ text, or whatever as long it's a Fragment based tag with `content` label.
 Based on the previous examples this is what two-column layout would look like:
 
 ```html
-<div class='left'> {{ cms:mardown left_column }} </div>
+<div class='left'> {{ cms:markdown left_column }} </div>
 <div class='right'> {{ cms:markdown right_column }} </div>
 ```
 
@@ -73,7 +73,7 @@ actuality you are dealing with layout that has this content:
 
 ```html
 <h1> {{ cms:text title }} </h1>
-<div class='left'> {{ cms:mardown left_column }} </div>
+<div class='left'> {{ cms:markdown left_column }} </div>
 <div class='right'> {{ cms:markdown right_column }} </div>
 ```
 
