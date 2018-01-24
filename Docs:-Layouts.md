@@ -6,7 +6,7 @@ Layout defines content areas for the page. For example, if you need a page with 
 <html>
   <body>
     <div class='header'>
-      {{ cms:snippet header }}
+      {{ cms:text header }}
     </div>
     <div class='content'>
       <h1> {{ cms:text header }} </h1>
