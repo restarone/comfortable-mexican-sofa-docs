@@ -28,3 +28,17 @@
 * [CMS Seeds](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-CMS-Seeds)
 * [CMS View Helpers](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-CMS-View-Helpers)
 * [CMS Render Methods](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-CMS-Render-Methods)
+
+### How-Tos
+
+* [Upgrading CMS from 1.12 to 2.0](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Upgrade-CMS-From-1.12-to-2.0)
+* [Changing Default Authentication](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Changing-Default-Authentication)
+* [Creating navigation from pages](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Creating-navigation-from-pages)
+* [Reusing Admin Area](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Reusing-Admin-Area)
+* [Creating Custom Content Tag](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Creating-Custom-Content-Tag)
+* [Password protecting pages](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Password-protecting-pages)
+* [Using CacheSweeper to Inform Updates or to Clear Caches](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Using-CacheSweeper-to-Inform-Updates-or-to-Clear-Caches)
+* [Fixing inaccessible routes](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Fix-Inaccessible-Routes)
+* [Devise CanCan Authentication/Authorization](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Devise-CanCan-Authentication-Authorization)
+* [Upgrading Redactor Wysiwyg](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Upgrading-Redactor-Wysiwyg)
+* [Deploying Comfy App to Heroku](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Deploying-Comfy-App-to-Heroku)
