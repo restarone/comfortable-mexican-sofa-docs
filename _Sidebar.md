@@ -28,3 +28,4 @@
 * [CMS Seeds](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-CMS-Seeds)
 * [CMS View Helpers](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-CMS-View-Helpers)
 * [CMS Render Methods](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-CMS-Render-Methods)
+* [How-Tos](//github.com/comfy/comfortable-mexican-sofa/wiki#how-tos)
