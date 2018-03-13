@@ -26,7 +26,7 @@ Here's a path that might work for you:
     File.delete(attributes_path)
     if path.include? '/snippets/'
       File.delete(path)
-      File.delete(File.dirname(path))
+      Dir.rmdir(File.dirname(path))
       path = path.sub('/content.html', '.html')
     end
     File.write(path, "[attributes]\n#{attributes}\n#{content_tag}\n#{content}")
