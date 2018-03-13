@@ -14,6 +14,7 @@
 * [{{ cms:helper }}](#helper)
 * [{{ cms:partial }}](#partial)
 * [{{ cms:file_link }}](#filelink)
+* [{{ cms:page_file_link }}](#pagefilelink)
 * [{{ cms:asset }}](#asset)
 
 Content tags have this structure: `{{ cms:tag_name params }}`. Always wrapped
@@ -231,9 +232,26 @@ It's possible to define whitelist of partials that can be called via this tag.
 {{ cms:file_link file_id }}
 ```
 
-This tag is identical to "file" tags in a way it's rendered. But instead of
+This tag is identical to `file` tag in a way it's rendered. But instead of
 dealing with page fragment attachments, it renders previously uploaded files
 (`Comfy::Cms::File` records) in *Files* section of the admin area.
+
+### PageFileLink
+
+Similar tag to the `file_link` tag. It allows linking to files uploaded to the
+page itself. For example, if your layout has these tags defined:
+
+```
+{{ cms:file graphic, render: false }}
+{{ cms:files attachments, render: false }}
+```
+You can link to the files from an individual page (or snippet rendered in
+the context of the page) like so:
+
+```
+{{ cms:page_file_link graphic }}
+{{ cms:page_file_link attachments, filename: "cat.jpg" }}
+```
 
 ### Asset
 

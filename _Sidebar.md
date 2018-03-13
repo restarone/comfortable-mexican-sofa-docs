@@ -21,6 +21,7 @@
   * [Helper](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-Content-Tags#helper)
   * [Partial](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-Content-Tags#partial)
   * [FileLink](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-Content-Tags#filelink)
+  * [PageFileLink](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-Content-Tags#pagefilelink)
   * [Asset](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-Content-Tags#asset)
 * [Translations](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-Translations)
 * [Revisions](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-Revisions)
