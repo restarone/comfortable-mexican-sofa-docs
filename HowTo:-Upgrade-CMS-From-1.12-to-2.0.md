@@ -14,19 +14,19 @@ Here's a path that might work for you:
 
   Begin by inlining all the `attributes.yml` files into `content.html` like this:
 
-	```ruby
-	Dir['db/cms_seeds/**/content.html'].each do |path|
-	  attributes_path = File.join(File.dirname(path), 'attributes.yml')
-	  next unless File.readable?(attributes_path)
-	  attributes = File.read(attributes_path)
-      attributes.sub!(/\A---\n/, '')
-      attributes.sub!(/^parent: [^\n]+\n/, '')
-	  content = File.read(path)
-      content_tag = path.includes?('/pages'/) ? '[textarea content]' : '[content]'
-	  File.write(path, "[attributes]\n#{attributes}\n#{content_tag}\n#{content}")
-	  File.delete(attributes_path)
-	end
-	```
+  ```ruby
+  Dir['db/cms_seeds/**/content.html'].each do |path|
+    attributes_path = File.join(File.dirname(path), 'attributes.yml')
+    next unless File.readable?(attributes_path)
+    attributes = File.read(attributes_path)
+    attributes.sub!(/\A---\n/, '')
+    attributes.sub!(/^parent: [^\n]+\n/, '')
+    content = File.read(path)
+    content_tag = path.includes?('/pages'/) ? '[textarea content]' : '[content]'
+    File.write(path, "[attributes]\n#{attributes}\n#{content_tag}\n#{content}")
+    File.delete(attributes_path)
+  end
+  ```
 
 - Change CMS tags from old `{{cms:foo:bar:red:green}}` format to the new `{{cms:foo bar, red: green}}`.
 
