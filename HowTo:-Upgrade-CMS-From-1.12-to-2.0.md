@@ -11,7 +11,8 @@ Here's a path that might work for you:
 - In 1.12 install export all content to CMS Fixture files via `rake comfortable_mexican_sofa:fixtures:export FROM=site_identifier TO=folder_name`
 - Remove existing 1.12 CMS related db tables and Paperclip attachment files wherever they might be.
 - Edit files into new CMS Seeds format. [See Wiki entry on that](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-CMS-Seeds).
-  You can begin by inline all the `attributes.yml` files into `content.html` like this:
+
+  Begin by inlining all the `attributes.yml` files into `content.html` like this:
 
 	```ruby
 	Dir['db/cms_seeds/**/content.html'].each do |path|
@@ -23,9 +24,10 @@ Here's a path that might work for you:
 	  File.delete(attributes_path)
 	end
 	```
-	
 
 - Change CMS tags from old `{{cms:foo:bar:red:green}}` format to the new `{{cms:foo bar, red: green}}`
+  You can do so using a few RegExp replacements, such as `\{\{ ?cms:helper:([\w]+) ?\}\}` => `{{ cms:helper $1 }}`.
+
 - If you attached files via WYSIWYG editor prepare for the pain of trying to locate and re-link those files later.
 - Install CMS 2.0
 - Import CMS Seeds with `rake comfy:cms_seeds:import[folder_name,site_identifier]`
