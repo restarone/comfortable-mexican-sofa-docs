@@ -18,7 +18,9 @@ Here's a path that might work for you:
 	Dir['db/cms_seeds/**/content.html'].each do |path|
 	  attributes_path = File.join(File.dirname(path), 'attributes.yml')
 	  next unless File.readable?(attributes_path)
-	  attributes = File.read(attributes_path).sub(/\A---\n/, '')
+	  attributes = File.read(attributes_path)
+      attributes.sub!(/\A---\n/, '')
+      attributes.sub!(/^parent: [^\n]+\n/, '')
 	  content = File.read(path)
 	  File.write(path, "[attributes]\n#{attributes}\n[textarea content]\n#{content}")
 	  File.delete(attributes_path)
