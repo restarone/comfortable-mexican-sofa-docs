@@ -22,9 +22,14 @@ Here's a path that might work for you:
     attributes.sub!(/\A---\n/, '')
     attributes.sub!(/^parent: [^\n]+\n/, '')
     content = File.read(path)
-    content_tag = path.includes?('/pages'/) ? '[textarea content]' : '[content]'
-    File.write(path, "[attributes]\n#{attributes}\n#{content_tag}\n#{content}")
+    content_tag = path.include?('/pages'/) ? '[textarea content]' : '[content]'
     File.delete(attributes_path)
+    if path.include? '/snippets/'
+      File.delete(path)
+      File.delete(File.dirname(path))
+      path = path.sub('/content.html', '.html')
+    end
+    File.write(path, "[attributes]\n#{attributes}\n#{content_tag}\n#{content}")
   end
   ```
 
