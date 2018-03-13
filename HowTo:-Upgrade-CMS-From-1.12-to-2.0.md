@@ -25,8 +25,14 @@ Here's a path that might work for you:
 	end
 	```
 
-- Change CMS tags from old `{{cms:foo:bar:red:green}}` format to the new `{{cms:foo bar, red: green}}`
-  You can do so using a few RegExp replacements, such as `\{\{ ?cms:helper:([\w]+) ?\}\}` => `{{ cms:helper $1 }}`.
+- Change CMS tags from old `{{cms:foo:bar:red:green}}` format to the new `{{cms:foo bar, red: green}}`.
+
+  For most of these, you can do so using a few RegExps, such as:
+
+  | Pattern | Replacement |
+  |---------|-------------|
+  | `\{\{ ?cms:helper:([\w]+) ?\}\}` | `{{ cms:helper $1 }}` |
+  | `\{\{ ?cms:helper:([\w]+):([^:]*) ?\}\}` | `{{ cms:helper $1, "$2" }}` |
 
 - If you attached files via WYSIWYG editor prepare for the pain of trying to locate and re-link those files later.
 - Install CMS 2.0
