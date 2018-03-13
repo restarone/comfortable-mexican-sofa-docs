@@ -22,7 +22,8 @@ Here's a path that might work for you:
       attributes.sub!(/\A---\n/, '')
       attributes.sub!(/^parent: [^\n]+\n/, '')
 	  content = File.read(path)
-	  File.write(path, "[attributes]\n#{attributes}\n[textarea content]\n#{content}")
+      content_tag = path.includes?('/pages'/) ? '[textarea content]' : '[content]'
+	  File.write(path, "[attributes]\n#{attributes}\n#{content_tag}\n#{content}")
 	  File.delete(attributes_path)
 	end
 	```
