@@ -19,7 +19,7 @@ Here's a path that might work for you:
 	  next unless File.readable?(attributes_path)
 	  attributes = File.read(attributes_path).sub(/\A---\n/, '')
 	  content = File.read(path)
-	  File.write(path, "[attributes]\n#{attributes}\n[content]#{content}")
+	  File.write(path, "[attributes]\n#{attributes}\n[content]\n#{content}")
 	  File.delete(attributes_path)
 	end
 	```
