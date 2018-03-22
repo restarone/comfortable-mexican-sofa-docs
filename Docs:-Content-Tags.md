@@ -91,6 +91,12 @@ a proper DateTime value. Rendered using Flatpickr in the admin area.
 ```
 Same as Date, but with option to set Time!
 
+You can change how datetime is rendered by passing `strftime` option like so:
+
+```
+{{ cms:datetime example, strftime: "at %I:%M%p" }}
+```
+
 ### Checkbox
 
 ```
