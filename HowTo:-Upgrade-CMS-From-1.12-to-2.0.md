@@ -22,7 +22,7 @@ Here's a path that might work for you:
     attributes.sub!(/\A---\n/, '')
     attributes.sub!(/^parent: [^\n]+\n/, '')
     content = File.read(path)
-    content_tag = path.include?('/pages'/) ? '[textarea content]' : '[content]'
+    content_tag = path.include?('/pages/') ? '[textarea content]' : '[content]'
     File.delete(attributes_path)
     if path.include? '/snippets/'
       File.delete(path)
