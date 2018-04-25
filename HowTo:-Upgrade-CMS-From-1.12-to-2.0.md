@@ -42,6 +42,7 @@ Here's a path that might work for you:
   | `\{\{ ?cms:helper:([\w]+) ?\}\}` | `{{ cms:helper $1 }}` |
   | `\{\{ ?cms:helper:([\w]+):([^:]*) ?\}\}` | `{{ cms:helper $1, "$2" }}` |
 
+- Remove all `block:` lines in the YAML in `files/`
 - If you attached files via WYSIWYG editor prepare for the pain of trying to locate and re-link those files later.
 - Install CMS 2.0
 - Import CMS Seeds with `rake comfy:cms_seeds:import[folder_name,site_identifier]`
