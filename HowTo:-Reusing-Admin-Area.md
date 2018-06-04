@@ -10,7 +10,7 @@ views will be using Sofa's admin layout and it's basic HttpAuth.
 
 
 ```ruby
-class Admin::CategoriesController < Comfy::Admin::BaseController
+class Admin::CategoriesController < Comfy::Admin::Cms::BaseController
   # your code goes here
 end
 ```
