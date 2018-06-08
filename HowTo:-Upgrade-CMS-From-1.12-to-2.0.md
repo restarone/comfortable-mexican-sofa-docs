@@ -97,7 +97,7 @@ class RenameComfyCmsBlocksToComfyCmsFragments < ActiveRecord::Migration[5.2]
   end
 end
 ```
-The Rake task invoked is discussed below (under Updating Tags)
+The Rake task invoked is discussed below (under Updating Tags). There is at least one other column (`comfy_cms_files.block_id`) that is no longer used by Comfy but that may be useful during migration.
 
 ## Other code changes
 While I'm sure there are more code changes than I've noted, these required changes to our code:
@@ -137,7 +137,7 @@ If you have any Paperclip styles defined, you'll need to update any references t
 ### Page attachments
 Page attachments are handled sufficiently differently to cause a bit of work. In my case, I found it easier to migrate each page attachment to a text reference to the Comfy::Cms::File object id and then adjust from there, but it should be possible to instead reattach the blob to the fragment itself.
 
-How I did it:
+How I did it, using the vestigial `block_id` value in the `comfy_cms_files` table:
 ```ruby
     task :reattach_page_files => :environment do |t|
         files = Comfy::Cms::File.where.not(block_id: nil)
