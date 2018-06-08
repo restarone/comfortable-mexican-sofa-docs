@@ -183,7 +183,7 @@ A few notes:
 * rich_text fields are now wysiwyg fields
 * unless you reattach files, the tags referring to them will be broken
 * if you do reattach them, you'll presumably need to update the syntax
-* apologies for making your eyes bleed with the mess below, [b]please[/b] update the wiki entry if you do the upgrade and clean up and consolidate the regular expressions properly
+* apologies for making your eyes bleed with the mess below, **please** update the wiki entry if you do the upgrade and clean up and consolidate the regular expressions properly
 
 ```ruby
     task :update_cms_tags => :environment do |t|
