@@ -54,12 +54,12 @@ It is possible to upgrade in place. The difficulty level of the upgrade will var
 
 Key differences from 1.12 to 2.0:
 * upgrade to Rails 5.2 from whichever version you were using. This upgrade may require upgrading other gems, updating to current best practices, etc., but will be necessary to run CMS 2.0
-* Comfy::Cms::Blocks have become Comfy::Cms::Fragments, belong to a record instead of a blockable, and there are a few other schema changes that can get a bit tricky if your code is particularly integrated
+* `Comfy::Cms::Blocks` have become `Comfy::Cms::Fragments`, belong to a `record` instead of a `blockable`, and there are a few other schema changes that can get a bit tricky if your code is particularly integrated
 * migration from Paperclip to ActiveStorage. 
 * updating layout tags to the new style
 
 ## Schema changes, especially Fragments and Translations
-The two biggest changes to the database schema for CMS 2.0 are the new Translations table and renaming Blocks to Fragments. Fragments belong to a `record` rather than a `blockable`, and the fragments table also has three additional columns. See the migration below.
+The two biggest changes to the database schema for CMS 2.0 are the new Translations table and renaming `Blocks` to `Fragments`. `Fragments` belong to a `record` rather than a `blockable`, and the fragments table also has three additional columns. See the migration below.
 
 Obviously, any code or query referring to any of the renamed classes or attributes will need to be updated. **This includes helper methods**; calls to `cms_block_content` will need to be calls to `cms_fragment_content`, for example.
 
@@ -115,7 +115,8 @@ In short, you'll need to first configure ActiveStorage and then somehow convince
 
 The guides above may give some ideas; if you're using standard filesystem storage, it can be done even more easily:
 
-```ruby    task :reattach_files => :environment do |t|
+```ruby    
+task :reattach_files => :environment do |t|
         files_directory = Rails.root.join("public/system/files")
         Dir.children(files_directory).each do |f|
             Dir.children(files_directory.join("#{f}/original")).each do |file| 
