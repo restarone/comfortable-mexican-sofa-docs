@@ -4,7 +4,7 @@ Because of:
 - Change of CMS tag structure, including format of tags as well as commands
 - Removal of Mirrored sites functionality and adding page translations
 
-It's not that easy to upgrade 1.12 install to the current 2.0 version. The reinstallation path below is probably safer, but if you want to live dangerously, see below for an upgrade-in-place path.
+It's not that easy to upgrade 1.12 install to the current 2.0 version. The reinstallation path is probably safer, but if you want to live dangerously, see below for an upgrade-in-place path.
 
 # Safe (Reinstallation) Option
 Here's a path that might work for you:
