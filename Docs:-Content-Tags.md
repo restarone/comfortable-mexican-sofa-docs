@@ -96,7 +96,7 @@ You can change how datetime is rendered by passing a non-blank `strftime` option
 ```
 {{ cms:datetime example, strftime: "at %I:%M%p" }}
 ```
-Suppressing rendering with `render: false` is supported from 5f3b1d93235ef0153ddcca3797a05a9df0697e30 on.
+Suppressing rendering with `render: false` is supported from https://github.com/comfy/comfortable-mexican-sofa/commit/5f3b1d93235ef0153ddcca3797a05a9df0697e30 on.
 
 ### Checkbox
 
