@@ -63,6 +63,8 @@ The two biggest changes to the database schema for CMS 2.0 are the new Translati
 
 Obviously, any code or query referring to any of the renamed classes or attributes will need to be updated. **This includes helper methods**; calls to `cms_block_content` will need to be calls to `cms_fragment_content`, for example.
 
+Also, `comfy_cms_files.label` now has a default value of an empty string. Failing to change this will break file uploading.
+
 ```ruby
 class RenameComfyCmsBlocksToComfyCmsFragments < ActiveRecord::Migration[5.2]
   def change
@@ -72,6 +74,7 @@ class RenameComfyCmsBlocksToComfyCmsFragments < ActiveRecord::Migration[5.2]
     add_column :comfy_cms_fragments, :tag, :string, null: false, default: 'text'
     add_column :comfy_cms_fragments, :datetime, :datetime
     add_column :comfy_cms_fragments, :boolean, :boolean, null: false, default: false
+    change_column :comfy_cms_files, :label, :string, null: false, default: ''
     remove_index :comfy_cms_sites, :is_mirrored
     remove_column :comfy_cms_sites, :is_mirrored
     remove_column :comfy_cms_layouts, :is_shared
