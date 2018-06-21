@@ -75,6 +75,9 @@ class RenameComfyCmsBlocksToComfyCmsFragments < ActiveRecord::Migration[5.2]
     add_column :comfy_cms_fragments, :datetime, :datetime
     add_column :comfy_cms_fragments, :boolean, :boolean, null: false, default: false
     change_column :comfy_cms_files, :label, :string, null: false, default: ''
+    change_column :comfy_cms_files, :file_file_name, :string, null: true
+    remove_column :comfy_cms_files, :file_content_type
+    remove_column :comfy_cms_files, :file_file_size
     remove_index :comfy_cms_sites, :is_mirrored
     remove_column :comfy_cms_sites, :is_mirrored
     remove_column :comfy_cms_layouts, :is_shared
@@ -101,6 +104,8 @@ class RenameComfyCmsBlocksToComfyCmsFragments < ActiveRecord::Migration[5.2]
 end
 ```
 The Rake task invoked is discussed below (under Updating Tags). There is at least one other column (`comfy_cms_files.block_id`) that is no longer used by Comfy but that may be useful during migration.
+
+Note that the migration above leaves the `comfy_cms_files.file_file_name` column in place but allows nulls; this allows for using that value during migration to Active Storage. Removing the column after migration is probably a good idea.
 
 ## Other code changes
 While I'm sure there are more code changes than I've noted, these required changes to our code:
@@ -136,6 +141,8 @@ task :reattach_files => :environment do |t|
 Note that this rake task could easily be tweaked to pull files from S3 or another cloud provider, as long as you can determine the appropriate URL to download.
 
 If you have any Paperclip styles defined, you'll need to update any references to those images to use variants instead. See the above migration docs for details.
+
+Also, note that this migration relies on the Paperclip file_file_name field. Once you have completed the migration, you'll probably want to remove the Paperclip columns. If you don't remove them, you will need to at least allow null values or file uploads will fail.
 
 ### Page attachments
 Page attachments are handled sufficiently differently to cause a bit of work. In my case, I found it easier to migrate each page attachment to a text reference to the Comfy::Cms::File object id and then adjust from there, but it should be possible to instead reattach the blob to the fragment itself.
