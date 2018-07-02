@@ -13,7 +13,7 @@ For those not using haml, something like this can be used:
 
 ```erb
 <% @cms_page.children.published.each do |p| %>
-  <%= link_to p.label, p.url(:relative) %>
+  <%= link_to p.label, p.url(relative: true) %>
 <% end %>
 ```
 
@@ -21,7 +21,7 @@ or:
 
 ```erb
 <% Comfy::Cms::Site.first.pages.root.children.published.each do |page| %>
-  <li><%= link_to page.label, page.url(:relative) %></li>
+  <li><%= link_to page.label, page.url(relative: true) %></li>
 <% end %>
 ```
 
