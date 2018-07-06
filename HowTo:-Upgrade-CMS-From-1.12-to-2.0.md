@@ -13,26 +13,26 @@ Here's a path that might work for you:
 - Remove existing 1.12 CMS related db tables and Paperclip attachment files wherever they might be.
 - Edit files into new CMS Seeds format. [See Wiki entry on that](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-CMS-Seeds).
 
-  Begin by inlining all the `attributes.yml` files into `content.html` like this:
+Begin by inlining all the `attributes.yml` files into `content.html` like this:
 
-  ```ruby
-  Dir['db/cms_seeds/**/content.html'].each do |path|
-    attributes_path = File.join(File.dirname(path), 'attributes.yml')
-    next unless File.readable?(attributes_path)
-    attributes = File.read(attributes_path)
-    attributes.sub!(/\A---\n/, '')
-    attributes.sub!(/^parent: [^\n]+\n/, '')
-    content = File.read(path)
-    content_tag = path.include?('/pages/') ? '[textarea content]' : '[content]'
-    File.delete(attributes_path)
-    if path.include? '/snippets/'
-      File.delete(path)
-      Dir.rmdir(File.dirname(path))
-      path = path.sub('/content.html', '.html')
-    end
-    File.write(path, "[attributes]\n#{attributes}\n#{content_tag}\n#{content}")
+```ruby
+Dir['db/cms_seeds/**/content.html'].each do |path|
+  attributes_path = File.join(File.dirname(path), 'attributes.yml')
+  next unless File.readable?(attributes_path)
+  attributes = File.read(attributes_path)
+  attributes.sub!(/\A---\n/, '')
+  attributes.sub!(/^parent: [^\n]+\n/, '')
+  content = File.read(path)
+  content_tag = path.include?('/pages/') ? '[textarea content]' : '[content]'
+  File.delete(attributes_path)
+  if path.include? '/snippets/'
+    File.delete(path)
+    Dir.rmdir(File.dirname(path))
+    path = path.sub('/content.html', '.html')
   end
-  ```
+  File.write(path, "[attributes]\n#{attributes}\n#{content_tag}\n#{content}")
+end
+```
 
 - Change CMS tags from old `{{cms:foo:bar:red:green}}` format to the new `{{cms:foo bar, red: green}}`.
 
@@ -125,18 +125,18 @@ The guides above may give some ideas; if you're using standard filesystem storag
 
 ```ruby    
 task :reattach_files => :environment do |t|
-        files_directory = Rails.root.join("public/system/files")
-        Dir.children(files_directory).each do |f|
-            Dir.children(files_directory.join("#{f}/original")).each do |file| 
-                comfy_file = Comfy::Cms::File.find(Integer(f))
-                local_path = files_directory.join("#{f}/original/#{file}")
-                puts "Attaching #{local_path} to File #{f}"
-                comfy_file.attachment.attach io: File.open(local_path), filename: comfy_file.file_file_name
-            rescue ActiveRecord::RecordNotFound
-                warn "Did not find Comfy::Cms::File #{f}"
-            end
-        end
+  files_directory = Rails.root.join("public/system/files")
+  Dir.children(files_directory).each do |f|
+    Dir.children(files_directory.join("#{f}/original")).each do |file| 
+      comfy_file = Comfy::Cms::File.find(Integer(f))
+      local_path = files_directory.join("#{f}/original/#{file}")
+      puts "Attaching #{local_path} to File #{f}"
+      comfy_file.attachment.attach io: File.open(local_path), filename: comfy_file.file_file_name
+    rescue ActiveRecord::RecordNotFound
+      warn "Did not find Comfy::Cms::File #{f}"
     end
+  end
+end
 ```
 Note that this rake task could easily be tweaked to pull files from S3 or another cloud provider, as long as you can determine the appropriate URL to download.
 
@@ -149,42 +149,42 @@ Page attachments are handled sufficiently differently to cause a bit of work. In
 
 How I did it, using the vestigial `block_id` value in the `comfy_cms_files` table:
 ```ruby
-    task :reattach_page_files => :environment do |t|
-        files = Comfy::Cms::File.where.not(block_id: nil)
-        files.each do |f|
-            unless f.attachment.attachment.nil?
-                fragment = Comfy::Cms::Fragment.find(f.block_id)
-                puts "Attaching File #{f.id} to fragment #{fragment.id}"
-                fragment.content = f.id
-                fragment.tag = "text"
-                fragment.attachments.purge
-                fragment.save
-            else
-                puts "Error: Attachment for File #{f.id} is nil, did not attach to fragment #{f.block_id}"
-            end
-        rescue ActiveRecord::RecordNotFound
-            warn "Did not find Comfy::Cms::Fragment #{f.block_id}"
-        end
+task :reattach_page_files => :environment do |t|
+  files = Comfy::Cms::File.where.not(block_id: nil)
+  files.each do |f|
+    unless f.attachment.attachment.nil?
+      fragment = Comfy::Cms::Fragment.find(f.block_id)
+      puts "Attaching File #{f.id} to fragment #{fragment.id}"
+      fragment.content = f.id
+      fragment.tag = "text"
+      fragment.attachments.purge
+      fragment.save
+    else
+      puts "Error: Attachment for File #{f.id} is nil, did not attach to fragment #{f.block_id}"
     end
+  rescue ActiveRecord::RecordNotFound
+    warn "Did not find Comfy::Cms::Fragment #{f.block_id}"
+  end
+end
 ```
 The below **may** actually reattach the blobs, but I haven't tested it:
 ```ruby
-    task :reattach_page_files => :environment do |t|
-        files = Comfy::Cms::File.where.not(block_id: nil)
-        files.each do |f|
-            unless f.attachment.attachment.nil?
-                fragment = Comfy::Cms::Fragment.find(f.block_id)
-                puts "Attaching File #{f.id} to fragment #{fragment.id}"
-                fragment.attachments.attach f.attachment.attachment.blob # note that the blob is to be attached, not the attachment
-                fragment.tag = "file"
-                fragment.save
-            else
-                puts "Error: Attachment for File #{f.id} is nil, did not attach to fragment #{f.block_id}"
-            end
-        rescue ActiveRecord::RecordNotFound
-            warn "Did not find Comfy::Cms::Fragment #{f.block_id}"
-        end
+task :reattach_page_files => :environment do |t|
+  files = Comfy::Cms::File.where.not(block_id: nil)
+  files.each do |f|
+    unless f.attachment.attachment.nil?
+      fragment = Comfy::Cms::Fragment.find(f.block_id)
+      puts "Attaching File #{f.id} to fragment #{fragment.id}"
+      fragment.attachments.attach f.attachment.attachment.blob # note that the blob is to be attached, not the attachment
+      fragment.tag = "file"
+      fragment.save
+    else
+      puts "Error: Attachment for File #{f.id} is nil, did not attach to fragment #{f.block_id}"
     end
+  rescue ActiveRecord::RecordNotFound
+    warn "Did not find Comfy::Cms::Fragment #{f.block_id}"
+  end
+end
 ```
 ## Updating tags
 The content/layout tagging syntax has changed. Please see the appropriate Wiki entries and source code for more details, but you will need to change any existing tags in your layouts and such. The regular expressions listed above proved a good starting point for my upgrade, but I ended up with a lot more. The rake task I used clearly could be cleaned up substantially; I was testing iteratively and adding / updating new lines each time I came across a tag that didn't get converted cleanly. Further clean-up would be necessary to make it work across all installations.
@@ -196,49 +196,49 @@ A few notes:
 * apologies for making your eyes bleed with the mess below, **please** update the wiki entry if you do the upgrade and clean up and consolidate the regular expressions properly
 
 ```ruby
-    task :update_cms_tags => :environment do |t|
-        Comfy::Cms::Layout.all.each do |layout|
-            layout.content = layout.content.gsub(/\{\{ ?cms:page:([\w\/]+) ?\}\}/, '{{ cms:text \1 }}') if layout.content.is_a? String
-            
-            # {{cms:page:page_header:string}} -> {{ cms:text page_header }}
-            layout.content = layout.content.gsub(/\{\{ ?cms:page:([\w]+):string ?\}\}/, '{{ cms:text \1 }}') if layout.content.is_a? String
-            
-            # {{cms:page:content:rich_text}} -> {{ cms:wysiwyg content }}
-            layout.content = layout.content.gsub(/\{\{ ?cms:page:([\w]+):rich_text ?\}\}/, '{{ cms:wysiwyg \1 }}') if layout.content.is_a? String
-            layout.content = layout.content.gsub(/\{\{ ?cms:page:([\w]+):([^:]*) ?\}\}/, '{{ cms:\2 \1 }}') if layout.content.is_a? String
-            layout.content = layout.content.gsub(/\{\{ ?cms:field:([\w]+):string ?\}\}/, '{{ cms:text \1, render: false }}') if layout.content.is_a? String
-            layout.content = layout.content.gsub(/\{\{ ?cms:field:([\w]+):([^:]*) ?\}\}/, '{{ cms:\2 \1, render: false }}') if layout.content.is_a? String
+task :update_cms_tags => :environment do |t|
+  Comfy::Cms::Layout.all.each do |layout|
+    layout.content = layout.content.gsub(/\{\{ ?cms:page:([\w\/]+) ?\}\}/, '{{ cms:text \1 }}') if layout.content.is_a? String
+    
+    # {{cms:page:page_header:string}} -> {{ cms:text page_header }}
+    layout.content = layout.content.gsub(/\{\{ ?cms:page:([\w]+):string ?\}\}/, '{{ cms:text \1 }}') if layout.content.is_a? String
+    
+    # {{cms:page:content:rich_text}} -> {{ cms:wysiwyg content }}
+    layout.content = layout.content.gsub(/\{\{ ?cms:page:([\w]+):rich_text ?\}\}/, '{{ cms:wysiwyg \1 }}') if layout.content.is_a? String
+    layout.content = layout.content.gsub(/\{\{ ?cms:page:([\w]+):([^:]*) ?\}\}/, '{{ cms:\2 \1 }}') if layout.content.is_a? String
+    layout.content = layout.content.gsub(/\{\{ ?cms:field:([\w]+):string ?\}\}/, '{{ cms:text \1, render: false }}') if layout.content.is_a? String
+    layout.content = layout.content.gsub(/\{\{ ?cms:field:([\w]+):([^:]*) ?\}\}/, '{{ cms:\2 \1, render: false }}') if layout.content.is_a? String
 
-            # {{ cms:partial:main/homepage }} -> {{ cms:partial "main/homepage" }}
-            layout.content = layout.content.gsub(/\{\{ ?cms:partial:([\w\/]+) ?\}\}/, '{{ cms:partial \1 }}') if layout.content.is_a? String
+    # {{ cms:partial:main/homepage }} -> {{ cms:partial "main/homepage" }}
+    layout.content = layout.content.gsub(/\{\{ ?cms:partial:([\w\/]+) ?\}\}/, '{{ cms:partial \1 }}') if layout.content.is_a? String
 
-            layout.content = layout.content.gsub(/\{\{ ?cms:(\w+):([\w\/]+) ?\}\}/, '{{ cms:\1 \2 }}') if layout.content.is_a? String
-            layout.content = layout.content.gsub(/\{\{ ?cms:(\w+):([\w]+):([^:]*) ?\}\}/, '{{ cms:\1 \2, "\3" }}') if layout.content.is_a? String
-            layout.content = layout.content.gsub(/cms:asset:([\w-]+)---([\w-]+):css:html_tag/, 'cms:asset \1, type: css, as: tag') if layout.content.is_a? String
-            layout.content = layout.content.gsub(/cms:rich_text/, 'cms:wysiwyg') if layout.content.is_a? String
-            layout.content = layout.content.gsub(/cms:integer/, 'cms:number') if layout.content.is_a? String
-            layout.content = layout.content.gsub(/cms: string/, 'cms:text') if layout.content.is_a? String # probably a result of goofing one of the more general regexps
-            layout.content = layout.content.gsub(/\{\{ ?cms:page_file ([\w\/]+) ?\}\}/, '{{ cms:file \1, render: false }}') if layout.content.is_a? String
-            layout.content = layout.content.gsub(/<!-- {{ cms:text (\w+)_slide, render: false }} -->/, "{{ cms:text \1, render: false }}") if layout.content.is_a? String
-            layout.save if layout.changed?
-        end
-        Comfy::Cms::Fragment.all.each do |fragment|
-            # {{ cms:partial:main/homepage }} -> {{ cms:partial "main/homepage" }}
-            fragment.datetime = fragment.updated_at if fragment.datetime.nil?
-            fragment.content = fragment.content.gsub(/\{\{ ?cms:partial:([\w\/]+) ?\}\}/, '{{ cms:partial \1 }}') if fragment.content.is_a? String
+    layout.content = layout.content.gsub(/\{\{ ?cms:(\w+):([\w\/]+) ?\}\}/, '{{ cms:\1 \2 }}') if layout.content.is_a? String
+    layout.content = layout.content.gsub(/\{\{ ?cms:(\w+):([\w]+):([^:]*) ?\}\}/, '{{ cms:\1 \2, "\3" }}') if layout.content.is_a? String
+    layout.content = layout.content.gsub(/cms:asset:([\w-]+)---([\w-]+):css:html_tag/, 'cms:asset \1, type: css, as: tag') if layout.content.is_a? String
+    layout.content = layout.content.gsub(/cms:rich_text/, 'cms:wysiwyg') if layout.content.is_a? String
+    layout.content = layout.content.gsub(/cms:integer/, 'cms:number') if layout.content.is_a? String
+    layout.content = layout.content.gsub(/cms: string/, 'cms:text') if layout.content.is_a? String # probably a result of goofing one of the more general regexps
+    layout.content = layout.content.gsub(/\{\{ ?cms:page_file ([\w\/]+) ?\}\}/, '{{ cms:file \1, render: false }}') if layout.content.is_a? String
+    layout.content = layout.content.gsub(/<!-- {{ cms:text (\w+)_slide, render: false }} -->/, "{{ cms:text \1, render: false }}") if layout.content.is_a? String
+    layout.save if layout.changed?
+  end
+  Comfy::Cms::Fragment.all.each do |fragment|
+    # {{ cms:partial:main/homepage }} -> {{ cms:partial "main/homepage" }}
+    fragment.datetime = fragment.updated_at if fragment.datetime.nil?
+    fragment.content = fragment.content.gsub(/\{\{ ?cms:partial:([\w\/]+) ?\}\}/, '{{ cms:partial \1 }}') if fragment.content.is_a? String
 
-            fragment.content = fragment.content.gsub(/\{\{ ?cms:page:([\w]+):string ?\}\}/, '{{ cms:text \1 }}') if fragment.content.is_a? String
-            fragment.content = fragment.content.gsub(/\{\{ ?cms:page:([\w]+):rich_text ?\}\}/, '{{ cms:wysiwyg \1 }}') if fragment.content.is_a? String
+    fragment.content = fragment.content.gsub(/\{\{ ?cms:page:([\w]+):string ?\}\}/, '{{ cms:text \1 }}') if fragment.content.is_a? String
+    fragment.content = fragment.content.gsub(/\{\{ ?cms:page:([\w]+):rich_text ?\}\}/, '{{ cms:wysiwyg \1 }}') if fragment.content.is_a? String
 
-            fragment.content = fragment.content.gsub(/\{\{ ?cms:page:([\w\/]+) ?\}\}/, '{{ cms:text \1 }}') if fragment.content.is_a? String
-            fragment.content = fragment.content.gsub(/\{\{ ?cms:page:([\w]+):([^:]*) ?\}\}/, '{{ cms:\2 \1 }}') if fragment.content.is_a? String
-            fragment.content = fragment.content.gsub(/\{\{ ?cms:field:([\w]+):([^:]*) ?\}\}/, '{{ cms:\2 \1, render: false }}') if fragment.content.is_a? String
+    fragment.content = fragment.content.gsub(/\{\{ ?cms:page:([\w\/]+) ?\}\}/, '{{ cms:text \1 }}') if fragment.content.is_a? String
+    fragment.content = fragment.content.gsub(/\{\{ ?cms:page:([\w]+):([^:]*) ?\}\}/, '{{ cms:\2 \1 }}') if fragment.content.is_a? String
+    fragment.content = fragment.content.gsub(/\{\{ ?cms:field:([\w]+):([^:]*) ?\}\}/, '{{ cms:\2 \1, render: false }}') if fragment.content.is_a? String
 
-            fragment.content = fragment.content.gsub(/\{\{ ?cms:(\w+):([\w]+) ?\}\}/, '{{ cms:\1 \2 }}') if fragment.content.is_a? String
-            fragment.content = fragment.content.gsub(/\{\{ ?cms:(\w+):([\w]+):([^:]*) ?\}\}/, '{{ cms:\1 \2, "\3" }}') if fragment.content.is_a? String
-            fragment.save if fragment.changed?
-        end
-    end
+    fragment.content = fragment.content.gsub(/\{\{ ?cms:(\w+):([\w]+) ?\}\}/, '{{ cms:\1 \2 }}') if fragment.content.is_a? String
+    fragment.content = fragment.content.gsub(/\{\{ ?cms:(\w+):([\w]+):([^:]*) ?\}\}/, '{{ cms:\1 \2, "\3" }}') if fragment.content.is_a? String
+    fragment.save if fragment.changed?
+  end
+end
 ```
 
 Feel free to update this Wiki entry if you had to do this migration.
