@@ -47,6 +47,7 @@ end
 - If you attached files via WYSIWYG editor prepare for the pain of trying to locate and re-link those files later (you may be able to use filenames and some of the ActiveStorage migration documents below to do so)
 - Install CMS 2.0
 - Import CMS Seeds with `rake comfy:cms_seeds:import[folder_name,site_identifier]`
+- If you previously used cms_manageable, it will need to be reimplemented as the WithFragments concern. See this [wiki page](https://github.com/comfy/comfortable-mexican-sofa/wiki/Render-Non-Comfy-Models-as-Pages) for guidance.
 
 # Upgrade-in-Place Option
 
@@ -188,6 +189,9 @@ end
 ```
 ## Updating tags
 The content/layout tagging syntax has changed. Please see the appropriate Wiki entries and source code for more details, but you will need to change any existing tags in your layouts and such. The regular expressions listed above proved a good starting point for my upgrade, but I ended up with a lot more. The rake task I used clearly could be cleaned up substantially; I was testing iteratively and adding / updating new lines each time I came across a tag that didn't get converted cleanly. Further clean-up would be necessary to make it work across all installations.
+
+## cms_manageable
+- If you previously used cms_manageable, it will need to be reimplemented as the WithFragments concern. See this [wiki page](https://github.com/comfy/comfortable-mexican-sofa/wiki/Render-Non-Comfy-Models-as-Pages) for guidance.
 
 A few notes:
 * rich_text fields are now wysiwyg fields
