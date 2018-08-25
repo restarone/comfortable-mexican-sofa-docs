@@ -31,3 +31,4 @@
 * [CMS Render Methods](//github.com/comfy/comfortable-mexican-sofa/wiki/Docs:-CMS-Render-Methods)
 
 ### [How-Tos](//github.com/comfy/comfortable-mexican-sofa/wiki#how-tos)
+* [Render Non Comfy Models As Pages](//github.com/comfy/comfortable-mexican-sofa/wiki/Render-Non-Comfy-Models-as-Pages)
