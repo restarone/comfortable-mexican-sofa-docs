@@ -214,16 +214,17 @@ task :update_cms_tags => :environment do |t|
     layout.content = layout.content.gsub(/\{\{ ?cms:field:([\w]+):([^:]*) ?\}\}/, '{{ cms:\2 \1, render: false }}') if layout.content.is_a? String
 
     # {{ cms:partial:main/homepage }} -> {{ cms:partial "main/homepage" }}
-    layout.content = layout.content.gsub(/\{\{ ?cms:partial:([\w\/]+) ?\}\}/, '{{ cms:partial \1 }}') if layout.content.is_a? String
+        layout.content = layout.content.gsub(/\{\{ ?cms:asset:([\w\/-]+):([\w\/-]+):([\w\/-]+) ?\}\}/, '{{ cms:asset \1 type: \2 as: tag}}') if layout.content.is_a? String
+        layout.content = layout.content.gsub(/\{\{ ?cms:partial:([\w\/]+) ?\}\}/, '{{ cms:partial \1 }}') if layout.content.is_a? String
+        layout.content = layout.content.gsub(/\{\{ ?cms:(\w+):([\w\/-]+) ?\}\}/, '{{ cms:\1 \2 }}') if layout.content.is_a? String
+        layout.content = layout.content.gsub(/\{\{ ?cms:(\w+):([\w\/-]+):([\w\/-]+):([\w\/-]+) ?\}\}/, '{{ cms:\1 \2 \3 \4}}') if layout.content.is_a? String
+        layout.content = layout.content.gsub(/\{\{ ?cms:(\w+):([\w]+):([^:]*) ?\}\}/, '{{ cms:\1 \2, "\3" }}') if layout.content.is_a? String
+        layout.content = layout.content.gsub(/cms:rich_text/, 'cms:wysiwyg') if layout.content.is_a? String
+        layout.content = layout.content.gsub(/cms:integer/, 'cms:number') if layout.content.is_a? String
+        layout.content = layout.content.gsub(/cms: string/, 'cms:text') if layout.content.is_a? String # probably a result of goofing one of the more general regexps
+        layout.content = layout.content.gsub(/\{\{ ?cms:page_file ([\w\/]+) ?\}\}/, '{{ cms:file \1, render: false }}') if layout.content.is_a? String
+        layout.content = layout.content.gsub(/<!-- {{ cms:text (\w+)_slide, render: false }} -->/, "{{ cms:text \1, render: false }}") if layout.content.is_a? String
 
-    layout.content = layout.content.gsub(/\{\{ ?cms:(\w+):([\w\/]+) ?\}\}/, '{{ cms:\1 \2 }}') if layout.content.is_a? String
-    layout.content = layout.content.gsub(/\{\{ ?cms:(\w+):([\w]+):([^:]*) ?\}\}/, '{{ cms:\1 \2, "\3" }}') if layout.content.is_a? String
-    layout.content = layout.content.gsub(/cms:asset:([\w-]+)---([\w-]+):css:html_tag/, 'cms:asset \1, type: css, as: tag') if layout.content.is_a? String
-    layout.content = layout.content.gsub(/cms:rich_text/, 'cms:wysiwyg') if layout.content.is_a? String
-    layout.content = layout.content.gsub(/cms:integer/, 'cms:number') if layout.content.is_a? String
-    layout.content = layout.content.gsub(/cms: string/, 'cms:text') if layout.content.is_a? String # probably a result of goofing one of the more general regexps
-    layout.content = layout.content.gsub(/\{\{ ?cms:page_file ([\w\/]+) ?\}\}/, '{{ cms:file \1, render: false }}') if layout.content.is_a? String
-    layout.content = layout.content.gsub(/<!-- {{ cms:text (\w+)_slide, render: false }} -->/, "{{ cms:text \1, render: false }}") if layout.content.is_a? String
     layout.save if layout.changed?
   end
   Comfy::Cms::Fragment.all.each do |fragment|
