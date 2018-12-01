@@ -47,4 +47,3 @@ For further information, see the `Comfy::Cms::WithFragment` module, which is als
 Links
 * The Comfy::Cms::WithFragment concern - https://github.com/comfy/comfortable-mexican-sofa/blob/master/app/models/concerns/comfy/cms/with_fragments.rb
 * The cms_manageable pull request - https://github.com/comfy/comfortable-mexican-sofa/pull/409
- 

@@ -45,7 +45,8 @@
 * [Devise CanCan Authentication/Authorization](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Devise-CanCan-Authentication-Authorization)
 * [Upgrading Redactor Wysiwyg](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Upgrading-Redactor-Wysiwyg)
 * [Deploying Comfy App to Heroku](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Deploying-Comfy-App-to-Heroku)
-* [Render Non-Comfy Models as Pages](//github.com/comfy/comfortable-mexican-sofa/wiki/Render-Non-Comfy-Models-as-Pages)
+* [Render Non-Comfy Models as Pages](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Render-Non-Comfy-Models-as-Pages)
+* [Handle SVG File Uploads](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Handle-SVG-File-Uploads)
 
 ### Documentation for old versions
 To access documentation for CMS prior to version 2.0 it's best to checkout wiki locally:
