@@ -243,6 +243,15 @@ task :update_cms_tags => :environment do |t|
     fragment.content = fragment.content.gsub(/\{\{ ?cms:(\w+):([\w]+):([^:]*) ?\}\}/, '{{ cms:\1 \2, "\3" }}') if fragment.content.is_a? String
     fragment.save if fragment.changed?
   end
+
+  # With the change from Block to Fragment, Revision.data hash keys need to be updated
+  Comfy::Cms::Revision.all.each do |revision|
+    if revision.data['blocks_attributes'].present?
+      revision.data['fragments_attributes'] = revision.data['blocks_attributes']
+      revision.data.delete('blocks_attributes')
+      revision.save
+    end
+  end
 end
 ```
 
