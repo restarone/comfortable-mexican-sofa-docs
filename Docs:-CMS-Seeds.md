@@ -44,7 +44,7 @@ All you need to do is create a rake task like this:
 namespace :test do
   task :prepare do
     Comfy::Cms::Site.create!(identifier: 'site-identifier', hostname: 'localhost')
-    Rake::Task['comfy:cms_seeds:import[folder-name, site-identifier]'].invoke
+    Rake::Task['comfy:cms_seeds:import'].invoke('folder-name', 'site-identifier')
   end
 end
 ```
