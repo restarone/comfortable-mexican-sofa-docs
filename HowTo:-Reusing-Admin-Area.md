@@ -30,12 +30,6 @@ run something like this:
 rails g comfy:scaffold Location name:string distance:integer
 ```
 
--> ISSUE: I found that when using this command one will get most things right out of the box, but in my case i had the problem, that the generated controller missed a ```::Cms::``` derivation so you might have to check if your ```app/models/location.rb``` also has this ```Comfy::Admin::BaseController``` missing the Cms in between Admin and BaseController, so it should look like this ```Comfy::Admin::Cms::BaseController```.
--> Visually you can check if you have this problem if your cms side navigation has options disappearing if you navigate to the newly generated menue point. This dissappearing of menue options should of course not happen and is a cause of the missing derivation.
--> Also one needs to specify at least one model parameter. (With no parameters the template will fail, parameters are in this example the name and the distance.)
-
-
-
 After running it you should get:
 
 * `db/migrate/create_locations.rb` migration file. Don't forget your indexes.
