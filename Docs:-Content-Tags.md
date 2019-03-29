@@ -2,7 +2,7 @@
 
 * [{{ cms:text }}](#text-textarea-wysiwyg-and-markdown)
 * [{{ cms:textarea }}](#text-textarea-wysiwyg-and-markdown)
-* [{{ cms:wisywyg }}](#text-textarea-wysiwyg-and-markdown)
+* [{{ cms:wysiwyg }}](#text-textarea-wysiwyg-and-markdown)
 * [{{ cms:markdown }}](#text-textarea-wysiwyg-and-markdown)
 * [{{ cms:number }}](#number)
 * [{{ cms:date }}](#date-and-datetime)
