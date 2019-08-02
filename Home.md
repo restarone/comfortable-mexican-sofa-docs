@@ -48,6 +48,7 @@
 * [Render Non-Comfy Models as Pages](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Render-Non-Comfy-Models-as-Pages)
 * [Handle SVG File Uploads](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Handle-SVG-File-Uploads)
 * [Use CMS For Your Root URL](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Use-CMS-For-Your-Root-URL)
+* [Minimal Fixtures For Testing](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Minimal-Fixtures-For-Testing)
 
 ### Documentation for old versions
 To access documentation for CMS prior to version 2.0 it's best to checkout wiki locally:
