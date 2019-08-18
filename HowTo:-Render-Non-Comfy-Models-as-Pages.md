@@ -1,4 +1,4 @@
-Sometimes you want to render you're regular app objects like a Comfy::Cms::Page. Enter the Comfy::Cms::WithFragments concern. (Note: This used to be called cms_manageable, but with the release of comfy 2.0, has been converted into a concern.)
+Sometimes you want to render your regular app objects like a Comfy::Cms::Page. Enter the Comfy::Cms::WithFragments concern. (Note: This used to be called cms_manageable, but with the release of comfy 2.0, has been converted into a concern.)
 
 An example from the previous implementation of this feature as cms_manageable:
 ````
