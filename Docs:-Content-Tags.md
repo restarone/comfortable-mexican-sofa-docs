@@ -125,7 +125,7 @@ This tag accepts several options. Let's go through them:
   - `url` - This is the default. Will render URL pointing to uploaded attachment.
   - `link` - Will wrap URL in `<a href=>` tag.
   - `image` - Will wrap URL in `<img src=>` tag.
-- `label` - Will use this as text for links or alt attibute value for images.
+- `label` - Will use this as text for links or alt attribute value for images.
 - `resize`, `gravity`, `crop` - Only applicable for image variants. These are
   transform options that are passed into ImageMagick via ActiveStorage.
 - `class` - html class attribute for the image or link
