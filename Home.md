@@ -50,6 +50,9 @@
 * [Use CMS For Your Root URL](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Use-CMS-For-Your-Root-URL)
 * [Minimal Fixtures For Testing](//github.com/comfy/comfortable-mexican-sofa/wiki/HowTo:-Minimal-Fixtures-For-Testing)
 
+### Plugins
+* [ComfyBlog](https://github.com/comfy/comfy-blog) - Simple blog management engine
+
 ### Documentation for old versions
 To access documentation for CMS prior to version 2.0 it's best to checkout wiki locally:
 ```
