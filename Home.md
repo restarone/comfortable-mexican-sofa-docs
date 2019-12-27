@@ -52,6 +52,7 @@
 
 ### Plugins
 * [ComfyBlog](https://github.com/comfy/comfy-blog) - Simple blog management engine
+* [ComfyArchive](https://github.com/DiscoveryMap/comfy-archive) - Chronological & categorical archive sections
 
 ### Documentation for old versions
 To access documentation for CMS prior to version 2.0 it's best to checkout wiki locally:
